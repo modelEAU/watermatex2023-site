@@ -1,0 +1,16 @@
+---
+// @ts-ignore
+import { Image } from "@astrojs/image/components";
+
+import iwaLogo from "../assets/logo-iwa.png";
+import ulavalLogo from "../assets/logo-ulaval.png";
+---
+
+<div class="mt-24">
+  <h2 class="text-center text-2xl text-slate-500">Thank you to our partners</h2>
+  <div class="flex gap-8 md:gap-20 items-center justify-center mt-10 flex-wrap">
+    <Image  src={iwaLogo} alt="IWA" width={300} height={142}/>
+    <Image  src={ulavalLogo} alt="Université Laval" width={300} height={130}/>
+
+  </div>
+</div>
