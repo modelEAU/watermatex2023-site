@@ -6,29 +6,44 @@ import logo from "../../assets/logo-watermatex.png";
 import Dropdown from "./dropdown.astro";
 const menuitems = [
   {
-    title: "Programme",
-    path: "#",
+    title: "The Conference",
+    path: "/conference",
     children: [
-      { title: "Schedule", path: "#" },
-      { title: "Speakers", path: "#" },
-      { title: "Presentations", path: "#" },
+      { title: "Themes", path: "/conference/themes" },
+      { title: "Scientific Program", path: "/conference/scientific-program" },
+      { title: "Social Program", path: "/conference/social-program" },
+      //{ title: "Workshops", path: "/conference/workshops" },
+      //{ title: "Keynote", path: "/conference/keynote" },
     ],
   },
-  /*{
-    title: "Register",
-    path: "/pricing",
-  },*/
   {
-    title: "About Watermatex",
+    title: "About us",
     path: "/about",
+    children: [
+      { title: "Committees", path: "/about/committees" },
+      { title: "Contact us", path: "/about/contact" },
+    ]
+  },
+  {
+    title: "Practical info",
+    path: "/info",
+    children: [
+      { title: "Venue", path: "/info/venue" },
+      { title: "Accommodation", path: "/info/accommodation" },
+      { title: "Visas", path: "/info/visas" },
+    ]
+  },
+  {
+    title: "Sponsors",
+    path: "/sponsors",
+    children: [
+      { title: "Becoming a sponsor", path: "/sponsors/becoming-a-sponsor" },
+      { title: "Our sponsors", path: "/sponsors/our-sponsors" },
+    ]
   },
   {
     title: "Blog",
     path: "/blog",
-  },
-  {
-    title: "Contact",
-    path: "/contact",
   },
 ];
 ---
@@ -105,15 +120,12 @@ const menuitems = [
           ))
         }
       </ul>
-      <div class="lg:hidden flex items-center mt-3 gap-4">
-        <Link href="#" style="muted" block size="md">Log in</Link>
-        <Link href="#" size="md" block>Sign up</Link>
-      </div>
     </nav>
     <div>
       <div class="hidden lg:flex items-center gap-4">
-        <!--a href="#">Log in</a-->
-        <Link href="#" size="md">Register (coming soon!)</Link>
+
+        <Link style="outline" href="/submissions/guidelines" size="md">Submissions</Link>
+        <Link href="/register/fees" size="md">Register</Link>
       </div>
     </div>
   </header>
