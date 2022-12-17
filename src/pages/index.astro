@@ -3,14 +3,43 @@ import Container from "@components/container.astro";
 import Cta from "@components/cta.astro";
 import Hero from "@components/hero.astro";
 import Logos from "@components/logos.astro";
+import Sectionhead from "@components/sectionhead.astro";
 import Layout from "@layouts/Layout.astro";
+import ulaval from "../assets/logo-ulaval.png";
+
+const affiliates = [
+  {
+    name: "ulaval",
+    src: ulaval,
+    width: 200,
+    height: 87
+  }
+]
+
+const sponsors = [
+  {
+    name: "iwa",
+    src: "./../assests/logo-iwa.png",
+    width: 200,
+    height: 150
+  }
+]
 ---
 
-<Layout title="">
+<Layout title="Watermatex 2023">
   <Container>
     <Hero />
-    <!--Features /-->
-    <Logos />
+    <!--Features/-->
+      <Logos header="Affiliations" logos={affiliates}/>
+      <Sectionhead>
+        <Fragment slot="title">Thank you to our sponsors</Fragment>
+        <Fragment slot="desc">There are no sponsors yet. <a href="/sponsors/becoming-a-sponsor" class= "text-blue-500 mt-1">Will you be the first?</a></Fragment>
+
+      </Sectionhead>
+      <!--Logos header="Platinum sponsors" logos={sponsors}/>
+      <Logos header="Gold sponsors" logos={sponsors}/>
+      <Logos header="Silver sponsors" logos={sponsors}/>
+      <Logos header="Bronze sponsors" logos={sponsors}/-->
     <Cta />
   </Container>
 </Layout>

@@ -1,8 +1,7 @@
 ---
-import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
-import Pricing from "@components/pricing.astro";
+import Layout from "@layouts/Layout.astro";
 
 const pricing = [
   {
@@ -64,17 +63,15 @@ const pricing = [
 ];
 ---
 
-<Layout title="Pricing">
+<Layout title="Becoming a sponsor">
   <Container>
     <Sectionhead>
-      <Fragment slot="title">Pricing</Fragment>
-      <Fragment slot="desc"
-        >Simple & Predictable pricing. No Surprises.</Fragment
-      >
+      <Fragment slot="title">Sponsorships</Fragment>
+      <Fragment slot="desc">Sponsorship plan coming soon.</Fragment>
     </Sectionhead>
 
-    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-screen-lg mt-12">
+    <!--div class="grid md:grid-cols-3 gap-10 mx-auto max-w-screen-lg mt-12">
       {pricing.map((item) => <Pricing plan={item} />)}
-    </div>
+    </div-->
   </Container>
 </Layout>
