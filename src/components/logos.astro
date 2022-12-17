@@ -2,15 +2,28 @@
 // @ts-ignore
 import { Image } from "@astrojs/image/components";
 
-import iwaLogo from "../assets/logo-iwa.png";
-import ulavalLogo from "../assets/logo-ulaval.png";
+export interface Logo {
+  name: string
+  src: string;
+  width: number;
+  height: number;
+}
+
+export interface Props {
+  header: string;
+  logos?: Logo[];
+}
+
+const { header, logos} = Astro.props as Props;
 ---
 
-<div class="mt-24">
-  <h2 class="text-center text-2xl text-slate-500">Thank you to our partners</h2>
+<div class="mt-6">
+  <h2 class="text-center text-2xl lg:text-3xl font-bold lg:tracking-tight">{header}</h2>
   <div class="flex gap-8 md:gap-20 items-center justify-center mt-10 flex-wrap">
-    <Image  src={iwaLogo} alt="IWA" width={300} height={142}/>
-    <Image  src={ulavalLogo} alt="Université Laval" width={300} height={130}/>
-
+    {
+      logos.map((logo) => (
+        <Image  src={logo.src} alt={logo.name} width={logo.width} height={logo.height}/>
+      ))
+    }
   </div>
 </div>
