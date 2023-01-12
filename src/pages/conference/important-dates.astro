@@ -1,0 +1,48 @@
+---
+import Container from "@components/container.astro";
+import DateTile from "@components/date-tile.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import Layout from "@layouts/Layout.astro";
+
+const dates = [
+    {
+        "title": "Deadline for abstract submissions",
+        "day": "10",
+        "month": "April"
+    },
+    {
+        "title": "Notice of acceptance",
+        "day": "1",
+        "month": "June"
+    },
+    {
+        "title": "Final conference program",
+        "day": "1",
+        "month": "July"
+    },
+    {
+        "title": "Deadline for early bird registration",
+        "day": "15",
+        "month": "July"
+    },
+    {
+        "title": "Watermatex Conference",
+        "day": "23-27",
+        "month": "September"
+    },
+]
+---
+
+<Layout title="Important Dates">
+  <Container>
+    <Sectionhead>
+        <Fragment slot="title">Important Dates</Fragment>
+        <Fragment slot="desc"></Fragment>
+      </Sectionhead>
+  </Container>
+  <Container>
+    {dates.map((date) => (
+        <DateTile {...date}></DateTile>
+    ))}
+  </Container>
+</Layout>

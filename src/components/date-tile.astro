@@ -1,0 +1,28 @@
+---
+const { title , day, month} = Astro.props;
+
+
+---
+
+<div class="date-container border-solid border-slate-300 border-2 rounded-md max-w-sm  mx-auto my-5 transition  hover:-translate-y-1 hover:-translate-x-1 hover:shadow-md flex flex-row align-middle items-center">
+
+    <div class="calendar w-2/5 align-middle items-center">
+        <div class="day w-full  text-center text-4xl font-bold align-middle">
+            {day}
+        </div>
+        <div class="month text-center text-xl font-semibold">
+            {month}
+        </div>
+    </div>
+
+    <div class="description align-middle">{title}</div>
+</div>
+<style>
+    .calendar{
+        display: grid;
+        grid-auto-flow: dense;
+        vertical-align: middle;
+    }
+
+
+</style>
