@@ -1,5 +1,6 @@
 ---
 import Container from "@components/container.astro";
+import Cta from "@components/cta.astro";
 import Sectionhead from "@components/sectionhead.astro";
 import Layout from "@layouts/Layout.astro";
 ---
@@ -8,7 +9,22 @@ import Layout from "@layouts/Layout.astro";
   <Container>
     <Sectionhead>
         <Fragment slot="title">Submission guidelines</Fragment>
-        <Fragment slot="desc">Coming soon</Fragment>
+        <Fragment slot="desc"></Fragment>
       </Sectionhead>
+  </Container>
+  <Container>
+    <div class="mt-16 md:mt-5">
+      <div class="mx-12 md:mx-36 py-8">
+        <p class="text-lg mt-4 text-slate-600 py-2">
+          The deadline for abstract submission for the conference is <strong>April 10, 2023.</strong>
+        </p>
+        <p class="text-lg mt-4 text-slate-600 py-2">
+          You can find details and instructions on how to prepare your submission <a style="text-decoration: underline;" href="/info/templates">here</a>. For more information relating to the conference, please visit the <a style="text-decoration: underline;" href="/" >conference website</a> or contact the organisers at <a style="text-decoration: underline;" href="mailto:submissions@watermatex2023.org">submissions@watermatex2023.org</a>.
+        </p>
+    </div>
+    </div>
+  </Container>
+  <Container>
+    <Cta></Cta>
   </Container>
 </Layout>
