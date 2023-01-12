@@ -4,9 +4,9 @@ import Link from "@components/ui/link.astro";
 import heroImage from "assets/chutes-montmorency.jpg";
 ---
 
-<main class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-8">
+<main class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-8 z-0">
   <div class="py-6 md:order-1 hidden md:block relative">
-    <Image class="rounded-md"
+    <Image class="rounded-md z-0"
     src={heroImage}
     alt="Chutes Montmorency near Québec City"
     loading="eager"
@@ -19,7 +19,7 @@ import heroImage from "assets/chutes-montmorency.jpg";
       Watermatex 2023
     </h1>
     <p class="text-lg mt-4 text-slate-600 max-w-xl">
-      The 11th IWA Symposium on Modelling and Integrated Assessment.<br />Québec City, 23 - 27 september, 2023. <br />Stay tuned for updates!
+      The 11th IWA Symposium on Modelling and Integrated Assessment.<br />Québec City, 23 - 28 September, 2023. <br />Stay tuned for updates!
     </p>
     <div class="mt-6 flex flex-col sm:flex-row gap-3">
       <Link
