@@ -1,0 +1,39 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon";
+
+const docs = [
+  {
+    title: "Workshop outline",
+    description:
+      "Organize a full-day workshop for training or exchanges of ideas.",
+    icon: "fluent:people-team-toolbox-20-regular",
+    link: "https://docs.google.com/document/d/1m2tQqo1YykQM_XWhz6xZirKWSFhl84fi/edit?usp=share_link&ouid=109327077578878817900&rtpof=true&sd=true",
+  },
+  {
+    title: "Presentation abstract",
+    description:
+      "Present your work to your peers in themed sessions.",
+    icon: "grommet-icons:workshop",
+    link: "https://docs.google.com/document/d/19djPvQdZL6yyDfxGXLPgE1ionChyrliC/edit?usp=share_link&ouid=109327077578878817900&rtpof=true&sd=true"
+  },
+];
+---
+
+<div class="grid sm:grid-cols-1 md:grid-cols-2 mt-16 gap-16">
+  {
+    docs.map((item) => (
+      <a href={item.link}>
+        <div class="flex gap-4 items-start">
+        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
+          <Icon class="text-white" name={item.icon} />
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+        </div>
+        </div>
+      </a>
+    ))
+  }
+</div>

@@ -1,0 +1,18 @@
+---
+import Container from "@components/container.astro";
+import DocsLinks from "@components/docs-links.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import Layout from "@layouts/Layout.astro";
+---
+
+<Layout title="Venue">
+  <Container>
+    <Sectionhead>
+        <Fragment slot="title">Templates</Fragment>
+        <Fragment slot="desc">Everything you need to submit your work to Watermatex.</Fragment>
+      </Sectionhead>
+  </Container>
+  <Container>
+    <DocsLinks></DocsLinks>
+  </Container>
+</Layout>
