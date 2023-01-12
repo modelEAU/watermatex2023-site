@@ -1,0 +1,87 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon";
+import Card from "./card.astro";
+
+const themes = [
+  {
+    title: "Methodologies",
+    subthemes: [
+      "Process modelling (Biochemical and separation processes",
+      "Plant-wide and integrated assessment",
+      "Holistic evaluation (LCA, Circular economy and Socio-economic aspects)",
+      "Decision support systems",
+      "Uncertainty, sensitivity and risk analysis",
+      "(Hierarchical) control strategies",
+      "Advanced modelling frameworks (CFD, PBM, etc.)",
+      "Hybrid modelling",
+      "Data quality pipelines",
+      "Soft sensors"
+    ],
+    icon: "entypo:lab-flask",
+  },
+  {
+    title: "Application Domains",
+    subthemes: [
+      "Water treatment (wastewater, drinking water, process water)",
+      "Water and resource recovery",
+      "Decentralized water treatment",
+      "Drinking water and sewer networks",
+      "Receiving water systems",
+      "Water and energy nexus",
+      "Smart cities",
+    ],
+    icon: "ic:baseline-water-drop",
+  },
+
+];
+---
+
+<div class="mt-16 md:mt-5">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight text-center">
+    Conference Themes
+  </h2>
+  <div class="mx-12 md:mx-36 py-8">
+    <p class="text-lg mt-4 text-slate-600 py-2">
+      The <strong>11th IWA Symposium on Modelling and Integrated Assessment</strong> (Watermatex 2023) will provide a great forum to exchange methodologies and international experiences on all aspects of water-related problems within an interdisciplinary framework that relies heavily on different types of models. Integrated Assessment aims at bringing all aspects of a problem together, and is particularly concerned with such issues as the social and economic impacts of solutions to these problems. The symposium's contributions are not restricted to any single discipline but extend to problems in drinking water treatment and distribution, sewer systems and wastewater treatment, surface and groundwater, technical and natural systems. However, contributions are expected to have a methodological focus.
+    </p>
+    <p class="text-lg mt-4 text-slate-600 py-2">
+      Watermatex aims at promoting the application of mathematical methods for modelling and simulation, data management, systems analysis and decision support within the entire water sector. It targets people from research, consulting companies, institutions and utilities to extend the use of models and computing tools to support the understanding, management and optimization of all water systems. New challenges related to smart water systems, water reuse, resource recovery and the water-energy nexus open up new opportunities for enhanced modelling and contributions tackling these topics will be particularly welcomed at the conference.
+    </p>
+
+    <p class="text-lg mt-4 text-slate-600 py-2">
+      The MIA Specialist Group of IWA organizes Watermatex as a quadrennial symposium. The first one dates back to 1987 in London, UK. The most recent editions were in June 2015 in Gold Coast, Australia and in September 2019 in Copenhagen, Denmark. We look forward to welcoming you during the Indian summer in Québec City, Canada in September 2023 for the 11th IWA Symposium on MIA.
+    </p>
+  </div>
+</div>
+<div class="mx-12 md:mx-36 justify-center">
+  <div class="grid sm:grid-cols-1 md:grid-cols-2 mt-8 gap-16 justify-center">
+    {
+      themes.map((item) => (
+        <div class="flex gap-4 items-start">
+          <div>
+            <div class="flex gap-4">
+              <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
+                <Icon class="text-white" name={item.icon} />
+              </div>
+              <div><h2 class="font-semibold text-3xl">{item.title}</h2></div>
+            </div>
+            <div class="text-slate-500 mt-2 leading-relaxed">
+              <ul>
+                {item.subthemes.map((subtheme) => (
+                  <Card>
+                    <p class="text-md font-semibold">
+                      {subtheme}
+                    </p>
+
+                    </Card>
+                  )
+                )}
+              </ul>
+            </div>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</div>
