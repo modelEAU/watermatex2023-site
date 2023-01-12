@@ -4,17 +4,17 @@ import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
 import Layout from "@layouts/Layout.astro";
 
-const peter = "https://media.licdn.com/dms/image/C4D03AQFGSzFnygWZog/profile-displayphoto-shrink_800_800/0/1516787058933?e=1676505600&v=beta&t=rHhUsFkJtXQtUJGUDpNLJ0IBVWNturhUeKocX61ZTZU";
-const elena = "https://media.licdn.com/dms/image/C5603AQEP-B3_ZG40Uw/profile-displayphoto-shrink_800_800/0/1516933568929?e=1676505600&v=beta&t=lZDXqWHohL8rRfhqVriKiP0FQnW4hDa9-Kw6C2700y4";
-const jd = "https://media.licdn.com/dms/image/C5603AQGKoUU6Dr-qCg/profile-displayphoto-shrink_800_800/0/1616870061858?e=1676505600&v=beta&t=a5af8gNMDywfpTy0JWdqu9aECDiRleZOqdE1t9Ouyxc";
-const saba = "https://media.licdn.com/dms/image/C5603AQEXrWOesvTXjQ/profile-displayphoto-shrink_800_800/0/1585305464115?e=1676505600&v=beta&t=m8yIDOP7rQpKLaTy_T7Jn2CXRVMibu-Q-eAztR89iFE";
+// import elena from "assets/person-elena.jpg";
+// import jd from "assets/person-jd.avif";
+// import peter from "assets/person-peter.avif";
+// import saba from "assets/person-saba.avif";
 
 const orgCommittee = [
   {
     name: "Peter Vanrolleghem",
     title: "",
     avatar: {
-      src: peter,
+      src: "src/assets/person-peter.avif",
       width: 800,
       height: 800,
     },
@@ -23,7 +23,7 @@ const orgCommittee = [
     name: "Elena Torfs",
     title: "",
     avatar: {
-      src: elena,
+      src: "src/assets/person-elena2.jpg",
       width: 800,
       height: 800,
     },
@@ -32,7 +32,7 @@ const orgCommittee = [
     name: "Jean-David Therrien",
     title: "",
     avatar: {
-      src: jd,
+      src: "src/assets/person-jd.avif",
       width: 800,
       height: 800,
     },
@@ -41,7 +41,7 @@ const orgCommittee = [
     name: "Saba Daneshgar",
     title: "",
     avatar: {
-      src: saba,
+      src: "src/assets/person-saba.avif",
       width: 800,
       height: 800,
     },
@@ -61,7 +61,7 @@ const ywpCommittee = [];
 
     <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
       <h2 class="font-bold text-3xl text-gray-800">
-        Organization committee
+        Organizing committee
       </h2>
       <!--p class="text-lg leading-relaxed text-slate-500">
         Insert text here
