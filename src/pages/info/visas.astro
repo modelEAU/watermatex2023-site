@@ -1,4 +1,5 @@
 ---
+import Callout from "@components/callout.astro";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
 import Layout from "@layouts/Layout.astro";
@@ -8,7 +9,98 @@ import Layout from "@layouts/Layout.astro";
   <Container>
     <Sectionhead>
         <Fragment slot="title">Obtaining a visa</Fragment>
-        <Fragment slot="desc">Coming soon</Fragment>
-      </Sectionhead>
+        <Fragment slot="desc">What you need to know to travel to Canada</Fragment>
+    </Sectionhead>
+    <div class="mx-12 md:mx-36 py-8">
+      <h2 class="text-2xl lg:text-3xl font-bold lg:tracking-tight text-left mt-6">
+        Do I need a visa?
+      </h2>
+      <p class="text-lg mt-4 text-slate-600 py-2">
+        <a class="underline text-blue-500" target="_blank" href="http://www.cic.gc.ca/english/visit/visas.asp" target="_blank">
+          Citizens of certain countries and territories
+        </a> need a visa to visit or transit Canada. Visa-exempt foreign nationals are expected to have an
+        <a class="underline text-blue-500" target="_blank" href="http://www.cic.gc.ca/english/visit/eta.asp">
+          Electronic Travel Authorization (eTA)
+        </a> to fly to or transit through Canada.
+        <a class="underline text-blue-500" target="_blank" href="http://www.cic.gc.ca/english/visit/visas-all.asp#eta-exemptions">
+          Exceptions
+        </a>
+        include U.S. citizens, and travellers with a valid Canadian visa. Canadian citizens, including
+        <a class="underline text-blue-500" target="_blank" href="http://www.cic.gc.ca/english/visit/dual-canadian-citizens.asp">
+          dual citizens
+        </a>
+        , and
+        <a class="underline text-blue-500" target="_blank" href="http://www.cic.gc.ca/english/newcomers/about-pr.asp">
+          Canadian permanent residents
+        </a>
+        are not eligible to apply for an eTA.
+      </p>
+      <p class="text-lg mt-4 text-slate-600 py-2">
+        If you need a visa, we will send you an Invitation Letter on request. <strong>Please, carefully read the following information.</strong>
+      </p>
+
+      <Callout>
+        Delegates can include an event code in their visa application to expedite their request. <br>An event code will be made available soon. <strong>Please check this page often!</strong>
+      </Callout>
+
+      <h2 class="text-2xl lg:text-3xl font-bold lg:tracking-tight text-left mt-6">
+        Submission of Applications
+      </h2>
+      <p class="text-lg mt-4 text-slate-600 py-2">
+        Canada does not have a visa office in every country so it is important that delegates visit
+        <a class="underline text-blue-500" target="_blank" href="http://www.cic.gc.ca/ENGLISH/information/offices/apply-where.asp">
+          the website of the visa office
+        </a>
+        responsible for processing their visa applications. Information is available on the website on how to submit a visa application and the documentation required.
+      </p>
+
+      <p class="text-lg mt-4 text-slate-600 py-2">
+        Delegates are encouraged to submit their visa applications <strong>well in advance of the date of the event</strong> at a
+        <a class="underline text-blue-500" target="_blank" href="http://www.cic.gc.ca/english/information/offices/vac.asp">
+          Visa Application Centre
+        </a>
+        or
+        <a class="underline text-blue-500" target="_blank" href="http://www.cic.gc.ca/english/visit/business.asp">
+          on-line E-applications (e-Apps).
+        </a>
+      </p>
+
+      <h2 class="text-2xl lg:text-3xl font-bold lg:tracking-tight text-left mt-6">
+        e-Apps
+      </h2>
+      <p class="text-lg mt-4 text-slate-600 py-2">
+        The e-Application system allows delegates to submit applications online.
+      </p>
+      <p class="text-lg mt-4 text-slate-600 py-2">
+        Delegates that need a visa but require their passport for other travel purposes are strongly encouraged to submit their visa applications on-line (
+        <a class="underline text-blue-500" target="_blank" href="http://www.cic.gc.ca/english/visit/business.asp">
+        e-Apps
+        </a>
+        ). Delegates that choose to apply on-line will not have to submit their passport until a decision has been taken on their applications. If required, the visa office will send the applicant instructions on how and where to send their passports to finalize the visa process.
+      </p>
+      <h2 class="text-2xl lg:text-3xl font-bold lg:tracking-tight text-left mt-6">
+        Visa Application Centres (VACs)
+      </h2>
+      <p class="text-lg mt-4 text-slate-600 py-2">
+        VACs are commercial service providers authorized by Canada to provide specific services to applicants.
+      </p>
+      <p class="text-lg mt-4 text-slate-600 py-2">
+        VACs provide a number of services including help applicants fill out forms, answer questions and ensure that applications are complete, thereby reducing unnecessary delays or refusals due to incomplete applications.
+      </p>
+      <p class="text-lg mt-4 text-slate-600 py-2">
+        Applicants that are required to provide
+        <a class="underline text-blue-500" target="_blank" href="http://www.cic.gc.ca/english/visit/biometrics.asp">
+          biometrics information
+        </a>
+        as part of the visa application process can do so at a VAC.
+        Additional information on the biometrics requirements is available
+        <a class="underline text-blue-500" target="_blank" href="http://www.cic.gc.ca/english/department/media/multimedia/video/biometrics/biometrics.asp">
+          at the CIC website.
+        </a>
+      </p>
+      <p class="text-lg mt-4 text-slate-600 py-2">
+        VACs send applications to Visa Offices and transmit decisions to applicants in a secure and confidential manner. VACs do not process visa applications and play no role in the decision-making process.
+      </p>
+    </div>
   </Container>
 </Layout>

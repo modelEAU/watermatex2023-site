@@ -1,0 +1,26 @@
+---
+const { showTitle = false } = Astro.props;
+
+const paragraphs = [
+    "The 11th IWA Symposium on Modelling and Integrated Assessment (Watermatex 2023) will provide a great forum to exchange methodologies and international experiences on all aspects of water-related problems within an interdisciplinary framework that relies heavily on different types of models. Integrated Assessment aims at bringing all aspects of a problem together, and is particularly concerned with such issues as the social and economic impacts of solutions to these problems. The symposium's contributions are not restricted to any single discipline but extend to problems in drinking water treatment and distribution, sewer systems and wastewater treatment, surface and groundwater, technical and natural systems. However, contributions are expected to have a methodological focus.",
+
+    "Watermatex aims at promoting the application of mathematical methods for modelling and simulation, data management, systems analysis and decision support within the entire water sector. It targets people from research, consulting companies, institutions and utilities to extend the use of models and computing tools to support the understanding, management and optimization of all water systems. New challenges related to smart water systems, water reuse, resource recovery and the water-energy nexus open up new opportunities for enhanced modelling and contributions tackling these topics will be particularly welcomed at the conference.",
+
+    "The MIA Specialist Group of IWA organizes Watermatex as a quadrennial symposium. The first one dates back to 1987 in London, UK. The most recent editions were in June 2015 in Gold Coast, Australia and in September 2019 in Copenhagen, Denmark. We look forward to welcoming you during the Indian summer in Québec City, Canada in September 2023 for the 11th IWA Symposium on MIA."
+]
+---
+
+<div class="mt-16 md:mt-5">
+  {showTitle ? <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight text-center">
+    Conference Themes
+  </h2>: ""}
+  <div class="mx-12 md:mx-36 py-8">
+    {
+        paragraphs.map((text) => (
+            <p class="text-lg mt-4 text-slate-600 py-2">
+              {text}
+            </p>
+        ))
+    }
+  </div>
+</div>

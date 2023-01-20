@@ -3,9 +3,11 @@ import Container from "@components/container.astro";
 import Cta from "@components/cta.astro";
 import Hero from "@components/hero.astro";
 import Logos from "@components/logos.astro";
-import Sectionhead from "@components/sectionhead.astro";
+import ThemesText from "@components/themes-text.astro";
 import Layout from "@layouts/Layout.astro";
+import uGhent from "../assets/logo-ugent_en.png";
 import ulaval from "../assets/logo-ulaval.png";
+import cEau from "../assets/logo-ul_ceau.png";
 
 const affiliates = [
   {
@@ -13,15 +15,21 @@ const affiliates = [
     src: ulaval,
     width: 200,
     height: 87
+  },
+  {
+    name: "ugent",
+    src: uGhent,
+    width: 117,
+    height: 100
   }
 ]
 
 const sponsors = [
   {
-    name: "iwa",
-    src: "./../assests/logo-iwa.png",
-    width: 200,
-    height: 150
+    name: "c-eau",
+    src: cEau,
+    width: 245,
+    height: 87
   }
 ]
 ---
@@ -30,16 +38,14 @@ const sponsors = [
   <Container>
     <Hero />
     <!--Features/-->
-      <Logos header="Affiliations" logos={affiliates}/>
-      <Sectionhead>
-        <Fragment slot="title">Thank you to our sponsors</Fragment>
-        <Fragment slot="desc">There are no sponsors yet. <a href="/sponsors/becoming-a-sponsor" class= "text-blue-500 mt-1">Will you be the first?</a></Fragment>
+    <Logos header="Thank you to our sponsors" logos={sponsors}/>
 
-      </Sectionhead>
-      <!--Logos header="Platinum sponsors" logos={sponsors}/>
-      <Logos header="Gold sponsors" logos={sponsors}/>
+    <!--Logos header="Supporting utilities" logos={sponsors}/-->
+    <!--<Logos header="Gold sponsors" logos={sponsors}/>
       <Logos header="Silver sponsors" logos={sponsors}/>
       <Logos header="Bronze sponsors" logos={sponsors}/-->
+    <Logos header="This event brought to you by" logos={affiliates}/>
+    <ThemesText showTitle={false}></ThemesText>
     <Cta />
   </Container>
 </Layout>
