@@ -5,6 +5,8 @@ import Hero from "@components/hero.astro";
 import Logos from "@components/logos.astro";
 import ThemesText from "@components/themes-text.astro";
 import Layout from "@layouts/Layout.astro";
+import hrsd from "../assets/logo-hrsd.png";
+import iwa from "../assets/logo-iwa.png";
 import uGhent from "../assets/logo-ugent_en.png";
 import ulaval from "../assets/logo-ulaval.png";
 import cEau from "../assets/logo-ul_ceau.png";
@@ -13,15 +15,22 @@ const affiliates = [
   {
     name: "ulaval",
     src: ulaval,
-    width: 200,
-    height: 87
+    width: 200/1.5,
+    height: 87/1.5
   },
   {
     name: "ugent",
     src: uGhent,
-    width: 117,
-    height: 100
-  }
+    width: 117/1.5,
+    height: 100/1.5
+  },
+  {
+    name: "IWA",
+    src: iwa,
+    width: 211/1.5,
+    height: 100/1.5
+  },
+
 ]
 
 const sponsors = [
@@ -32,20 +41,33 @@ const sponsors = [
     height: 87
   }
 ]
+const utilities = [
+  {
+    name: "HRSD",
+    src: hrsd,
+    width: 280,
+    height: 50
+  }
+]
 ---
 
 <Layout title="Watermatex 2023">
   <Container>
     <Hero />
     <!--Features/-->
-    <Logos header="Thank you to our sponsors" logos={sponsors}/>
+    <div class="mx-12 md:mx-36 justify-center">
+      <div class="grid sm:grid-cols-1 md:grid-cols-2 mt-8 gap-16 justify-center">
+        <Logos header="Thank you to our sponsors" logos={sponsors}/>
+        <Logos header="Supporting utilities" logos={utilities}/>
+      </div>
+    </div>
 
     <!--Logos header="Supporting utilities" logos={sponsors}/-->
     <!--<Logos header="Gold sponsors" logos={sponsors}/>
       <Logos header="Silver sponsors" logos={sponsors}/>
       <Logos header="Bronze sponsors" logos={sponsors}/-->
-    <Logos header="This event brought to you by" logos={affiliates}/>
     <ThemesText showTitle={false}></ThemesText>
+    <Logos header=" " logos={affiliates}/>
     <Cta />
   </Container>
 </Layout>
