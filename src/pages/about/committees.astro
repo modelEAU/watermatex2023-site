@@ -49,22 +49,34 @@ const orgCommittee = [
 ];
 const sciCommittee = [];
 const ywpCommittee = [];
-
 ---
 
 <Layout title="About us">
   <Container>
     <Sectionhead>
       <Fragment slot="title">About us</Fragment>
-      <Fragment slot="desc">Our team is dedicated to building an incredible Watermatex.</Fragment>
+      <Fragment slot="desc"
+        >Our team is dedicated to building an incredible Watermatex.</Fragment
+      >
     </Sectionhead>
 
     <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
-      <h2 class="font-bold text-3xl text-gray-800">
-        Scientific committee
-      </h2>
+      <h2 class="font-bold text-3xl text-gray-800">Scientific committee</h2>
       <p class="text-lg leading-relaxed text-slate-500">
-        Coming soon...
+        The scientific committee for Watermatex2023 will be made up of teams of
+        Experienced Water Professionals (EWP) and Young Water Professionals
+        (YWP). EWPs and YWPs will review abstracts together. Thoughout the
+        review process, the EWPs will provide mentorship and guidance to their
+        YWP peers. The abstract review process is scheduled to take place
+        between mid-April and mid-May 2023.
+      </p>
+      <p class="text-lg leading-relaxed text-slate-500">
+        <a
+          href="https://forms.gle/MW7Ke2dgXop2SPCx7"
+          target="_parent"
+          class="text-gray-600 hover:text-gray-900 underline"
+          >Apply now for a YWP spot on the scientific committee</a
+        >
       </p>
     </div>
     <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
@@ -73,25 +85,23 @@ const ywpCommittee = [];
           <div class="group">
             <div class="w-full aspect-square">
               <Image
-              {...item.avatar}
-              format="avif"
-              alt="Team"
-              class="w-full h-full object-cover rounded transition  group-hover:-translate-y-1 group-hover:shadow-xl"
+                {...item.avatar}
+                format="avif"
+                alt="Team"
+                class="w-full h-full object-cover rounded transition  group-hover:-translate-y-1 group-hover:shadow-xl"
               />
-              </div>
+            </div>
 
-                <div class="mt-4 text-center">
-                  <h2 class="text-lg text-gray-800"> {item.name}</h2>
-                  <h3 class="text-sm text-slate-500"> {item.title}</h3>
-                  </div>
-                  </div>
-                  ))
-                }
+            <div class="mt-4 text-center">
+              <h2 class="text-lg text-gray-800"> {item.name}</h2>
+              <h3 class="text-sm text-slate-500"> {item.title}</h3>
+            </div>
+          </div>
+        ))
+      }
     </div>
     <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
-      <h2 class="font-bold text-3xl text-gray-800">
-        Organizing committee
-      </h2>
+      <h2 class="font-bold text-3xl text-gray-800">Organizing committee</h2>
       <!--p class="text-lg leading-relaxed text-slate-500">
         Insert text here
       </p-->
@@ -102,17 +112,17 @@ const ywpCommittee = [];
           <div class="group">
             <div class="w-full aspect-square">
               <Image
-              {...item.avatar}
-              format="avif"
-              alt="Team"
-              class="w-full h-full object-cover rounded transition  group-hover:-translate-y-1 group-hover:shadow-xl"
+                {...item.avatar}
+                format="avif"
+                alt="Team"
+                class="w-full h-full object-cover rounded transition  group-hover:-translate-y-1 group-hover:shadow-xl"
               />
-              </div>
+            </div>
 
-              <div class="mt-4 text-center">
-                <h2 class="text-lg text-gray-800"> {item.name}</h2>
-                <h3 class="text-sm text-slate-500"> {item.title}</h3>
-                </div>
+            <div class="mt-4 text-center">
+              <h2 class="text-lg text-gray-800"> {item.name}</h2>
+              <h3 class="text-sm text-slate-500"> {item.title}</h3>
+            </div>
           </div>
         ))
       }
@@ -121,9 +131,7 @@ const ywpCommittee = [];
       <h2 class="font-bold text-3xl text-gray-800">
         Young Water Professionals committee
       </h2>
-      <p class="text-lg leading-relaxed text-slate-500">
-        Coming soon...
-      </p>
+      <p class="text-lg leading-relaxed text-slate-500">Coming soon...</p>
     </div>
     <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
       {
