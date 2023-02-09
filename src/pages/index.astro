@@ -5,64 +5,63 @@ import Hero from "@components/hero.astro";
 import Logos from "@components/logos.astro";
 import ThemesText from "@components/themes-text.astro";
 import Layout from "@layouts/Layout.astro";
+import cEau from "../assets/logo-c-eau.png";
 import dcWater from "../assets/logo-dcwater.png";
 import dommel from "../assets/logo-de-dommel2.png";
 import hrsd from "../assets/logo-hrsd.png";
 import iwa from "../assets/logo-iwa.png";
 import uGhent from "../assets/logo-ugent_en.png";
 import ulaval from "../assets/logo-ulaval.png";
-import cEau from "../assets/logo-ul_ceau.png";
 
 const affiliates = [
   {
     name: "ulaval",
     src: ulaval,
-    width: 200/1.5,
-    height: 87/1.5
+    width: 200 / 1.5,
+    height: 87 / 1.5,
   },
   {
     name: "ugent",
     src: uGhent,
-    width: 117/1.5,
-    height: 100/1.5
+    width: 117 / 1.5,
+    height: 100 / 1.5,
   },
   {
     name: "IWA",
     src: iwa,
-    width: 211/1.5,
-    height: 100/1.5
+    width: 211 / 1.5,
+    height: 100 / 1.5,
   },
-
-]
+];
 
 const sponsors = [
   {
     name: "c-eau",
     src: cEau,
-    width: 245,
-    height: 87
-  }
-]
+    width: 308,
+    height: 55,
+  },
+];
 const utilities = [
   {
     name: "HRSD",
     src: hrsd,
     width: 140,
-    height: 25
+    height: 25,
   },
   {
     name: "Waterschap De Dommel",
     src: dommel,
     width: 140,
-    height: 70
+    height: 70,
   },
   {
     name: "DC Water",
     src: dcWater,
     width: 140,
-    height: 103
+    height: 103,
   },
-]
+];
 ---
 
 <Layout title="Watermatex 2023">
@@ -70,9 +69,10 @@ const utilities = [
     <Hero />
     <!--Features/-->
     <div class="mx-12 md:mx-36 justify-center">
-      <div class="grid sm:grid-cols-1 md:grid-cols-2 mt-8 gap-16 justify-center">
-        <Logos header="Thank you to our sponsors" logos={sponsors}/>
-        <Logos header="Supporting utilities" logos={utilities}/>
+      <div
+        class="grid sm:grid-cols-1 md:grid-cols-2 mt-8 gap-16 justify-center">
+        <Logos header="Thank you to our sponsors" logos={sponsors} />
+        <Logos header="Supporting utilities" logos={utilities} />
       </div>
     </div>
 
@@ -80,8 +80,8 @@ const utilities = [
     <!--<Logos header="Gold sponsors" logos={sponsors}/>
       <Logos header="Silver sponsors" logos={sponsors}/>
       <Logos header="Bronze sponsors" logos={sponsors}/-->
-    <ThemesText showTitle={false}></ThemesText>
-    <Logos header=" " logos={affiliates}/>
+    <ThemesText showTitle={false} />
+    <Logos header=" " logos={affiliates} />
     <Cta />
   </Container>
 </Layout>
