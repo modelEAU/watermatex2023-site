@@ -8,15 +8,17 @@ const themes = [
     title: "Methodologies",
     subthemes: [
       "Process modelling (Biochemical and separation processes",
-      "Plant-wide and integrated assessment",
+      "System-wide modelling and integrated assessment",
+      "Hydrological modelling and forecasting",
+      "Hydraulic modelling",
       "Holistic evaluation (LCA, Circular economy and Socio-economic aspects)",
       "Decision support systems",
       "Uncertainty, sensitivity and risk analysis",
       "(Hierarchical) control strategies",
       "Advanced modelling frameworks (CFD, PBM, etc.)",
       "Hybrid modelling",
-      "Data quality pipelines",
-      "Soft sensors"
+      "Smart sensors Data quality pipelines",
+      "Soft sensors",
     ],
     icon: "entypo:lab-flask",
   },
@@ -24,20 +26,19 @@ const themes = [
     title: "Application Domains",
     subthemes: [
       "Water treatment (wastewater, drinking water, process water)",
-      "Water reuse",
-      "Resource recovery",
+      "Water and resource recovery",
       "Decentralized water treatment",
-      "Drinking water and sewer networks",
-      "Receiving water systems",
-      "Water and energy nexus",
+      "Drinking water networks and sewer networks",
+      "Natural water systems (rivers, lakes, ...)",
+      "Water & energy nexus",
       "Smart cities",
+      "Green infrastructures",
+      "Watersheds",
     ],
     icon: "ic:baseline-water-drop",
   },
-
 ];
 ---
-
 
 <div class="mx-12 md:mx-36 justify-center">
   <div class="grid sm:grid-cols-1 md:grid-cols-2 mt-8 gap-16 justify-center">
@@ -49,19 +50,17 @@ const themes = [
               <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
                 <Icon class="text-white" name={item.icon} />
               </div>
-              <div><h2 class="font-semibold text-3xl">{item.title}</h2></div>
+              <div>
+                <h2 class="font-semibold text-3xl">{item.title}</h2>
+              </div>
             </div>
             <div class="text-slate-500 mt-2 leading-relaxed">
               <ul>
                 {item.subthemes.map((subtheme) => (
                   <Card>
-                    <p class="text-md font-semibold">
-                      {subtheme}
-                    </p>
-
-                    </Card>
-                  )
-                )}
+                    <p class="text-md font-semibold">{subtheme}</p>
+                  </Card>
+                ))}
               </ul>
             </div>
           </div>
