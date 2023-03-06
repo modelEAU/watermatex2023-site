@@ -21,9 +21,10 @@ const menuitems = [
     title: "About Us",
     path: "/about",
     children: [
-      { title: "Committees", path: "/about/committees" },
+      { title: "Scientific Committee", path: "/about/sci-committee" },
+      { title: "Organisation Committee", path: "/about/org-committee" },
       { title: "Contact us", path: "/about/contact" },
-    ]
+    ],
   },
   {
     title: "Practical Info",
@@ -33,7 +34,7 @@ const menuitems = [
       { title: "Accommodation", path: "/info/accommodation" },
       { title: "Visas", path: "/info/visas" },
       { title: "Templates", path: "/info/templates" },
-    ]
+    ],
   },
   {
     title: "Sponsors",
@@ -41,7 +42,7 @@ const menuitems = [
     children: [
       { title: "Becoming a sponsor", path: "/sponsors/becoming-a-sponsor" },
       { title: "Our sponsors", path: "/sponsors/our-sponsors" },
-    ]
+    ],
   },
   {
     title: "News",
@@ -56,7 +57,8 @@ const menuitems = [
     x-data="{ open: false }"
     x-init="$watch('open', value => console.log(value))">
     <div class="flex w-full lg:w-auto items-center justify-between">
-      <Image class="mr-6"
+      <Image
+        class="mr-6"
         src={logo}
         alt="watermatex2023"
         loading="eager"
@@ -125,8 +127,9 @@ const menuitems = [
     </nav>
     <div>
       <div class="hidden lg:flex items-center gap-4">
-
-        <Link style="outline" href="/submissions/guidelines" size="md">Submit</Link>
+        <Link style="outline" href="/submissions/guidelines" size="md"
+          >Submit</Link
+        >
         <Link href="/register/fees" size="md">Register</Link>
       </div>
     </div>

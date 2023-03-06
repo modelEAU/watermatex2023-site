@@ -1,0 +1,121 @@
+---
+import { Image } from "@astrojs/image/components";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import Layout from "@layouts/Layout.astro";
+
+import elena from "assets/people/elena-torfs.png";
+import jd from "assets/people/jean-david-therrien.png";
+import mostafa from "assets/people/mostafa-khalil.png";
+import peter from "assets/people/peter-vanrolleghem.png";
+import saba from "assets/people/saba-daneshgar.png";
+import sanaz from "assets/people/sanaz-mohebali.png";
+import sovanna from "assets/people/sovanna-tik.png";
+
+const orgCommittee = [
+  {
+    name: "Peter Vanrolleghem",
+    title: "Université Laval",
+    avatar: {
+      src: peter,
+      width: 800,
+      height: 800,
+    },
+  },
+  {
+    name: "Elena Torfs",
+    title: "Université Laval",
+    avatar: {
+      src: elena,
+      width: 800,
+      height: 800,
+    },
+  },
+  {
+    name: "Jean-David Therrien",
+    title: "Université Laval",
+    avatar: {
+      src: jd,
+      width: 800,
+      height: 800,
+    },
+  },
+  {
+    name: "Saba Daneshgar",
+    title: "Biomath",
+    avatar: {
+      src: saba,
+      width: 800,
+      height: 800,
+    },
+  },
+  {
+    name: "Sanaz Mohebali",
+    title: "Université Laval",
+    avatar: {
+      src: sanaz,
+      width: 800,
+      height: 800,
+    },
+  },
+  {
+    name: "Sovanna Tik",
+    title: "Université Laval",
+    avatar: {
+      src: sovanna,
+      width: 800,
+      height: 800,
+    },
+  },
+  {
+    name: "Mostafa Khalil",
+    title: "University of Alberta",
+    avatar: {
+      src: mostafa,
+      width: 800,
+      height: 800,
+    },
+  },
+];
+
+const committee = "Organisation Committee";
+---
+
+<Layout title={committee}>
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">{committee}</Fragment>
+      <Fragment slot="desc"
+        >Our team is dedicated to building an incredible Watermatex.</Fragment
+      >
+    </Sectionhead>
+    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
+      {
+        orgCommittee
+          .sort((a, b) =>
+            a.name.split(" ")[1].toLowerCase() >
+            b.name.split(" ")[1].toLowerCase()
+              ? 1
+              : -1
+          )
+          .map((item) => (
+            <div class="group">
+              <div class="w-full aspect-square">
+                <Image
+                  {...item.avatar}
+                  format="avif"
+                  alt="Team"
+                  class="w-full h-full object-cover rounded transition  group-hover:-translate-y-1 group-hover:shadow-xl"
+                />
+              </div>
+
+              <div class="mt-4 text-center">
+                <h2 class="text-lg text-gray-800"> {item.name}</h2>
+                <h3 class="text-sm text-slate-500"> {item.title}</h3>
+              </div>
+            </div>
+          ))
+      }
+    </div>
+  </Container>
+</Layout>

@@ -4,90 +4,50 @@ import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
 import Layout from "@layouts/Layout.astro";
 
-import elena from "assets/person-elena2.jpg";
-import jd from "assets/person-jd.jpg";
-import peter from "assets/person-peter.jpg";
-import saba from "assets/person-saba.jpg";
+import elena from "assets/people/elena-torfs.png";
+import peter from "assets/people/peter-vanrolleghem.png";
 
-import alexandroVargas from "assets/sc/alejandro-vargas.png";
-import andreiaAmaral from "assets/sc/andreia-amaral.png";
-import bingJieNi from "assets/sc/bing-jie-ni.png";
-import bruceJohnson from "assets/sc/bruce-johnson.png";
-import charlesBott from "assets/sc/charles-bott.png";
-import damienBatstone from "assets/sc/damien-batstone.png";
-import dirkMuschalla from "assets/sc/dirk-muschalla.png";
-import dwightHouweling from "assets/sc/dwight-houweling.png";
-import eberhardMorgenroth from "assets/sc/eberhard-morgenroth.png";
-import eduardoAyesa from "assets/sc/eduardo-ayesa.png";
-import elhamRamin from "assets/sc/elham-ramin.png";
-import fatemehChebana from "assets/sc/fateh-chebana.png";
-import francoisAnctil from "assets/sc/francois-anctil.png";
-import giacomoBellandi from "assets/sc/giacomo-bellandi.png";
-import giorgioManina from "assets/sc/giorgio-manina.png";
-import janelcyAlfares from "assets/sc/janelcy-alfares.png";
-import jeanLucBertrandKrajewski from "assets/sc/jean-lub-bertrand-krajewski.png";
-import jipingJiang from "assets/sc/jiping-jiang.png";
-import juanBaeza from "assets/sc/juan-baeza.png";
-import julienLaurent from "assets/sc/julien-laurent.png";
-import kimberlySolon from "assets/sc/kimberly-solon.png";
-import lievRieger from "assets/sc/liev-rieger.png";
-import linaBelia from "assets/sc/lina-belia.png";
-import lloydTownley from "assets/sc/lloyd-townley.png";
-import lluisCorominas from "assets/sc/lluis-corominas.png";
-import lorenzoBenedetti from "assets/sc/lorenzo-benedetti.png";
-import marieNoellePons from "assets/sc/marie-noelle-pons.png";
-import martinPleau from "assets/sc/martin-pleau.png";
-import peterBach from "assets/sc/peter-bach.png";
-import sarahDorner from "assets/sc/sarah-dorner.png";
-import sinaBorzoei from "assets/sc/sina-borzoei.png";
-import sophieDuchesne from "assets/sc/sophie-duchesne.png";
-import sovannaTik from "assets/sc/sovanna-tik.png";
-import tahaOuarda from "assets/sc/taha-ouarda.png";
-import timothyHoloway from "assets/sc/timothy-holoway.png";
-import ulfJeppsson from "assets/sc/ulf-jeppsson.png";
-import wolfgangRauch from "assets/sc/wolfgang-rauch.png";
-import xavierFloresAlsina from "assets/sc/xavier-flores-alsina.png";
-import yvesComeau from "assets/sc/yves-comeau.png";
-import zoranKapelan from "assets/sc/zoran-kapelan.png";
+import alexandroVargas from "assets/people/alejandro-vargas.png";
+import andreiaAmaral from "assets/people/andreia-amaral.png";
+import bingJieNi from "assets/people/bing-jie-ni.png";
+import bruceJohnson from "assets/people/bruce-johnson.png";
+import charlesBott from "assets/people/charles-bott.png";
+import damienBatstone from "assets/people/damien-batstone.png";
+import dirkMuschalla from "assets/people/dirk-muschalla.png";
+import dwightHouweling from "assets/people/dwight-houweling.png";
+import eberhardMorgenroth from "assets/people/eberhard-morgenroth.png";
+import eduardoAyesa from "assets/people/eduardo-ayesa.png";
+import elhamRamin from "assets/people/elham-ramin.png";
+import fatemehChebana from "assets/people/fateh-chebana.png";
+import francoisAnctil from "assets/people/francois-anctil.png";
+import giacomoBellandi from "assets/people/giacomo-bellandi.png";
+import giorgioManina from "assets/people/giorgio-manina.png";
+import janelcyAlfares from "assets/people/janelcy-alfares.png";
+import jeanLucBertrandKrajewski from "assets/people/jean-lub-bertrand-krajewski.png";
+import jipingJiang from "assets/people/jiping-jiang.png";
+import juanBaeza from "assets/people/juan-baeza.png";
+import julienLaurent from "assets/people/julien-laurent.png";
+import kimberlySolon from "assets/people/kimberly-solon.png";
+import lievRieger from "assets/people/liev-rieger.png";
+import linaBelia from "assets/people/lina-belia.png";
+import lloydTownley from "assets/people/lloyd-townley.png";
+import lluisCorominas from "assets/people/lluis-corominas.png";
+import lorenzoBenedetti from "assets/people/lorenzo-benedetti.png";
+import marieNoellePons from "assets/people/marie-noelle-pons.png";
+import martinPleau from "assets/people/martin-pleau.png";
+import peterBach from "assets/people/peter-bach.png";
+import sarahDorner from "assets/people/sarah-dorner.png";
+import sinaBorzoei from "assets/people/sina-borzoei.png";
+import sophieDuchesne from "assets/people/sophie-duchesne.png";
+import sovannaTik from "assets/people/sovanna-tik.png";
+import tahaOuarda from "assets/people/taha-ouarda.png";
+import timothyHoloway from "assets/people/timothy-holoway.png";
+import ulfJeppsson from "assets/people/ulf-jeppsson.png";
+import wolfgangRauch from "assets/people/wolfgang-rauch.png";
+import xavierFloresAlsina from "assets/people/xavier-flores-alsina.png";
+import yvesComeau from "assets/people/yves-comeau.png";
+import zoranKapelan from "assets/people/zoran-kapelan.png";
 
-const orgCommittee = [
-  {
-    name: "Peter Vanrolleghem",
-    title: "Université Laval",
-    avatar: {
-      src: peter,
-      width: 800,
-      height: 800,
-    },
-  },
-  {
-    name: "Elena Torfs",
-    title: "Université Laval",
-    avatar: {
-      src: elena,
-      width: 800,
-      height: 800,
-    },
-  },
-  {
-    name: "Jean-David Therrien",
-    title: "Université Laval",
-    avatar: {
-      src: jd,
-      width: 800,
-      height: 800,
-    },
-  },
-  {
-    name: "Saba Daneshgar",
-    title: "Biomath",
-    avatar: {
-      src: saba,
-      width: 800,
-      height: 800,
-    },
-  },
-];
 const sciCommittee = [
   {
     name: "Peter Vanrolleghem",
@@ -468,110 +428,65 @@ const sciCommittee = [
     },
   },
 ];
-const ywpCommittee = [];
+
+const title = "Scientific Committee";
 ---
 
-<Layout title="About us">
+<Layout title={title}>
   <Container>
     <Sectionhead>
-      <Fragment slot="title">About us</Fragment>
-      <Fragment slot="desc"
-        >Our team is dedicated to building an incredible Watermatex.</Fragment
-      >
+      <Fragment slot="title">{title}</Fragment>
+      <Fragment slot="desc"></Fragment>
     </Sectionhead>
 
     <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
-      <h2 class="font-bold text-3xl text-gray-800">Scientific committee</h2>
       <p class="text-lg leading-relaxed text-slate-500">
         The scientific committee for Watermatex2023 will be made up of teams of
         Experienced Water Professionals (EWP) and Young Water Professionals
-        (YWP). EWPs and YWPs will review abstracts together. Thoughout the
+        (YWP). EWPs and YWPs will review abstracts together. Throughout the
         review process, the EWPs will provide mentorship and guidance to their
         YWP peers. The abstract review process is scheduled to take place
         between mid-April and mid-May 2023.
+      </p>
+      <p class="text-lg leading-relaxed text-slate-500">
+        The members of the scientific committee are still being confirmed. Below
+        are the currently confirmed members.
       </p>
       <p class="text-lg leading-relaxed text-slate-500">
         <a
           href="https://forms.gle/MW7Ke2dgXop2SPCx7"
           target="_parent"
           class="text-gray-600 hover:text-gray-900 underline"
-          >Apply now for a YWP spot on the scientific committee</a
+          >Apply now for a YWP spot on the scientific committee!</a
         >
       </p>
     </div>
     <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
       {
-        sciCommittee.map((item) => (
-          <div class="group">
-            <div class="w-full aspect-square">
-              <Image
-                {...item.avatar}
-                format="avif"
-                alt="Team"
-                class="w-full h-full object-cover rounded transition  group-hover:-translate-y-1 group-hover:shadow-xl"
-              />
-            </div>
+        sciCommittee
+          .sort((a, b) =>
+            a.name.split(" ")[1].toLowerCase() >
+            b.name.split(" ")[1].toLowerCase()
+              ? 1
+              : -1
+          )
+          .map((item) => (
+            <div class="group">
+              <div class="w-full aspect-square">
+                <Image
+                  {...item.avatar}
+                  format="avif"
+                  alt="Team"
+                  class="w-full h-full object-cover rounded transition  group-hover:-translate-y-1 group-hover:shadow-xl"
+                />
+              </div>
 
-            <div class="mt-4 text-center">
-              <h2 class="text-lg text-gray-800"> {item.name}</h2>
-              <h3 class="text-sm text-slate-500"> {item.title}</h3>
+              <div class="mt-4 text-center">
+                <h2 class="text-lg text-gray-800"> {item.name}</h2>
+                <h3 class="text-sm text-slate-500"> {item.title}</h3>
+              </div>
             </div>
-          </div>
-        ))
-      }
-    </div>
-    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
-      <h2 class="font-bold text-3xl text-gray-800">Organizing committee</h2>
-      <!--p class="text-lg leading-relaxed text-slate-500">
-        Insert text here
-      </p-->
-    </div>
-    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
-      {
-        orgCommittee.map((item) => (
-          <div class="group">
-            <div class="w-full aspect-square">
-              <Image
-                {...item.avatar}
-                format="avif"
-                alt="Team"
-                class="w-full h-full object-cover rounded transition  group-hover:-translate-y-1 group-hover:shadow-xl"
-              />
-            </div>
-
-            <div class="mt-4 text-center">
-              <h2 class="text-lg text-gray-800"> {item.name}</h2>
-              <h3 class="text-sm text-slate-500"> {item.title}</h3>
-            </div>
-          </div>
-        ))
-      }
-    </div>
-    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
-      <h2 class="font-bold text-3xl text-gray-800">
-        Young Water Professionals committee
-      </h2>
-      <p class="text-lg leading-relaxed text-slate-500">Coming soon...</p>
-    </div>
-    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
-      {
-        ywpCommittee.map((item) => (
-          <div class="group">
-            <div class="w-full aspect-square">
-              <Image
-                {...item.avatar}
-                format="avif"
-                alt="Team"
-                class="w-full h-full object-cover rounded transition  group-hover:-translate-y-1 group-hover:shadow-xl"
-              />
-            </div>
-
-            <div class="mt-4 text-center">
-              <h2 class="text-lg text-gray-800"> {item.name}</h2>
-              <h3 class="text-sm text-slate-500"> {item.title}</h3>
-            </div>
-          </div>
-        ))
+          ))
       }
     </div>
   </Container>
