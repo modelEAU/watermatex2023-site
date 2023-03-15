@@ -1,63 +1,60 @@
 ---
 import Container from "@components/container.astro";
+import Pricing from "@components/pricing.astro";
 import Sectionhead from "@components/sectionhead.astro";
 import Layout from "@layouts/Layout.astro";
 
 const pricing = [
   {
-    name: "Personal",
-    price: "Free",
-    popular: false,
-    features: [
-      "Lifetime free",
-      "Up to 3 users",
-      "Unlimited Pages",
-      "Astro Sub domain",
-      "Basic Integrations",
-      "Community Support",
-    ],
-    button: {
-      text: "Get Started",
-      link: "/",
-    },
-  },
-  {
-    name: "Startup",
+    name: "High-income country - Early Registration",
     price: {
-      monthly: "$19",
-      annual: "$16",
-      discount: "10%",
-      original: "$24",
+      nonIWA: "$1090",
+      IWA: "$950",
+      YWPStudent: "$580",
+      accompanier: "$290",
     },
-    popular: true,
-    features: [
-      "All Free Features",
-      "Up to 20 users",
-      "20 Custom domains",
-      "Unlimited Collaborators",
-      "Advanced Integrations",
-      "Priority Support",
-    ],
     button: {
-      text: "Get Started",
+      text: "Register (coming soon)",
       link: "#",
     },
   },
   {
-    name: "Enterprise",
-    price: "Custom",
-    popular: false,
-    features: [
-      "All Pro Features",
-      "Unlimited Custom domains",
-      "99.99% Uptime SLA",
-      "SAML & SSO Integration",
-      "Dedicated Account Manager",
-      "24/7 Phone Support",
-    ],
+    name: "High-income country - Late Registration",
+    price: {
+      nonIWA: "$1160",
+      IWA: "$1020",
+      YWPStudent: "$650",
+      accompanier: "$290",
+    },
     button: {
-      text: "Contact us",
-      link: "/contact",
+      text: "Register (coming soon)",
+      link: "#",
+    },
+  },
+  {
+    name: "Low-income country - Early Registration",
+    price: {
+      nonIWA: "$870",
+      IWA: "$730",
+      YWPStudent: "$440",
+      accompanier: "$290",
+    },
+    button: {
+      text: "Register (coming soon)",
+      link: "#",
+    },
+  },
+  {
+    name: "Low-income country - Late Registration",
+    price: {
+      nonIWA: "$940",
+      IWA: "$800",
+      YWPStudent: "$510",
+      accompanier: "$290",
+    },
+    button: {
+      text: "Register (coming soon)",
+      link: "#",
     },
   },
 ];
@@ -67,18 +64,27 @@ const pricing = [
   <Container>
     <Sectionhead>
       <Fragment slot="title">Registration</Fragment>
-      <Fragment slot="desc"
-        >Registration opens on June 1st. Check again soon for pricing.</Fragment
+      <Fragment slot="desc">Registration opens on June 1st - be ready!</Fragment
       >
     </Sectionhead>
+    <div class="mx-12 md:mx-36 mt-2 text-slate-400">* All prices in CAD</div>
+    <div class="grid md:grid-cols-2 gap-10 mx-12 md:mx-36 max-w-screen-lg mt-4">
+      {pricing.map((item) => <Pricing plan={item} />)}
+    </div>
     <div class="mt-16 md:mt-5 mx-12 md:mx-36 py-8">
       <h2 class="font-bold text-3xl text-gray-800">Cancellation Policy</h2>
       <p class="text-lg mt-4 text-slate-600 py-2">
-        Cancellations must be sent by e-mail to <a class="underline text-blue-500" href="mailto:registration@watermatex2023.org">registration@watermatex2023.org</a>. All cancellations require confirmation by the organizers. Cancellations up until August 23, 2023 are eligible for a refund, minus an administration fee of CAD$100. Cancellations received after the deadline are not eligible for a refund. Substitutions will be accepted, but the organizers <strong>must</strong> be advised by e-mail of the new participant's name and contact details.
+        Cancellations must be sent by e-mail to <a
+          class="underline text-blue-500"
+          href="mailto:registration@watermatex2023.org"
+          >registration@watermatex2023.org</a
+        >. All cancellations require confirmation by the organizers.
+        Cancellations up until August 23, 2023 are eligible for a refund, minus
+        an administration fee of CAD$100. Cancellations received after the
+        deadline are not eligible for a refund. Substitutions will be accepted,
+        but the organizers <strong>must</strong> be advised by e-mail of the new
+        participant's name and contact details.
       </p>
     </div>
-    <!--div class="grid md:grid-cols-3 gap-10 mx-auto max-w-screen-lg mt-12">
-      {pricing.map((item) => <Pricing plan={item} />)}
-    </div-->
   </Container>
 </Layout>
