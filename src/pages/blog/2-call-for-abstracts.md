@@ -9,7 +9,7 @@ layout: "@layouts/BlogLayout.astro"
 tags: [announcement]
 ---
 
-## Watermatex2023 - September 23-27
+## Watermatex2023 - September 24-27
 
 Dear fellow researchers,
 

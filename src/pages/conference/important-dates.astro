@@ -5,44 +5,42 @@ import Sectionhead from "@components/sectionhead.astro";
 import Layout from "@layouts/Layout.astro";
 
 const dates = [
-    {
-        "title": "Deadline for abstract submissions",
-        "day": "10",
-        "month": "April"
-    },
-    {
-        "title": "Notice of acceptance",
-        "day": "15",
-        "month": "June"
-    },
-    {
-        "title": "Final conference program",
-        "day": "24",
-        "month": "June"
-    },
-    {
-        "title": "Deadline for early bird registration",
-        "day": "15",
-        "month": "July"
-    },
-    {
-        "title": "Watermatex Conference",
-        "day": "23-27",
-        "month": "September"
-    },
-]
+  {
+    title: "Deadline for abstract submissions",
+    day: "10",
+    month: "April",
+  },
+  {
+    title: "Notice of acceptance",
+    day: "15",
+    month: "June",
+  },
+  {
+    title: "Final conference program",
+    day: "24",
+    month: "June",
+  },
+  {
+    title: "Deadline for early bird registration",
+    day: "15",
+    month: "July",
+  },
+  {
+    title: "Watermatex Conference",
+    day: "24-27",
+    month: "September",
+  },
+];
 ---
 
 <Layout title="Important Dates">
   <Container>
     <Sectionhead>
-        <Fragment slot="title">Important Dates</Fragment>
-        <Fragment slot="desc"></Fragment>
-      </Sectionhead>
+      <Fragment slot="title">Important Dates</Fragment>
+      <Fragment slot="desc"></Fragment>
+    </Sectionhead>
   </Container>
   <Container>
-    {dates.map((date) => (
-        <DateTile {...date}></DateTile>
-    ))}
+    {dates.map((date) => <DateTile {...date} />)}
   </Container>
 </Layout>
