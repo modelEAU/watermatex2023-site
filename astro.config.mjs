@@ -16,5 +16,7 @@ import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), alpinejs(), image(), mdx()]
+  integrations: [tailwind(), alpinejs(), image({
+    defaultFormat: "jpeg", // set the default format to JPEG
+  }), mdx()]
 });
