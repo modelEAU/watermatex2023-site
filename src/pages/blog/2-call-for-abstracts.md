@@ -27,6 +27,6 @@ For templates for abstract submission and more information relating to the sympo
 
 ## Conference Themes
 
-Please concult the themes page for more information.)[https://www.watermatex2023.org/conference/themes]
+Please consult the themes page for more information.)[https://www.watermatex2023.org/conference/themes]
 
 (Download the .pdf)[https://drive.google.com/file/d/1aRrLPPKt4jS_45TqBjcT68auKtMlfq4A/view?usp=share_link]
