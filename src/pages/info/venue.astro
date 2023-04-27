@@ -1,14 +1,57 @@
 ---
+import { Image } from "@astrojs/image/components";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
 import Layout from "@layouts/Layout.astro";
+import mapPath from "assets/airports-map.png";
+
+const map = {
+  src: mapPath,
+  alt: "Map of nearby international airports",
+  width: "1250",
+  height: "818",
+  format: "png",
+  loading: "lazy",
+};
 ---
 
 <Layout title="Venue">
   <Container>
     <Sectionhead>
-        <Fragment slot="title">The Venue</Fragment>
-        <Fragment slot="desc">Coming soon</Fragment>
-      </Sectionhead>
+      <Fragment slot="title">The Venue</Fragment>
+      <Fragment slot="desc"></Fragment>
+    </Sectionhead>
+  </Container>
+  <Container>
+    <div class="mx-12 md:mx-36 py-8">
+      <h2
+        class="text-2xl lg:text-3xl font-bold lg:tracking-tight text-left mt-6">
+        Getting there
+      </h2>
+      <p class="text-lg mt-4 text-slate-600 py-2">
+        The airport <a
+          class="underline text-blue-500"
+          target="_blank"
+          href="https://www.aeroportdequebec.com/en">
+          Jean-Lesage International Airport (YQB)
+        </a> is the airport of Québec City and the closest airport to the conference
+        venue. Multiple flights arrive at Quebec International Airport (YQB) daily.
+        You will be able to book a connection from Montreal, Toronto, Chicago, New
+        York (Newark and JFK) or Philadelphia.
+      </p>
+      <Image class="mx-auto w-screen max-w-xl" {...map} />
+      <p class="text-lg mt-4 text-slate-600 py-2">
+        The conference venue is located approximately 35km (35 min by car) North
+        of the airport. No public transport exists between the airport and the
+        venue. Therefore, it is suggested to use a taxi or Uber. Theirs stands
+        are clearly indicated upon arrival. Further information is available
+        <a
+          class="underline text-blue-500"
+          target="_blank"
+          href="https://www.aeroportdequebec.com/en/airport-access/taxis-and-limousine"
+          >here.
+        </a>
+      </p>
+    </div>
   </Container>
 </Layout>
