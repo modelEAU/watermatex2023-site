@@ -8,6 +8,8 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 import alpinejs from "@astrojs/alpinejs";
 
+
+
 // https://astro.build/config
 import image from "@astrojs/image";
 
@@ -16,7 +18,8 @@ import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), alpinejs(), image({
-    defaultFormat: "jpeg", // set the default format to JPEG
-  }), mdx()]
+  integrations: [,
+    tailwind(), alpinejs(), image({
+      defaultFormat: "jpeg", // set the default format to JPEG
+    }), mdx()]
 });

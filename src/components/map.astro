@@ -1,0 +1,14 @@
+---
+import Container from "./container.astro";
+---
+
+<Container>
+  <iframe
+    width="500"
+    height="500"
+    style="border:0"
+    referrerpolicy="no-referrer-when-downgrade"
+    src={`https://www.google.com/maps/embed/v1/place?key=${process.env["GOOGLE_MAPS_API_KEY"]}&q=Pavillon+Desjardins+Universite+Laval`}
+    allowfullscreen>
+  </iframe>
+</Container>

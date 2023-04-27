@@ -10,17 +10,17 @@ const paragraphs = [
 ];
 ---
 
-<div class="mt-16 md:mt-5">
+<div class="max-w-5xl mt-24 md:mt-12 mx-auto">
   {
     showTitle ? (
-      <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight text-center">
+      <h2 class="text-3xl lg:text-4xl font-semibold lg:tracking-tight">
         Conference Themes
       </h2>
     ) : (
       ""
     )
   }
-  <div class="mx-12 md:mx-36 py-8">
+  <div class="py-8">
     {
       paragraphs.map((text) => (
         <p class="text-lg mt-4 text-slate-600 py-2">{text}</p>
