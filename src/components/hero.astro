@@ -1,11 +1,50 @@
 ---
-import { Image } from "@astrojs/image/components";
 import Link from "@components/ui/link.astro";
-import heroImage from "../assets/chutes-montmorency.jpg";
+import vcsDen from "../assets/logo-VCS.png";
+import cws from "../assets/logo-cws.png";
+import dcWater from "../assets/logo-dcwater.png";
+import dommel from "../assets/logo-de-dommel2.png";
+import hrsd from "../assets/logo-hrsd.png";
+import Logos from "./logos.astro";
+
+const utilities = [
+  {
+    name: "Clean Water Services",
+    src: cws,
+    width: 200,
+    height: 54,
+  },
+  {
+    name: "DC Water",
+    src: dcWater,
+    width: 110,
+    height: 80,
+  },
+  {
+    name: "HRSD",
+    src: hrsd,
+    width: 140,
+    height: 25,
+  },
+  {
+    name: "VCS Denmark",
+    src: vcsDen,
+    width: 173,
+    height: 60,
+  },
+  {
+    name: "Waterschap De Dommel",
+    src: dommel,
+    width: 140,
+    height: 70,
+  },
+];
 ---
 
-<main class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-8 z-0">
-  <div class="py-6 md:order-1 hidden md:block relative">
+<main
+  class="grid place-items-center pt-16 pb-8 md:pt-8 z-0"
+  style="grid-template-columns: 5fr 3fr;">
+  <!--div class="py-6 md:order-1 hidden md:block relative">
     <Image
       class="rounded-md z-0"
       src={heroImage}
@@ -17,8 +56,8 @@ import heroImage from "../assets/chutes-montmorency.jpg";
       class="absolute bottom-8 left-4 rounded-md bg-slate-700 bg-opacity-30 p-1 text-white text-sm">
       Chutes Montmorency, near Québec City.
     </div>
-  </div>
-  <div>
+  </div-->
+  <div class="">
     <h1 class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight">
       Watermatex 2023
     </h1>
@@ -26,7 +65,7 @@ import heroImage from "../assets/chutes-montmorency.jpg";
       The 11th IWA Symposium on Modelling and Integrated Assessment.<br />Québec
       City, 24 - 27 September, 2023. <!--br /><div class="text-red-500">
         <strong
-          >Note: Abstract submission deadline pushed to April 24, 2023!</strong
+        >Note: Abstract submission deadline pushed to April 24, 2023!</strong
         >
       </div-->
     </p>
@@ -54,4 +93,5 @@ import heroImage from "../assets/chutes-montmorency.jpg";
       >
     </div>
   </div>
+  <Logos header="" logos={utilities} />
 </main>

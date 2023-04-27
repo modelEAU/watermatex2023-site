@@ -6,14 +6,9 @@ import Logos from "@components/logos.astro";
 import ThemesText from "@components/themes-text.astro";
 import Layout from "@layouts/Layout.astro";
 import cEau from "../assets/logo-c-eau.png";
-import cws from "../assets/logo-cws.png";
-import dcWater from "../assets/logo-dcwater.png";
-import dommel from "../assets/logo-de-dommel2.png";
-import hrsd from "../assets/logo-hrsd.png";
 import iwa from "../assets/logo-iwa2.png";
 import uGhent from "../assets/logo-ugent_en.png";
 import ulaval from "../assets/logo-ulaval.png";
-import vcsDen from "../assets/logo-VCS.png";
 
 const affiliates = [
   {
@@ -44,38 +39,6 @@ const sponsors = [
     height: 55,
   },
 ];
-const utilities = [
-  {
-    name: "Clean Water Services",
-    src: cws,
-    width: 200,
-    height: 54,
-  },
-  {
-    name: "DC Water",
-    src: dcWater,
-    width: 110,
-    height: 80,
-  },
-  {
-    name: "HRSD",
-    src: hrsd,
-    width: 140,
-    height: 25,
-  },
-  {
-    name: "VCS Denmark",
-    src: vcsDen,
-    width: 216,
-    height: 75,
-  },
-  {
-    name: "Waterschap De Dommel",
-    src: dommel,
-    width: 140,
-    height: 70,
-  },
-];
 ---
 
 <Layout title="Watermatex 2023">
@@ -84,9 +47,9 @@ const utilities = [
     <!--Features/-->
     <div class="mx-12 md:mx-36 justify-center">
       <div
-        class="grid sm:grid-cols-1 md:grid-cols-2 mt-8 gap-16 justify-center">
+        class="grid sm:grid-cols-1 md:grid-cols-1 mt-8 gap-16 justify-center">
         <Logos header="Thank you to our sponsors" logos={sponsors} />
-        <Logos header="Supporting utilities" logos={utilities} />
+        <!--Logos header="Supporting utilities" logos={utilities} /-->
       </div>
     </div>
 
@@ -95,7 +58,7 @@ const utilities = [
       <Logos header="Silver sponsors" logos={sponsors}/>
       <Logos header="Bronze sponsors" logos={sponsors}/-->
     <ThemesText showTitle={false} />
-    <Logos header=" " logos={affiliates} />
+    <Logos header="Organized by" logos={affiliates} />
     <Cta />
   </Container>
 </Layout>

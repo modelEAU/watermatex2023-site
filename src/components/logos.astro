@@ -3,7 +3,7 @@
 import { Image } from "@astrojs/image/components";
 
 export interface Logo {
-  name: string
+  name: string;
   src: string;
   width: number;
   height: number;
@@ -14,15 +14,20 @@ export interface Props {
   logos?: Logo[];
 }
 
-const { header, logos} = Astro.props as Props;
+const { header, logos } = Astro.props as Props;
 ---
 
-<div class="mt-6">
-  <h2 class="text-center text-2xl lg:text-3xl  lg:tracking-tight">{header}</h2>
+<div>
+  <h2 class="text-center text-2xl lg:text-3xl lg:tracking-tight">{header}</h2>
   <div class="flex gap-8 md:gap-20 items-center justify-center mt-10 flex-wrap">
     {
       logos.map((logo) => (
-        <Image  src={logo.src} alt={logo.name} width={logo.width} height={logo.height}/>
+        <Image
+          src={logo.src}
+          alt={logo.name}
+          width={logo.width}
+          height={logo.height}
+        />
       ))
     }
   </div>

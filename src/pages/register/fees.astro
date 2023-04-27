@@ -8,22 +8,9 @@ const pricing = [
   {
     name: "High-income country - Early Registration",
     price: {
-      nonIWA: "$1090",
-      IWA: "$950",
-      YWPStudent: "$580",
-      accompanier: "$290",
-    },
-    button: {
-      text: "Register (coming soon)",
-      link: "#",
-    },
-  },
-  {
-    name: "High-income country - Late Registration",
-    price: {
-      nonIWA: "$1160",
-      IWA: "$1020",
-      YWPStudent: "$650",
+      nonIWA: "$1090 [$818]",
+      IWA: "$950 [$713]",
+      YWPStudent: "$580 [$435]",
       accompanier: "$290",
     },
     button: {
@@ -34,9 +21,22 @@ const pricing = [
   {
     name: "Low-income country - Early Registration",
     price: {
-      nonIWA: "$870",
-      IWA: "$730",
-      YWPStudent: "$440",
+      nonIWA: "$870 [$653]",
+      IWA: "$730 [$548]",
+      YWPStudent: "$440 [$330]",
+      accompanier: "$290",
+    },
+    button: {
+      text: "Register (coming soon)",
+      link: "#",
+    },
+  },
+  {
+    name: "High-income country - Late Registration",
+    price: {
+      nonIWA: "$1160 [$870]",
+      IWA: "$1020 [$765]",
+      YWPStudent: "$650 [$488]",
       accompanier: "$290",
     },
     button: {
@@ -47,9 +47,9 @@ const pricing = [
   {
     name: "Low-income country - Late Registration",
     price: {
-      nonIWA: "$940",
-      IWA: "$800",
-      YWPStudent: "$510",
+      nonIWA: "$940 [$705]",
+      IWA: "$600 [$450]",
+      YWPStudent: "$510 [$383]",
       accompanier: "$290",
     },
     button: {
@@ -67,7 +67,10 @@ const pricing = [
       <Fragment slot="desc">Registration opens on June 1st - be ready!</Fragment
       >
     </Sectionhead>
-    <div class="mx-12 md:mx-36 mt-2 text-slate-400">* All prices in CAD</div>
+    <div class="mx-12 md:mx-36 mt-2 text-slate-400">* All fees in CAD</div>
+    <div class="mx-12 md:mx-36 mt-2 text-slate-400">
+      [ ] indicates single-day fee.
+    </div>
     <div class="grid md:grid-cols-2 gap-10 mx-12 md:mx-36 max-w-screen-lg mt-4">
       {pricing.map((item) => <Pricing plan={item} />)}
     </div>
