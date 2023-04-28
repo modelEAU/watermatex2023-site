@@ -8,8 +8,6 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 import alpinejs from "@astrojs/alpinejs";
 
-
-
 // https://astro.build/config
 import image from "@astrojs/image";
 
