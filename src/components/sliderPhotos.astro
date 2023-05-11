@@ -1,0 +1,53 @@
+---
+import { Icon } from "astro-icon";
+import photosData from "../assets/sliderData.json"
+import "../styles/sliderStyle.css"
+---
+
+<section class="slider-wrapper">
+  <h2 class="sr-only">slider</h2>
+  <div class="slider-container container-xs">
+    <button class="slider-btn grid-sm slider-btn--prev" id="prev" aria-label="Previous Photo">
+      <Icon name="feather:chevron-left" width="50"/>
+    </button>
+    <div class="photos">
+      {//duplicates the last picture (to make it look infinite)
+        photosData.slice(photosData.length - 1).map((photo)=> (
+            <div class="photo grid-sm ">
+                <img src={photo.imgFile} alt={photo.name} class="photo-img">
+            </div>
+        ))
+      }
+      {
+        photosData.map((photo)=> (
+            <div class="photo grid-sm ">
+                <img src={photo.imgFile} alt={photo.name} class="photo-img">
+            </div>
+        ))
+      }
+      {//duplicates the first picture (to make it look infinite)
+        photosData.slice(0,1).map((photo)=> (
+            <div class="photo grid-sm ">
+                <img src={photo.imgFile} alt={photo.name} class="photo-img">
+            </div>
+        ))
+      }
+    </div>
+    <div class="indicator-container">
+      {
+        photosData.map((photo) => (
+          <button class="indicator ${photo?.active && 'active'}"></button>
+        ))
+      }
+    </div>
+    <button class="slider-btn grid-sm slider-btn--next" id="next" aria-label="Next Photo">
+      <Icon name="feather:chevron-right" width="50"/>
+    </button>
+  </div>
+</section>
+
+<script>
+    import '@utils/sliderFunctions.js';
+</script>
+
+
