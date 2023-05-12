@@ -52,6 +52,7 @@
 
 .photo-img{
     max-width: var(--size-fluid-15);
+    max-height: var(--size-fluid-10);
 }
 
 .slider-btn{

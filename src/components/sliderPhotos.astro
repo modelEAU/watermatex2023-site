@@ -1,7 +1,14 @@
 ---
 import { Icon } from "astro-icon";
-import photosData from "../assets/sliderData.json"
-import "../styles/sliderStyle.css"
+import "../styles/sliderStyle.css";
+
+const photosData = [];
+let directory = "/data/slider-venue/"
+let numFiles = 11
+    
+for (let i = 0; i < numFiles; i++) {
+    photosData[i] = directory + 'venue-'+ (i+1).toString() + '.jpg';
+}
 ---
 
 <section class="slider-wrapper">
@@ -11,27 +18,27 @@ import "../styles/sliderStyle.css"
       <Icon name="feather:chevron-left" width="50"/>
     </button>
     <div class="photos">
-      {//duplicates the last picture (to make it look infinite)
-        photosData.slice(photosData.length - 1).map((photo)=> (
-            <div class="photo grid-sm ">
-                <img src={photo.imgFile} alt={photo.name} class="photo-img">
-            </div>
-        ))
-      }
-      {
-        photosData.map((photo)=> (
-            <div class="photo grid-sm ">
-                <img src={photo.imgFile} alt={photo.name} class="photo-img">
-            </div>
-        ))
-      }
-      {//duplicates the first picture (to make it look infinite)
-        photosData.slice(0,1).map((photo)=> (
-            <div class="photo grid-sm ">
-                <img src={photo.imgFile} alt={photo.name} class="photo-img">
-            </div>
-        ))
-      }
+        {//duplicates the last picture (to make it look infinite)
+            photosData.slice(photosData.length - 1).map((photo)=> (
+                <div class="photo grid-sm ">
+                    <img src={photo} alt="" class="photo-img">
+                </div>
+            ))
+        }
+        {
+            photosData.map((photo)=> (
+                <div class="photo grid-sm ">
+                    <img src={photo} alt="" class="photo-img">
+                </div>
+            ))
+        }
+        {//duplicates the first picture (to make it look infinite)
+            photosData.slice(0,1).map((photo)=> (
+                <div class="photo grid-sm ">
+                    <img src={photo} alt="" class="photo-img">
+                </div>
+            ))
+        }
     </div>
     <div class="indicator-container">
       {

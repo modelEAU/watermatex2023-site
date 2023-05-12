@@ -1,12 +1,12 @@
 [
   {
     "name": "Bus station",
-    "imgFile": "/data/slider-venue/venue-1.png",
+    "imgFile": "/data/slider-venue/venue-1.jpg",
     "active": true
   },
   {
     "name": "Building",
-    "imgFile": "/data/slider-venue/venue-2.jpg"
+    "imgFile": "/data/slider-venue/venue-2.png"
   },
   {
     "name": "Conference room",
@@ -18,7 +18,7 @@
   },
   {
     "name": "Conference room 2",
-    "imgFile": "/data/slider-venue/venue-5.jpg"
+    "imgFile": "/data/slider-venue/venue-5.png"
   },
   {
     "name": "Conference room 3",
