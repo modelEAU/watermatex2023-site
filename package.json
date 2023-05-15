@@ -23,6 +23,7 @@
     "astro-icon": "^0.8.0",
     "astro-seo": "^0.6.0",
     "dotenv": "^16.0.3",
+    "open-props": "^1.5.8",
     "tailwindcss": "^3.0.24"
   },
   "devDependencies": {
