@@ -37,12 +37,15 @@ dependencies:
   dotenv:
     specifier: ^16.0.3
     version: 16.0.3
-  jquery:
-    specifier: ^3.6.4
-    version: 3.6.4
+  open-props:
+    specifier: ^1.5.8
+    version: 1.5.8
   tailwindcss:
     specifier: ^3.0.24
     version: 3.2.1(postcss@8.4.18)
+  web-streams-polyfill:
+    specifier: ^3.2.1
+    version: 3.2.1
 
 devDependencies:
   '@tailwindcss/typography':
@@ -54,6 +57,9 @@ devDependencies:
   '@types/node':
     specifier: ^18.11.18
     version: 18.11.18
+  rollup:
+    specifier: ^2.79.1
+    version: 2.79.1
 
 packages:
 
@@ -2424,10 +2430,6 @@ packages:
     resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
     dev: false
 
-  /jquery@3.6.4:
-    resolution: {integrity: sha512-v28EW9DWDFpzcD9O5iyJXg3R3+q+mET5JhnjJzQUZMHOv67bpSIHq81GEYpPNZHG+XXHsfSme3nxp/hndKEcsQ==}
-    dev: false
-
   /js-tokens@4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
     dev: false
@@ -3219,6 +3221,10 @@ packages:
       mimic-fn: 4.0.0
     dev: false
 
+  /open-props@1.5.8:
+    resolution: {integrity: sha512-pE9oKg+4rDrKNJpHNSP1ensgMz41YW5pPCHExd4P12595gdObMmiO1OhTvXG0t7inRS54GhyZr5jm+28XzapEg==}
+    dev: false
+
   /open@8.4.0:
     resolution: {integrity: sha512-XgFPPM+B28FtCCgSb9I+s9szOC1vZRSwgWsRUA5ylIxRTgKozqjOCrVOqGsYABPYK5qnfqClxZTFBa8PKt2v6Q==}
     engines: {node: '>=12'}
@@ -3682,7 +3688,6 @@ packages:
     hasBin: true
     optionalDependencies:
       fsevents: 2.3.2
-    dev: false
 
   /run-parallel@1.2.0:
     resolution: {integrity: sha512-5l4VyZR86LZ/lDxZTR6jqL8AFE2S0IFLMP26AbjsLVADxHdhB/c0GUsH+y39UfCi3dzz8OlQuPmnaJOMoDHQBA==}
