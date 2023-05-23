@@ -1,5 +1,6 @@
 ---
 import Container from "@components/container.astro";
+import Callout from "@components/callout.astro";
 import Cta from "@components/cta.astro";
 import Hero from "@components/hero.astro";
 import Logos from "@components/logos.astro";
@@ -52,7 +53,43 @@ const sponsors = [
         <!--Logos header="Supporting utilities" logos={utilities} /-->
       </div>
     </div>
-
+    <Container>
+      <div class="max-w-5xl mt-24 md:mt-12 mx-auto p-6 bg-red-100 rounded-3xl">
+        <h2 class="text-3xl lg:text-4xl font-semibold lg:tracking-tight">NOTICE: Important travel information</h2>
+        <div class="py-8">
+          <p class="text-lg mt-4 text-slate-600 py-2">
+            It is now possible for participants from one any of the <a class="underline text-blue-500" href="https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/entry-requirements-country.html">visa required countries</a> to ask the organizing committee for an invitation letter. This letter should facilitate the processing of your visa application. <strong>If you plan at all to attend, please apply for your visa now!</strong>
+          </p>
+          <p class="text-lg mt-4 text-slate-600 py-2">
+            To request a letter, please reach out to <a class="underline text-blue-500" href="mailto:registration@watermatex2023.org">registration@watermatex2023.org</a> with the following information:
+          </p>
+          <div class="px-6">
+            <ul class="list-disc">
+              <li>Full legal name</li>
+              <li>Date of birth</li>
+              <li>Affiliation</li>
+              <li>Home address</li>
+              <li>Home phone number</li>
+              <li>Business phone number</li>
+            </ul>
+          </div>
+          <p class="text-lg mt-4 text-slate-600 py-2">
+            To ensure the swift processing of your application, <strong> please reach out again to <a class="underline text-blue-500" href="mailto:registration@watermatex2023.org">registration@watermatex2023.org</a> as soon as your visa application has been submitted</strong> and provide the following information:
+          </p>
+          <div class="px-6">
+            <ul class="list-disc">
+              <li>Full legal name</li>
+              <li>Visa application number</li>
+              <li>Passport country of issuance</li>
+            </ul>
+          </div>
+          
+          <p class="text-lg mt-4 text-slate-600 py-2">
+            <strong>Thank you for your collaboration!</strong> For more information, see our <a class="underline text-blue-500" href="/info/visas.html">"Obtaining a visa"</a> page and the following <a class="underline text-blue-500" href="public/data/info-letter.pdf"> information letter from Immigration, Refugees and Citizenship Canada</a>
+          </p>
+        </div>
+      </div>
+      </Container>
     <!--Logos header="Supporting utilities" logos={sponsors}/-->
     <!--<Logos header="Gold sponsors" logos={sponsors}/>
       <Logos header="Silver sponsors" logos={sponsors}/>
