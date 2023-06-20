@@ -2,7 +2,10 @@
 import Container from "@components/container.astro";
 import Pricing from "@components/pricing.astro";
 import Sectionhead from "@components/sectionhead.astro";
+import Link from "@components/ui/link.astro";
 import Layout from "@layouts/Layout.astro";
+
+const regLink = "https://event.fourwaves.com/95f0a42d-264a-4e94-a2e9-f1e631c51a77/registration"
 
 const pricing = [
   {
@@ -10,52 +13,36 @@ const pricing = [
     price: {
       nonIWA: "$1090 [$273]",
       IWA: "$950 [$238]",
-      YWPStudent: "$580 [$145]",
+      Student: "$580 [$145]",
       accompanier: "$290",
-    },
-    button: {
-      text: "Register (coming soon)",
-      link: "#",
-    },
+    }
   },
   {
     name: "Low-income country - Early Registration",
     price: {
       nonIWA: "$870 [$218]",
-      IWA: "$730 [$183]",
-      YWPStudent: "$440 [$110]",
+      IWA: "$600 [$150]",
+      Student: "$440 [$110]",
       accompanier: "$290",
-    },
-    button: {
-      text: "Register (coming soon)",
-      link: "#",
-    },
+    }
   },
   {
     name: "High-income country - Late Registration",
     price: {
       nonIWA: "$1160 [$290]",
       IWA: "$1020 [$255]",
-      YWPStudent: "$650 [$163]",
+      Student: "$650 [$163]",
       accompanier: "$290",
-    },
-    button: {
-      text: "Register (coming soon)",
-      link: "#",
-    },
+    }
   },
   {
     name: "Low-income country - Late Registration",
     price: {
       nonIWA: "$940 [$235]",
-      IWA: "$600 [$150]",
-      YWPStudent: "$510 [$128]",
+      IWA: "$730 [$183]",
+      Student: "$510 [$128]",
       accompanier: "$290",
-    },
-    button: {
-      text: "Register (coming soon)",
-      link: "#",
-    },
+    }
   },
 ];
 ---
@@ -73,6 +60,9 @@ const pricing = [
     </div>
     <div class="grid md:grid-cols-2 gap-10 mx-12 md:mx-36 max-w-screen-lg mt-4">
       {pricing.map((item) => <Pricing plan={item} />)}
+    </div>
+    <div class="flex mt-8 gap-10 mx-12 md:mx-36 max-w-screen-lg mt-4">
+      <Link href={regLink} style="primary"> Register </Link>
     </div>
     <div class="mt-16 md:mt-5 mx-12 md:mx-36 py-8">
       <h2 class="font-bold text-3xl text-gray-800">Cancellation Policy</h2>
