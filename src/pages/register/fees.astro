@@ -9,7 +9,7 @@ const regLink = "https://event.fourwaves.com/95f0a42d-264a-4e94-a2e9-f1e631c51a7
 
 const pricing = [
   {
-    name: "High-income country - Early Registration",
+    name: "Early Bird, high-income country",
     price: {
       nonIWA: "$1090 [$550]",
       IWA: "$950 [$500]",
@@ -18,7 +18,7 @@ const pricing = [
     }
   },
   {
-    name: "Low-income country - Early Registration",
+    name: "Early Bird, low-income country",
     price: {
       nonIWA: "$870 [$450]",
       IWA: "$600 [$350]",
@@ -27,7 +27,7 @@ const pricing = [
     }
   },
   {
-    name: "High-income country - Late Registration",
+    name: "High-income country",
     price: {
       nonIWA: "$1160 [$600]",
       IWA: "$1020 [$550]",
@@ -36,7 +36,7 @@ const pricing = [
     }
   },
   {
-    name: "Low-income country - Late Registration",
+    name: "Low-income country",
     price: {
       nonIWA: "$940 [$500]",
       IWA: "$730 [$400]",
@@ -51,18 +51,18 @@ const pricing = [
   <Container>
     <Sectionhead>
       <Fragment slot="title">Registration</Fragment>
-      <Fragment slot="desc">Registration opens on June 1st - be ready!</Fragment
+      <Fragment slot="desc">Early-bird pricing ends on August 1st &mdash; don't miss it!</Fragment
       >
     </Sectionhead>
-    <div class="mx-12 md:mx-36 mt-2 text-slate-400">* All fees in CAD</div>
     <div class="mx-12 md:mx-36 mt-2 text-slate-400">
       [ ] indicates single-day fee.
     </div>
+    <div class="mx-12 md:mx-36 mt-2 text-slate-400">All fees in CAD.</div>
     <div class="grid md:grid-cols-2 gap-10 mx-12 md:mx-36 max-w-screen-lg mt-4">
       {pricing.map((item) => <Pricing plan={item} />)}
     </div>
-    <div class="flex mt-8 gap-10 mx-12 md:mx-36 max-w-screen-lg mt-4">
-      <Link href={regLink} style="primary"> Register </Link>
+    <div class="flex gap-10 mx-12 md:mx-36 max-w-screen-lg mt-4">
+      <Link href={regLink} style="primary"> Click here to register </Link>
     </div>
     <div class="mt-16 md:mt-5 mx-12 md:mx-36 py-8">
       <h2 class="font-bold text-3xl text-gray-800">Cancellation Policy</h2>
