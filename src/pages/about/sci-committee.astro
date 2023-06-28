@@ -75,6 +75,179 @@ import xavierFloresAlsina from "assets/people/xavier-flores-alsina.png";
 import yanchenLiu from "assets/people/yanchen-liu.png";
 import yvesComeau from "assets/people/yves-comeau.png";
 import zoranKapelan from "assets/people/zoran-kapelan.png";
+import alyinaHashmi from "assets/people/alyina-hashmi.jpeg";
+import balpreetKaur from "assets/people/balpreet-kaur.jpeg";
+import camilaDBastiani from "assets/people/camila-d-bastiani.jpeg";
+import christinaMazivila from "assets/people/christina-mazivila.jpeg";
+import colineMilhau from "assets/people/coline-milhau.jpeg";
+import hosseinNorouziFirouz from "assets/people/hossein-norouzi-firouz.jpeg";
+import laurenceStrubbe from "assets/people/laurence-strubbe.jpeg";
+import mariaFarago from "assets/people/maria-farago.jpeg";
+import medhaviGupta from "assets/people/medhavi-gupta.jpeg";
+import nataliaDuque from "assets/people/natalia-duque.jpeg";
+import renataStarostka from "assets/people/renata-starostka.jpeg";
+import rihenMejdoubElFehri from "assets/people/rihem-mejdoub-el-fehri.jpeg";
+import sanazMohebali from "assets/people/sanaz-mohebali.jpg"
+import stephanieAparicio from "assets/people/stephanie-aparicio.jpeg";
+import susanGeorge from "assets/people/susan-george.jpeg";
+import xinyiZhang from "assets/people/xinyi-zhang.jpeg";
+import yalinLi from "assets/people/yalin-li.jpeg";
+
+const ywps = [
+  {
+    name: "Alyina Hashmi",
+    title: "IWA YWP Pakistan",
+    avatar: {
+      src: alyinaHashmi,
+      width: 400,
+      height: 400,
+    },
+  },
+  {
+    name: "Balpreet Kaur",
+    title: "TERI School of Advanced Studies",
+    avatar: {
+      src: balpreetKaur,
+      width: 400,
+      height: 400,
+    },
+  },
+  {
+    name: "Camila D' Bastiani",
+    title: "Technological University Dublin",
+    avatar: {
+      src: camilaDBastiani,
+      width: 400,
+      height: 400,
+    },
+  },
+  {
+    name: "Christina Mazivila",
+    title: "University of Cape Town",
+    avatar: {
+      src: christinaMazivila,
+      width: 400,
+      height: 400,
+    },
+  },
+  {
+    name: "Coline Milhau",
+    title: "Université Laval",
+    avatar: {
+      src: colineMilhau,
+      width: 400,
+      height: 400,
+    },
+  },
+  {
+    name: "Hossein Norouzi Firouz",
+    title: "EngD graduate",
+    avatar: {
+      src: hosseinNorouziFirouz,
+      width: 400,
+      height: 400,
+    },
+  },
+  {
+    name: "Laurence Strubbe",
+    title: "Ghent University",
+    avatar: {
+      src: laurenceStrubbe,
+      width: 400,
+      height: 400,
+    },
+  },
+  {
+    name: "Maria Faragó",
+    title: "Rambøll Water",
+    avatar: {
+      src: mariaFarago,
+      width: 400,
+      height: 400,
+    },
+  },
+  {
+    name: "Medhavi Gupta",
+    title: "Jacobs",
+    avatar: {
+      src: medhaviGupta,
+      width: 400,
+      height: 400,
+    },
+  },
+  {
+    name: "Natalia Duque",
+    title: "eawag",
+    avatar: {
+      src: nataliaDuque,
+      width: 400,
+      height: 400,
+    },
+  },
+  {
+    name: "Renata Starostka",
+    title: "University of Michigan",
+    avatar: {
+      src: renataStarostka,
+      width: 400,
+      height: 400,
+    },
+  },
+  {
+    name: "Rihem mejdoub el fehri",
+    title: "Earth sciences",
+    avatar: {
+      src: rihenMejdoubElFehri,
+      width: 400,
+      height: 400,
+    },
+  },
+  {
+    name: "Sanaz Mohebali",
+    title: "Université Laval",
+    avatar: {
+      src: sanazMohebali,
+      width: 400,
+      height: 400,
+    },
+  },
+  {
+    name: "Stéphanie Aparicio",
+    title: "Global Omnium - YWP Spanish Chapter",
+    avatar: {
+      src: stephanieAparicio,
+      width: 400,
+      height: 400,
+    },
+  },
+  {
+    name: "Susan George",
+    title: "Instituto de la Grasa, Spanish National Research Council (CSIC)",
+    avatar: {
+      src: susanGeorge,
+      width: 400,
+      height: 400,
+    },
+  },
+  {
+    name: "Xinyi Zhang",
+    title: "University of Illinois Urbana-Champaign",
+    avatar: {
+      src: xinyiZhang,
+      width: 400,
+      height: 400,
+    },
+  },
+  {
+    name: "Yalin Li",
+    title: "University of Illinois Urbana-Champaign",
+    avatar: {
+      src: yalinLi,
+      width: 400,
+      height: 400,
+    },
+  },
+]
 
 const sciCommittee = [
   {
@@ -720,46 +893,69 @@ const title = "Scientific Committee";
         YWP peers. The abstract review process is scheduled to take place
         between mid-April and mid-May 2023.
       </p>
-      <p class="text-lg leading-relaxed text-slate-500">
-        The members of the scientific committee are still being confirmed. Below
-        are the currently confirmed members.
-      </p>
-      <p class="text-lg leading-relaxed text-slate-500">
-        <a
-          href="https://forms.gle/MW7Ke2dgXop2SPCx7"
-          target="_parent"
-          class="text-gray-600 hover:text-gray-900 underline"
-          >Apply now for a YWP spot on the scientific committee!</a
-        >
-      </p>
     </div>
-    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
-      {
-        sciCommittee
-          .sort((a, b) =>
-            a.name.split(" ")[1].toLowerCase() >
-            b.name.split(" ")[1].toLowerCase()
-              ? 1
-              : -1
-          )
-          .map((item) => (
-            <div class="group">
-              <div class="w-full aspect-square">
-                <Image
-                  {...item.avatar}
-                  format="png"
-                  alt="Team"
-                  class="w-full h-full object-cover rounded transition  group-hover:-translate-y-1 group-hover:shadow-xl"
-                />
-              </div>
+    
+    <div class="mx-auto max-w-4xl mt-12">
+      <h2 class="text-2xl font-bold py-10">Experienced Water Professionals</h2>
+      <div class="grid md:grid-cols-3 gap-10">
+        {
+          sciCommittee
+            .sort((a, b) =>
+              a.name.split(" ")[1].toLowerCase() >
+              b.name.split(" ")[1].toLowerCase()
+                ? 1
+                : -1
+            )
+            .map((item) => (
+              <div class="group">
+                <div class="w-full aspect-square">
+                  <Image
+                    {...item.avatar}
+                    format="png"
+                    alt="Team"
+                    class="w-full h-full object-cover rounded transition  group-hover:-translate-y-1 group-hover:shadow-xl"
+                  />
+                </div>
 
-              <div class="mt-4 text-center">
-                <h2 class="text-lg text-gray-400"> {item.name}</h2>
-                <h3 class="text-sm text-slate-500"> {item.title}</h3>
+                <div class="mt-4 text-center">
+                  <h2 class="text-lg text-gray-400"> {item.name}</h2>
+                  <h3 class="text-sm text-slate-500"> {item.title}</h3>
+                </div>
               </div>
-            </div>
-          ))
-      }
+            ))
+        }
+      </div>
+    </div>
+    <div class="mx-auto max-w-4xl mt-12">
+      <h2 class="text-2xl font-bold py-10">Young Water Professionals</h2>
+      <div class="grid md:grid-cols-3 gap-10">
+        {
+          ywps
+            .sort((a, b) =>
+              a.name.split(" ")[1].toLowerCase() >
+              b.name.split(" ")[1].toLowerCase()
+                ? 1
+                : -1
+            )
+            .map((item) => (
+              <div class="group">
+                <div class="w-full aspect-square">
+                  <Image
+                    {...item.avatar}
+                    format="png"
+                    alt="Team"
+                    class="w-full h-full object-cover rounded transition  group-hover:-translate-y-1 group-hover:shadow-xl"
+                  />
+                </div>
+
+                <div class="mt-4 text-center">
+                  <h2 class="text-lg text-gray-400"> {item.name}</h2>
+                  <h3 class="text-sm text-slate-500"> {item.title}</h3>
+                </div>
+              </div>
+            ))
+        }
+      </div>
     </div>
   </Container>
 </Layout>
