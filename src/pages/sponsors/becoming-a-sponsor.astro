@@ -1,77 +1,84 @@
 ---
 import Container from "@components/container.astro";
+import Pricing from "@components/sponsorshipPricing.astro";
 import Sectionhead from "@components/sectionhead.astro";
 import Layout from "@layouts/Layout.astro";
+import Link from "@components/ui/link.astro";
 
 const pricing = [
   {
-    name: "Personal",
-    price: "Free",
-    popular: false,
-    features: [
-      "Lifetime free",
-      "Up to 3 users",
-      "Unlimited Pages",
-      "Astro Sub domain",
-      "Basic Integrations",
-      "Community Support",
-    ],
-    button: {
-      text: "Get Started",
-      link: "/",
-    },
-  },
-  {
-    name: "Startup",
-    price: {
-      monthly: "$19",
-      annual: "$16",
-      discount: "10%",
-      original: "$24",
-    },
+    name: "Platinum Sponsor",
+    price: "CAD 5,000",
+
     popular: true,
     features: [
-      "All Free Features",
-      "Up to 20 users",
-      "20 Custom domains",
-      "Unlimited Collaborators",
-      "Advanced Integrations",
-      "Priority Support",
+      "2 free registrations",
+      "Standard exhibition space to present your company and products.",
+      "Your logo present on the conference bag and in the proceedings",
+      "1 piece of information on your company added to the conference bag",
+      "Lunch sponsorship mentioned ",
+      "Plenary room display",
+      "Logo on the running Powerpoint during coffee breaks and lunches",
+      "Your logo on a prime location on the Watermatex website with a link to your company",
+      "A mention of your organization’s sponsorship in our social medias ",
     ],
     button: {
-      text: "Get Started",
-      link: "#",
+      text: "Become a platinum sponsor now",
+      link: "mailto:info@watermatex2023.org",
     },
   },
   {
-    name: "Enterprise",
-    price: "Custom",
-    popular: false,
+    name: "Gold Sponsor",
+    price: "CAD 3,500",
+
+    popular: true,
     features: [
-      "All Pro Features",
-      "Unlimited Custom domains",
-      "99.99% Uptime SLA",
-      "SAML & SSO Integration",
-      "Dedicated Account Manager",
-      "24/7 Phone Support",
+      "1 free registration",
+      "Your logo present on the conference bag and in the proceedings",
+      "1 piece of information on your company added to the conference bag",
+      "Coffee break sponsorship mentioned ",
+      "Plenary room display",
+      "Copy of the proceedings and a list of participants",
+      "Your logo on the Watermatex website with a link to your company",
+      "A mention of your organization’s sponsorship in our social medias",
     ],
     button: {
-      text: "Contact us",
-      link: "/contact",
+      text: "Become a gold sponsor now",
+      link: "mailto:info@watermatex2023.org",
+    },
+  },
+  {
+    name: "Silver Sponsor",
+    price: "CAD 2,000",
+
+    popular: true,
+    features: [
+      "1 free registration",
+      "Copy of the proceedings and a list of participants",
+      "Your logo on the Watermatex website with a link to your company",
+      "A mention of your organization’s sponsorship in our social medias",
+    ],
+    button: {
+      text: "Become a silver sponsor now",
+      link: "mailto:info@watermatex2023.org",
     },
   },
 ];
+
+
 ---
 
 <Layout title="Becoming a sponsor">
   <Container>
     <Sectionhead>
       <Fragment slot="title">Sponsorships</Fragment>
-      <Fragment slot="desc">Sponsorship plan coming soon.</Fragment>
+      <Fragment slot="desc">Make your organization shine by supporting our conference.</Fragment>
     </Sectionhead>
 
-    <!--div class="grid md:grid-cols-3 gap-10 mx-auto max-w-screen-lg mt-12">
+    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-screen-lg mt-12">
       {pricing.map((item) => <Pricing plan={item} />)}
-    </div-->
+    </div>
+    
   </Container>
+
 </Layout>
