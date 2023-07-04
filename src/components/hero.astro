@@ -1,44 +1,17 @@
 ---
 import Link from "@components/ui/link.astro";
-import vcsDen from "../assets/logo-VCS.png";
-import cws from "../assets/logo-cws.png";
-import dcWater from "../assets/logo-dcwater.png";
-import dommel from "../assets/logo-de-dommel2.png";
-import hrsd from "../assets/logo-hrsd.png";
 import Logos from "./logos.astro";
+import dynamita from "../assets/sponsors/Dynamita.png";
 
-const utilities = [
+const sponsors = [
   {
-    name: "Clean Water Services",
-    src: cws,
-    width: 200,
-    height: 54,
-  },
-  {
-    name: "DC Water",
-    src: dcWater,
-    width: 110,
-    height: 80,
-  },
-  {
-    name: "HRSD",
-    src: hrsd,
-    width: 140,
-    height: 25,
-  },
-  {
-    name: "VCS Denmark",
-    src: vcsDen,
-    width: 173,
-    height: 60,
-  },
-  {
-    name: "Waterschap De Dommel",
-    src: dommel,
-    width: 140,
-    height: 70,
+    name: "dynamita",
+    src: dynamita,
+    width: 351,
+    height: 84,
   },
 ];
+
 ---
 
 <main
@@ -93,5 +66,5 @@ const utilities = [
       >
     </div>
   </div>
-  <Logos header="" logos={utilities} />
+  <Logos header="" logos={sponsors} />
 </main>
