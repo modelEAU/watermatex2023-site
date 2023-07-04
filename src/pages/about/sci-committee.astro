@@ -894,12 +894,11 @@ const title = "Scientific Committee";
         between mid-April and mid-May 2023.
       </p>
     </div>
-    
     <div class="mx-auto max-w-4xl mt-12">
-      <h2 class="text-2xl font-bold py-10">Experienced Water Professionals</h2>
+      <h2 class="text-2xl font-bold py-10">Young Water Professionals</h2>
       <div class="grid md:grid-cols-3 gap-10">
         {
-          sciCommittee
+          ywps
             .sort((a, b) =>
               a.name.split(" ")[1].toLowerCase() >
               b.name.split(" ")[1].toLowerCase()
@@ -927,10 +926,10 @@ const title = "Scientific Committee";
       </div>
     </div>
     <div class="mx-auto max-w-4xl mt-12">
-      <h2 class="text-2xl font-bold py-10">Young Water Professionals</h2>
+      <h2 class="text-2xl font-bold py-10">Experienced Water Professionals</h2>
       <div class="grid md:grid-cols-3 gap-10">
         {
-          ywps
+          sciCommittee
             .sort((a, b) =>
               a.name.split(" ")[1].toLowerCase() >
               b.name.split(" ")[1].toLowerCase()

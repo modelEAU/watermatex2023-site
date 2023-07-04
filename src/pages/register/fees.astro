@@ -54,15 +54,15 @@ const pricing = [
       <Fragment slot="desc">Early-bird pricing ends on August 1st &mdash; don't miss it!</Fragment
       >
     </Sectionhead>
+    <div class="flex gap-10 mx-12 md:mx-36 max-w-screen-lg mt-4">
+      <Link href={regLink} style="primary"> Click here to register </Link>
+    </div>
     <div class="mx-12 md:mx-36 mt-2 text-slate-400">
       [ ] indicates single-day fee.
     </div>
     <div class="mx-12 md:mx-36 mt-2 text-slate-400">All fees in CAD.</div>
     <div class="grid md:grid-cols-2 gap-10 mx-12 md:mx-36 max-w-screen-lg mt-4">
       {pricing.map((item) => <Pricing plan={item} />)}
-    </div>
-    <div class="flex gap-10 mx-12 md:mx-36 max-w-screen-lg mt-4">
-      <Link href={regLink} style="primary"> Click here to register </Link>
     </div>
     <div class="mt-16 md:mt-5 mx-12 md:mx-36 py-8">
       <h2 class="font-bold text-3xl text-gray-800">Cancellation Policy</h2>
