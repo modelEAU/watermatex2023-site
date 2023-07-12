@@ -18,4 +18,4 @@ We are excited to dive into the latest advancements in all aspects of water-rela
 🗓️ Stay tuned for updates on the conference program, keynote speakers, and networking events 💡
 🙌 A big thank you to everyone who submitted their work! Let's make #Watermatex2023 an event to remember! 🌟
 
-![Submissions map](src/assets/blog/submission-map.jpeg)
+![Submissions map](/blog/submission-map.jpeg)

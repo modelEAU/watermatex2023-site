@@ -18,6 +18,6 @@ To give you a sneak peek, we've prepared two charts to highlight the submissions
 
 Stay tuned for more updates as we delve deeper into the selection process. We can't wait to share with you the final program that promises to be a rich tapestry of ideas and solutions for the water industry's challenges! 💡 💦
 
-![Submissions per domain](../../assets/blog/sub-domain.jpeg)
+![Submissions per domain](/blog/sub-domain.jpeg)
 
-![Submissions per methodology](../../assets/blog/sub-method.jpeg)
+![Submissions per methodology](/blog/sub-method.jpeg)

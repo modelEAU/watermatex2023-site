@@ -21,4 +21,4 @@ Here's how Bruce announces his keynote address, entitled: CLIMATE CHANGE DRIVES 
 
 Stay tuned as we unveil the full Watermatex 2023 program, featuring a lineup of exceptional speakers, cutting-edge research, and innovative solutions for the water industry.💧🌍
 
-![Keynote Speaker Bruce Beck](../../assets/blog/bruce.jpeg)
+![Keynote Speaker Bruce Beck](/blog/bruce.jpeg)

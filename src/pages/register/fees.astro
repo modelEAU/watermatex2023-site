@@ -5,7 +5,8 @@ import Sectionhead from "@components/sectionhead.astro";
 import Link from "@components/ui/link.astro";
 import Layout from "@layouts/Layout.astro";
 
-const regLink = "https://event.fourwaves.com/95f0a42d-264a-4e94-a2e9-f1e631c51a77/registration"
+const regLink =
+  "https://event.fourwaves.com/95f0a42d-264a-4e94-a2e9-f1e631c51a77/registration";
 
 const pricing = [
   {
@@ -15,7 +16,7 @@ const pricing = [
       IWA: "$950 [$500]",
       Student: "$580 [$300]",
       accompanier: "$290",
-    }
+    },
   },
   {
     name: "Early Bird, low-income country",
@@ -24,7 +25,7 @@ const pricing = [
       IWA: "$600 [$350]",
       Student: "$440 [$250]",
       accompanier: "$290",
-    }
+    },
   },
   {
     name: "High-income country",
@@ -33,7 +34,7 @@ const pricing = [
       IWA: "$1020 [$550]",
       Student: "$650 [$350]",
       accompanier: "$290",
-    }
+    },
   },
   {
     name: "Low-income country",
@@ -42,7 +43,7 @@ const pricing = [
       IWA: "$730 [$400]",
       Student: "$510 [$300]",
       accompanier: "$290",
-    }
+    },
   },
 ];
 ---
@@ -51,33 +52,44 @@ const pricing = [
   <Container>
     <Sectionhead>
       <Fragment slot="title">Registration</Fragment>
-      <Fragment slot="desc">Early-bird pricing ends on August 1st &mdash; don't miss it!</Fragment
-      >
+      <Fragment slot="desc">
+        Early-bird pricing ends on <span class="text-red-600 font-bold"
+          >August 1st</span
+        >
+        &mdash; don't miss it! <br />
+      </Fragment>
     </Sectionhead>
-    <div class="flex gap-10 mx-12 md:mx-36 max-w-screen-lg mt-4">
-      <Link href={regLink} style="primary"> Click here to register </Link>
-    </div>
-    <div class="mx-12 md:mx-36 mt-2 text-slate-400">
-      [ ] indicates single-day fee.
-    </div>
-    <div class="mx-12 md:mx-36 mt-2 text-slate-400">All fees in CAD.</div>
-    <div class="grid md:grid-cols-2 gap-10 mx-12 md:mx-36 max-w-screen-lg mt-4">
-      {pricing.map((item) => <Pricing plan={item} />)}
-    </div>
-    <div class="mt-16 md:mt-5 mx-12 md:mx-36 py-8">
-      <h2 class="font-bold text-3xl text-gray-800">Cancellation Policy</h2>
-      <p class="text-lg mt-4 text-slate-600 py-2">
-        Cancellations must be sent by e-mail to <a
-          class="underline text-blue-500"
-          href="mailto:registration@watermatex2023.org"
-          >registration@watermatex2023.org</a
-        >. All cancellations require confirmation by the organizers.
-        Cancellations up until August 23, 2023 are eligible for a refund, minus
-        an administration fee of CAD$100. Cancellations received after the
-        deadline are not eligible for a refund. Substitutions will be accepted,
-        but the organizers <strong>must</strong> be advised by e-mail of the new
-        participant's name and contact details.
-      </p>
-    </div>
   </Container>
+  <div class="flex gap-10 mx-12 md:mx-36 max-w-screen-lg mt-4">
+    <Link href={regLink} style="primary">Click here to register</Link>
+  </div>
+  <div class="mx-12 md:mx-36 mt-2 text-slate-400">
+    [ ] indicates single-day fee.
+  </div>
+  <div class="mx-12 md:mx-36 mt-2 text-slate-400">All fees in CAD.</div>
+  <div class="mx-12 md:mx-36 mt-2 text-slate-400">
+    The list of low-income countries as defined by IWA can be found <a
+      class="underline text-blue-500"
+      href="https://iwa-network.org/wp-content/uploads/2015/12/2021-Country-Classification-Update.pdf"
+      >here.</a
+    >
+  </div>
+  <div class="grid md:grid-cols-2 gap-10 mx-12 md:mx-36 max-w-screen-lg mt-4">
+    {pricing.map((item) => <Pricing plan={item} />)}
+  </div>
+  <div class="mt-16 md:mt-5 mx-12 md:mx-36 py-8">
+    <h2 class="font-bold text-3xl text-gray-800">Cancellation Policy</h2>
+    <p class="text-lg mt-4 text-slate-600 py-2">
+      Cancellations must be sent by e-mail to <a
+        class="underline text-blue-500"
+        href="mailto:registration@watermatex2023.org"
+        >registration@watermatex2023.org</a
+      >. All cancellations require confirmation by the organizers. Cancellations
+      up until August 23, 2023 are eligible for a refund, minus an
+      administration fee of CAD$100. Cancellations received after the deadline
+      are not eligible for a refund. Substitutions will be accepted, but the
+      organizers <strong>must</strong> be advised by e-mail of the new participant's
+      name and contact details.
+    </p>
+  </div>
 </Layout>
