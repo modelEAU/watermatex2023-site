@@ -2,7 +2,7 @@
 title: "🌊 Preliminary Program Released!"
 excerpt: ""
 publishDate: "2023-06-27T11:39:36.050Z"
-image: "src/assets/blog/prelim-prog.png"
+image: "/blog/prelim-prog.png"
 category: "Announcement"
 author: "Mostafa Khalil"
 layout: "@layouts/BlogLayout.astro"

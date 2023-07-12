@@ -2,7 +2,7 @@
 title: "⭐️ 📢 Keynote Speaker Announced"
 excerpt: ""
 publishDate: "2023-06-21T11:39:36.050Z"
-image: "src/assets/blog/bruce.jpeg"
+image: "/blog/bruce.jpeg"
 category: "Announcement"
 author: "Mostafa Khalil"
 layout: "@layouts/BlogLayout.astro"

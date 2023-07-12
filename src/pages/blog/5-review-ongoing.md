@@ -2,7 +2,7 @@
 title: "🌎 🔬 Attention all Watermatex 2023 enthusiasts!"
 excerpt: ""
 publishDate: "2023-05-30T11:39:36.050Z"
-image: "src/assets/blog/sub-domain.jpeg"
+image: "/blog/sub-domain.jpeg"
 category: "Announcement"
 author: "Mostafa Khalil"
 layout: "@layouts/BlogLayout.astro"

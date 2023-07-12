@@ -2,7 +2,7 @@
 title: "🌊 Watermatex 2023 Conference: Loading.....🌍"
 excerpt: ""
 publishDate: "2023-05-25T11:39:36.050Z"
-image: "src/assets/blog/submission-map.jpeg"
+image: "/blog/submission-map.jpeg"
 category: "Announcement"
 author: "Mostafa Khalil"
 layout: "@layouts/BlogLayout.astro"
