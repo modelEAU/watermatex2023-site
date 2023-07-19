@@ -6,6 +6,7 @@ import Sectionhead from "@components/sectionhead.astro";
 import Layout from "@layouts/Layout.astro";
 import mapPath from "assets/connections-map.png";
 import SliderPhotos from "@components/sliderPhotos.astro";
+import photoMaps from "@assets/sliderData.json";
 
 const map = {
   src: mapPath,
@@ -62,7 +63,7 @@ const map = {
           >here.
         </a>
       </p>
-      <SliderPhotos/>
+      <SliderPhotos photos={photoMaps} />
     </div>
   </Container>
 </Layout>

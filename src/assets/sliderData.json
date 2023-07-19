@@ -1,27 +1,38 @@
 [
   {
     "name": "Bus station",
-    "imgFile": "/data/slider-venue/venue-1.jpg",
-    "active": true
+    "src": "/data/slider-venue/venue-1.jpg",
+    "active": true,
+    "url": ""
   },
   {
     "name": "Building",
-    "imgFile": "/data/slider-venue/venue-2.png"
+    "src": "/data/slider-venue/venue-2.jpg",
+    "active": false,
+    "url": ""
   },
   {
     "name": "Conference room",
-    "imgFile": "/data/slider-venue/venue-3.png"
+    "src": "/data/slider-venue/venue-3.jpg",
+    "active": false,
+    "url": ""
   },
   {
     "name": "Poster gallery",
-    "imgFile": "/data/slider-venue/venue-4.png"
+    "src": "/data/slider-venue/venue-4.jpg",
+    "active": false,
+    "url": ""
   },
   {
     "name": "Conference room 2",
-    "imgFile": "/data/slider-venue/venue-5.png"
+    "src": "/data/slider-venue/venue-5.jpg",
+    "active": false,
+    "url": ""
   },
   {
     "name": "Conference room 3",
-    "imgFile": "/data/slider-venue/venue-6.jpg"
+    "src": "/data/slider-venue/venue-6.jpg",
+    "active": false,
+    "url": ""
   }
 ]

@@ -2,13 +2,45 @@
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
 import Layout from "@layouts/Layout.astro";
+import Callout from "@components/callout.astro";
+import HotelData from "@assets/hotelData.json";
+import SliderPhotos from "@components/sliderPhotos.astro";
 ---
 
 <Layout title="Accommodation">
   <Container>
     <Sectionhead>
-        <Fragment slot="title">Accommodation</Fragment>
-        <Fragment slot="desc">Coming soon</Fragment>
-      </Sectionhead>
+      <Fragment slot="title">Accommodation</Fragment>
+      <Fragment slot="desc">Sleep on both ears while in Québec City.</Fragment>
+    </Sectionhead>
+    <p class="text-lg mt-4 text-slate-600 py-2">
+      The city of Québec has an abundant and varied offer of accommodation both
+      near the conference venue and in its historic old town, all in walking
+      distance of public transportation. These will allow you both to enjoy the
+      conference and enjoy the many <a
+        class="underline text-blue-500"
+        href="https://meetings.quebec-cite.com/en/activities-experiences-quebec-city">
+        activities and experiences
+      </a> our beautiful city has to offer.
+    </p>
+
+    <p class="text-lg mt-4 text-slate-600 py-2">
+      Though the offer of accommodation is plentiful, it is recommended that
+      participants secure their housing ahead of their trip.
+    </p>
+    <div class="flex justify-center">
+      <SliderPhotos photos={HotelData} />
+    </div>
+    <Callout
+      >Student participants and our colleagues joining us from low and
+      middle-income countries may be interested to know that our organization
+      team has secured 30 rooms at the <a
+        class="underline text-blue-500"
+        href="https://www.residences.ulaval.ca/en/short-term-accommodations/"
+        >Université Laval Hotel</a
+      > at the competitive rate of 105$ + taxes. These rooms have a private bathroom
+      and can accommodate up to 4 people (Queen bed + couch-bed). Use event number
+      <strong>Watermatex 2023 - #337243</strong> when making your reservation.
+    </Callout>
   </Container>
 </Layout>

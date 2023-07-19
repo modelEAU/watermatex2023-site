@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Alt Hotel",
+    "src": "/data/slider-hotel/hotel-alt.png",
+    "active": true,
+    "url": "https://www.germainhotels.com/en/alt-hotel/quebec/gallery"
+  },
+  {
+    "name": "Concorde Hotel",
+    "src": "/data/slider-hotel/hotel-concorde.png",
+    "active": false,
+    "url": "https://hotelleconcordequebec.com/en"
+  },
+  {
+    "name": "Delta Hotel",
+    "src": "/data/slider-hotel/hotel-delta.jpeg",
+    "active": false,
+    "url": "https://www.marriott.com/en/hotels/yqbdr-delta-hotels-quebec/overview/"
+  },
+  {
+    "name": "Québec International Hostel",
+    "src": "/data/slider-hotel/hotel-hi.png",
+    "active": false,
+    "url": "https://en.hiquebec.ca/"
+  },
+  {
+    "name": "Hilton Hotel",
+    "src": "/data/slider-hotel/hotel-hilton.png",
+    "active": false,
+    "url": "https://www.hilton.com/en/hotels/yqbhihh-hilton-quebec/"
+  },
+  {
+    "name": "Laurier Hotel",
+    "src": "/data/slider-hotel/hotel-laurier.jpeg",
+    "active": false,
+    "url": "https://www.hotelchateaulaurier.com/en/"
+  },
+  {
+    "name": "Lindbergh Hotel",
+    "src": "/data/slider-hotel/hotel-lindbergh.jpeg",
+    "active": false,
+    "url": "https://www.hotelsjaro.com/en/lindbergh"
+  },
+  {
+    "name": "Plaza Hotel",
+    "src": "/data/slider-hotel/hotel-plaza.jpg",
+    "active": false,
+    "url": "https://www.hotelsjaro.com/en/plaza-quebec"
+  },
+  {
+    "name": "PUR Hotel",
+    "src": "/data/slider-hotel/hotel-pur.jpg",
+    "active": false,
+    "url": "https://www.marriott.com/en-us/hotels/yqbpu-hotel-pur-quebec-a-tribute-portfolio-hotel/overview/"
+  },
+  {
+    "name": "Palace Royal Hotel",
+    "src": "/data/slider-hotel/hotel-royal.jpg",
+    "active": false,
+    "url": "https://www.hotelsjaro.com/en/palace-royal"
+  },
+  {
+    "name": "Université Laval Hotel",
+    "src": "/data/slider-hotel/hotel-ulaval.jpeg",
+    "active": false,
+    "url": "https://www.residences.ulaval.ca/en/short-term-accommodations/"
+  },
+  {
+    "name": "Victoria Hotel",
+    "src": "/data/slider-hotel/hotel-victoria.jpeg",
+    "active": false,
+    "url": "https://www.manoir-victoria.com/index.php/en/"
+  }
+]

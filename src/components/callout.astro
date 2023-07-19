@@ -3,9 +3,14 @@ import { Icon } from "astro-icon";
 ---
 
 <div
-  class="bg-sky-100 bg-opacity-50 px-10 py-10 my-5 mx-auto rounded-lg flex flex-col  text-left">
+  class="bg-sky-100 bg-opacity-50 px-10 py-10 my-5 mx-auto rounded-lg flex flex-col text-left">
   <div class="flex gap-4 items-start">
-    <Icon class="text-slate-800 aspect-square" name="heroicons-outline:light-bulb" width="50"/>
+    <Icon
+      class="text-slate-800 aspect-square"
+      name="heroicons-outline:light-bulb"
+      width="50"
+      style="flex-shrink: 0;"
+    />
     <p class="text-slate-700 mt-4 text-base md:text-lg">
       <slot />
     </p>
