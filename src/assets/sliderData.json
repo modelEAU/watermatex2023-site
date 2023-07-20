@@ -1,37 +1,37 @@
 [
   {
-    "name": "Bus station",
+    "name": "A view of the Atrium",
     "src": "/data/slider-venue/venue-1.jpg",
     "active": true,
     "url": ""
   },
   {
-    "name": "Building",
+    "name": "The main conference room",
+    "src": "/data/slider-venue/venue-6.jpg",
+    "active": false,
+    "url": ""
+  },
+  {
+    "name": "Another view of the Atrium",
     "src": "/data/slider-venue/venue-2.jpg",
     "active": false,
     "url": ""
   },
   {
-    "name": "Conference room",
+    "name": "An Aerial view of the Université Laval campus",
     "src": "/data/slider-venue/venue-3.jpg",
     "active": false,
     "url": ""
   },
   {
-    "name": "Poster gallery",
+    "name": "A poster session",
     "src": "/data/slider-venue/venue-4.jpg",
     "active": false,
     "url": ""
   },
   {
-    "name": "Conference room 2",
+    "name": "A relaxing area near the conference rooms",
     "src": "/data/slider-venue/venue-5.jpg",
-    "active": false,
-    "url": ""
-  },
-  {
-    "name": "Conference room 3",
-    "src": "/data/slider-venue/venue-6.jpg",
     "active": false,
     "url": ""
   }
