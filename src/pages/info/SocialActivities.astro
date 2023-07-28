@@ -1,0 +1,195 @@
+---
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import Layout from "@layouts/Layout.astro";
+import { Image } from "@astrojs/image/components";
+import "styles/generalStyle.css";
+
+// all from unsplash 
+import historyPath from "/public/data/socialQuebec/oldQuebec.jpg"; 
+import culturalPath from "/public/data/socialQuebec/museum.jpg"; 
+import foodPath from "/public/data/socialQuebec/food.jpg"; 
+import naturePath from "/public/data/socialQuebec/nature.jpg"; 
+import eveningPath from "/public/data/socialQuebec/bar.jpg"; 
+import shoppingPath from "/public/data/socialQuebec/antique.jpg"; 
+
+
+const history = {
+  src: historyPath,
+  alt: "historic Quebec",
+  width: "500",
+  height: "600",
+  format: "jpg",
+};
+
+const cultural = {
+  src: culturalPath,
+  alt: "Museum",
+  width: "500",
+  height: "600",
+  format: "jpg",
+};
+
+const food = {
+  src: foodPath,
+  alt: "Gastronomic",
+  width: "500",
+  height: "600",
+  format: "jpg",
+};
+
+const nature = {
+  src: naturePath,
+  alt: "nature",
+  width: "500",
+  height: "600",
+  format: "jpg",
+};
+
+const evening = {
+  src: eveningPath,
+  alt: "bar",
+  width: "500",
+  height: "600",
+  format: "jpg",
+};
+
+const shopping = {
+  src: shoppingPath,
+  alt: "antiques",
+  width: "500",
+  height: "600",
+  format: "jpg",
+};
+
+
+---
+
+<Layout title="Discovering Quebec City">
+  <Container>
+    <Sectionhead>
+        <Fragment slot="title">Discovering Quebec City</Fragment>
+        <Fragment slot="desc"></Fragment>
+      </Sectionhead>
+  </Container>
+  <Container>
+    <p class="text-lg mt-4 text-slate-600 py-6">
+      Welcome to Quebec City, a vibrant and historic destination that offers an array of 
+      exciting social activities to enrich your experience during the congress. From cultural 
+      explorations to thrilling adventures, there's something for everyone to enjoy. Take a 
+      glimpse at some of the remarkable activities you can indulge in during your stay.
+
+    </p>
+
+    <Container>
+
+      <hr class="featurette-divider">
+
+      <div class="grid lg:grid-cols-2 items-center">
+        <div class="">
+          <h2 class="text-2xl lg:text-3xl font-bold lg:tracking-tight text-left mt-6 py-2">Explore Quebec City's Rich History. <span class="text-body-secondary">It’ll blow your mind.</span></h2>
+          <p class="lead">Immerse yourself in Quebec City's captivating history by visiting historic landmarks, 
+            such as the iconic Château Frontenac and the picturesque Old Quebec.</p>
+          <p class="py-4">
+            Step back in time and immerse yourself in Quebec City's rich history. As you stroll through the enchanting streets of Old Quebec, you'll feel the essence of centuries past lingering in the air. The UNESCO World Heritage-listed Old Quebec is a treasure trove of architectural marvels, charming boutiques, and quaint cafes. Take a guided walking tour to uncover the secrets and stories behind each cobblestone, and discover the significance of landmarks like the historic Notre-Dame de Québec Basilica-Cathedral, the oldest Catholic parish in North America.
+            While in the city, don't miss the chance to visit the iconic Fairmont Le Château Frontenac, a grand castle-like hotel that dominates the skyline. Marvel at its turrets and majestic presence, offering breathtaking views of the St. Lawrence River and the surrounding city. Allow yourself to be transported to a bygone era as you explore this magnificent piece of history.
+          </p>
+        </div>
+        <div class="w-screen max-w-xl flex items-center pl-8">
+          <Image {...history}  />
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette grid lg:grid-cols-2">
+        <div class="order-md-1">
+          <Image {...cultural}  />
+        </div>
+        <div class="order-md-2">
+          <h2 class="text-2xl lg:text-3xl font-bold lg:tracking-tight text-left mt-6 py-2">Cultural Excursions. <span class="text-body-secondary">See for yourself.</span></h2>
+          <p class="lead">Discover Quebec City's vibrant culture through guided tours of art galleries, 
+            museums, and exhibitions showcasing local artists and artisans.</p>
+          <p class="py-4">
+            Quebec City's cultural scene is a vibrant tapestry of art, music, and heritage. Embark on a guided cultural excursion that takes you through the heart of the city's artistic expression. Admire the works of talented local artists in art galleries, showcasing everything from contemporary pieces to traditional crafts. The Musee National des Beaux-Arts du Quebec (National Museum of Fine Arts of Quebec) is a must-visit, featuring an extensive collection of Quebecois and Canadian art that reflects the province's history and creativity.
+            Immerse yourself in live performances and musical events that capture the spirit of the city. Whether it's a lively street performance, an intimate jazz session, or a captivating theater production, you'll find a cultural experience to suit your tastes.
+          </p>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="grid lg:grid-cols-2">
+        <div class="">
+          <h2 class="text-2xl lg:text-3xl font-bold lg:tracking-tight text-left mt-6 py-2">Gastronomic Delights. <span class="text-body-secondary"> Checkmate.</span></h2>
+          <p class="lead">Experience Quebec City's culinary excellence with its diverse restaurants, 
+                        offering delectable French-inspired cuisine and local delicacies.</p>
+          <p class="py-4">
+            Quebec City's culinary landscape is a fusion of French heritage and local flavors, resulting in an extraordinary gastronomic journey. Treat yourself to a delectable dining experience at one of the city's renowned restaurants, where talented chefs present masterpieces on a plate. Delight in dishes featuring regional ingredients like maple syrup, wild game, and succulent seafood from the nearby Atlantic coast.
+            Indulge in a leisurely brunch at a charming cafe, sipping on freshly brewed coffee while savoring flaky croissants and savory crepes. The city's vibrant food markets, such as the Marché du Vieux-Port (Old Port Market), offer an opportunity to taste local specialties and artisanal products that embody the essence of Quebecois cuisine.
+          </p>
+        </div>
+        <div class="w-screen max-w-xl flex items-center pl-8">
+          <Image {...food}  />
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="grid lg:grid-cols-2">
+        <div class="">
+          <Image {...nature}  />
+        </div>
+        <div class="">
+          <h2 class="text-2xl lg:text-3xl font-bold lg:tracking-tight text-left mt-6 py-2">Adventures in Nature. <span class="text-body-secondary"> Checkmate.</span></h2>
+          <p class="lead"> Embrace the great outdoors with thrilling activities such as whale-watching tours, 
+                        hiking in picturesque national parks, and exploring the stunning Montmorency Falls.</p>
+          <p class="py-4">
+            For nature enthusiasts and adventure seekers, Quebec City offers an abundance of outdoor activities. Embark on a whale-watching tour on the mighty St. Lawrence River, where you can spot majestic marine mammals such as belugas and minke whales. The sight of these gentle giants swimming alongside your boat is an unforgettable experience.
+            Nature lovers can explore the nearby national parks, such as Parc de la Chute-Montmorency (Montmorency Falls Park), where the impressive Montmorency Falls cascades down a rock face higher than Niagara Falls. Take a scenic cable car ride for a stunning panoramic view or hike the surrounding trails to witness the falls up close.
+          </p>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="grid lg:grid-cols-2">
+        <div class="">
+          <h2 class="text-2xl lg:text-3xl font-bold lg:tracking-tight text-left mt-6 py-2">Evening Entertainment. <span class="text-body-secondary">Checkmate.</span></h2>
+          <p class="lead"> Unwind after conference sessions with vibrant nightlife, including live music performances, dance clubs, and entertainment shows.</p>
+          <p class="py-4">
+            When the sun sets, Quebec City's vibrant nightlife comes to life. Experience an evening filled with entertainment, from live music performances at intimate venues to energetic dance clubs where you can dance the night away. If you're interested in performing arts, attend a theater show or concert showcasing local and international talent.
+            For a more laid-back experience, enjoy a leisurely evening walk along the city's well-lit streets, taking in the captivating ambiance of historic buildings adorned with soft lighting and street performers adding to the charm.
+          </p>
+        </div>
+        <div class="w-screen max-w-xl flex items-center pl-8">
+          <Image {...evening}  />
+        </div>
+      </div>
+
+      <hr class="featurette-divider ">
+
+      <div class="grid lg:grid-cols-2">
+        <div class="col-md-5">
+          <Image {...shopping}  />
+        </div>
+        <div class="col-md-7">
+          <h2 class="text-2xl lg:text-3xl font-bold lg:tracking-tight text-left mt-6 py-2">Shopping and Souvenirs. <span class="text-body-secondary">Checkmate.</span></h2>
+          <p class="lead"> Enjoy shopping in the charming boutiques and shops scattered throughout Quebec City, offering unique souvenirs and local crafts.</p>
+          <p class="py-4">
+            No visit to Quebec City is complete without bringing home a piece of its unique charm. Explore the city's charming boutiques and shops, where you'll find an array of authentic Quebecois souvenirs and handcrafted treasures. From intricately designed maple syrup products and locally made chocolates to artisanal crafts and beautiful works of art, there's a souvenir to suit every taste and preference.
+            As you cherish the memories of your congress and time spent in Quebec City, these keepsakes will serve as delightful reminders of the city's warmth and hospitality.
+          </p>
+        </div>
+      </div>
+
+
+      <p class= "text-2xl lg:text-3xl font-bold lg:tracking-tight text-left mt-6 py-4">
+        Come join us at the congress in Quebec City, where you'll not only enrich your knowledge but also create unforgettable memories through these diverse social activities.
+      </p>
+
+    </Container>
+  </Container>
+</Layout>
+
+
