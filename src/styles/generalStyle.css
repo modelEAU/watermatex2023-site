@@ -1,0 +1,40 @@
+
+
+.featurette-divider {
+    margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+}
+  
+  /* Thin out the marketing headings */
+  /* rtl:begin:remove */
+
+.featurette-heading {
+    letter-spacing: -.05rem;
+}
+
+.fw-normal {
+    font-weight:400 !important
+}
+
+.text-body-secondary {
+    --bs-text-opacity: 1;
+    color:var(--bs-secondary-color) !important
+}
+
+.lead {
+    font-size: 1.25rem;
+    font-weight:300
+}
+
+.marketing .col-lg-4 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.marketing h2 {
+    font-weight: 400;
+}
+  /* rtl:begin:ignore */
+.marketing .col-lg-4 p {
+    margin-right: .75rem;
+    margin-left: .75rem;
+}
