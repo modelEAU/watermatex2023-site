@@ -11,7 +11,7 @@ tags: [announcement]
 
 📢🌟 Breaking News! We're thrilled to announce that the eagerly awaited Watermatex 2023 program will be unveiled this week!
 
-But wait, we have a little surprise for you in the meantime. Allow us to introduce one of our esteemed keynote speakers, M. Bruce Beck, who will be delivering a speech that will leave you inspired and ready for action.🔥
+But wait, we have a little surprise for you in the meantime. Allow us to introduce one of our esteemed keynote speakers, Mr. Bruce Beck, who will be delivering a speech that will leave you inspired and ready for action.🔥
 
 Bruce was a visionary leader and the driving force behind the establishment of the IWA MIA Specialist Group on Modelling and Integrated Assessment back in the 80s. Serving as chairman well into the 2000s, Bruce's unwavering passion and expertise have nurtured the group into one of the largest and most influential Specialist Groups within the IWA, covering all water systems.
 
