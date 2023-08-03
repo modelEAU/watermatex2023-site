@@ -2,13 +2,92 @@
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
 import Layout from "@layouts/Layout.astro";
+import { Image } from "@astrojs/image/components";
+import dinnerPath from "/public/data/social-program/dinner.jpg"; 
+import drinksPath from "/public/data/social-program/drinks.jpg"; 
+
+// Photo by <a href="https://unsplash.com/@antenna?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Antenna</a> on <a href="https://unsplash.com/photos/ZDN-G1xBWHY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+// Photo by <a href="https://unsplash.com/@filmmakerandrea6?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Andrea Joshua Sibabalo Qoqonga</a> on <a href="https://unsplash.com/photos/dxyyr_UzH6Q?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+
+const pathSocialQuebec = "/info/SocialActivities" 
+
+const dinner = {
+  src: dinnerPath,
+  alt: "dinner",
+  width: "633",
+  height: "480",
+  format: "jpg",
+};
+
+const drinks = {
+  src: drinksPath,
+  alt: "coctail",
+  width: "527",
+  height: "351",
+  format: "jpg",
+};
+
 ---
 
 <Layout title="Social Program">
   <Container>
     <Sectionhead>
         <Fragment slot="title">Social Program</Fragment>
-        <Fragment slot="desc">Coming soon</Fragment>
+        <Fragment slot="desc">In addition to engaging in stimulating discussions and enriching sessions, you'll also be a part of an exciting social program! 
+        </Fragment>
       </Sectionhead>
+
+    <Container>
+      <p class="text-lg mt-4 text-slate-600 py-6">
+        We firmly believe that the connections you make and the memories you create during the 
+        social events will add an extra layer of fulfilment to your conference experience. 
+        Don't miss out on this chance to bond with like-minded individuals and create lasting 
+        connections. Take a look at what we have in store for you:
+      </p>
+    </Container>
+    <Container>
+      <hr class="featurette-divider">
+
+      <div class="grid lg:grid-cols-2 items-center">
+        <div class="">
+          <h2 class="text-2xl lg:text-3xl font-bold lg:tracking-tight text-left mt-6 py-2">Welcome Reception.</h2>
+          <p class="lead">Sunday 24 September - Evening</p>
+          <p class="py-4">Let's kickstart the conference with a warm and welcoming reception. 
+            This event is designed to provide the perfect platform for networking, making new 
+            connections, and reuniting with old friends. Relax and enjoy delightful refreshments 
+            as you gear up for an incredible conference journey.</p>
+        </div>
+        <div class="w-screen max-w-xl flex items-center pl-8">
+          <Image {...drinks}  />
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="grid lg:grid-cols-2 items-center">
+        <div class="w-screen max-w-xl flex items-center pl-8">
+          <Image {...dinner}  />
+        </div>
+        <div class="">
+          <h2 class="text-2xl lg:text-3xl font-bold lg:tracking-tight text-left mt-6 py-2">Conference Dinner.</h2>
+          <p class="lead">Tuesday 26 September - Evening</p>
+          <p class="py-4">
+            Save the date for our conference dinner. It promises to be an enchanting affair filled with 
+            delectable cuisine, captivating entertainment, and an ambiance that encourages camaraderie and 
+            collaboration. Stay tuned for more details in the upcoming weeks - you won't want to miss this!
+          </p>
+        </div>
+      </div>
+
+      <p class= "lg:tracking-tight text-lg text-left lead mt-6 py-4">
+        While you're in town, take some time to explore the vibrant city and its many attractions. 
+        To a brief review of what Quebec City and its surroundings have to offer go here:
+        <a href={pathSocialQuebec} class="underline text-blue-500"> Discovering Quebec </a>
+      </p>
+
+      <p class= "text-2xl lg:text-3xl font-bold lg:tracking-tight text-left mt-6 py-4">
+        We look forward to welcoming you to our conference and sharing these incredible social moments together!
+      </p>
+    </Container>
   </Container>
 </Layout>
