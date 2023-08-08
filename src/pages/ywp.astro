@@ -1,13 +1,13 @@
 ---
+import { Image } from "@astrojs/image/components";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
-import { Image } from "@astrojs/image/components";
 import Layout from "@layouts/Layout.astro";
-import sabaDaneshgar from "assets/people/saba-daneshgar.png";
-import kesterMccullough from "assets/people/kester-mccullough.jpeg";
-import hannaMolin from "assets/people/hanna-molin.jpeg";
 import fanlinMeng from "assets/people/fanlin-meng.jpeg";
+import hannaMolin from "assets/people/hanna-molin.jpeg";
 import heliehAbasi from "assets/people/helieh-abasi.jpeg";
+import kesterMccullough from "assets/people/kester-mccullough.jpeg";
+import sabaDaneshgar from "assets/people/saba-daneshgar.png";
 
 const committee = [
   {
@@ -96,10 +96,17 @@ const committee = [
           breaks.
         </li>
         <li>
-          A <strong>“problems and ideas”</strong> session organized by YWPs (more
-          information will follow soon).
+          A <strong>“problems and ideas”</strong> session organized by YWPs.
         </li>
       </ul>
+      <p class="text-lg mt-4 text-slate-600 py-2">
+        <a
+          class="underline text-blue-500"
+          target="_blank"
+          href="/YWP_workshop_preliminary_program.pdf"
+          target="_blank">Click here</a
+        > to download the preliminary workshop program.
+      </p>
       <h2
         class="text-2xl lg:text-3xl font-bold lg:tracking-tight text-left mt-6">
         Meet the YWP Steering Committee
