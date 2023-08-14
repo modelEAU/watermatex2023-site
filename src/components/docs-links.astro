@@ -4,23 +4,31 @@ import { Icon } from "astro-icon";
 
 const docs = [
   {
-    title: "Workshop outline",
+    title: "Workshop outline template",
     description:
       "Organize a half-day or full-day workshop for training or exchanges of ideas.",
     icon: "fluent:people-team-toolbox-20-regular",
-    link: "https://docs.google.com/document/d/1m2tQqo1YykQM_XWhz6xZirKWSFhl84fi/edit?usp=share_link&ouid=109327077578878817900&rtpof=true&sd=true",
+    links: [
+      {
+        name: "Template",
+        url: "https://docs.google.com/document/d/1m2tQqo1YykQM_XWhz6xZirKWSFhl84fi/edit?usp=share_link&ouid=109327077578878817900&rtpof=true&sd=true",
+      },
+    ],
   },
   {
-    title: "Presentation abstract",
+    title: "Abstract template",
     description: "Present your work to your peers in themed sessions.",
     icon: "grommet-icons:workshop",
-    link: "https://docs.google.com/document/d/19djPvQdZL6yyDfxGXLPgE1ionChyrliC/edit?usp=share_link&ouid=109327077578878817900&rtpof=true&sd=true",
-  },
-  {
-    title: "Paper template",
-    description: "Latex paper template for your submission.",
-    icon: "grommet-icons:document-verified",
-    link: "https://drive.google.com/drive/folders/1_Xh2ig_k4ep752vPBajPHHMFubBIOrR1?usp=drive_link",
+    links: [
+      {
+        name: "Word",
+        url: "https://docs.google.com/document/d/19djPvQdZL6yyDfxGXLPgE1ionChyrliC/edit?usp=share_link&ouid=109327077578878817900&rtpof=true&sd=true",
+      },
+      {
+        name: "LaTeX",
+        url: "https://drive.google.com/drive/folders/1_Xh2ig_k4ep752vPBajPHHMFubBIOrR1?usp=drive_link",
+      },
+    ],
   },
 ];
 ---
@@ -28,19 +36,26 @@ const docs = [
 <div class="grid sm:grid-cols-1 md:grid-cols-2 mt-16 gap-16">
   {
     docs.map((item) => (
-      <a href={item.link} target="_blank">
-        <div class="flex gap-4 items-start">
-          <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
-            <Icon class="text-white" name={item.icon} />
-          </div>
-          <div>
-            <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
-            <p class="text-slate-500 mt-2 leading-relaxed">
-              {item.description}
-            </p>
+      <div class="flex gap-4 items-start">
+        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
+          <Icon class="text-white" name={item.icon} />
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+          <div class="mt-4">
+            {item.links.map((link) => (
+              <a
+                class="text-slate-500 hover:text-slate-600 underline mr-4"
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer">
+                {link.name}
+              </a>
+            ))}
           </div>
         </div>
-      </a>
+      </div>
     ))
   }
 </div>
