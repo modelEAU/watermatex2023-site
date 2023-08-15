@@ -1,7 +1,7 @@
 ---
 import Link from "@components/ui/link.astro";
-import Logos from "./logos.astro";
 import dynamita from "../assets/sponsors/Dynamita.png";
+import NewsTicker from "./news-ticker.astro";
 
 const sponsors = [
   {
@@ -11,26 +11,10 @@ const sponsors = [
     height: 84,
   },
 ];
-
 ---
 
-<main
-  class="grid place-items-center pt-16 pb-8 md:pt-8 z-0 mx-auto"
-  style="grid-template-columns: 5fr 3fr;">
-  <!--div class="py-6 md:order-1 hidden md:block relative">
-    <Image
-      class="rounded-md z-0"
-      src={heroImage}
-      alt="Chutes Montmorency near Québec City"
-      loading="eager"
-      format="jpeg"
-    />
-    <div
-      class="absolute bottom-8 left-4 rounded-md bg-slate-700 bg-opacity-30 p-1 text-white text-sm">
-      Chutes Montmorency, near Québec City.
-    </div>
-  </div-->
-  <div>
+<main class="main grid lg:grid-cols-2 place-items-center mt-8 mb-8 rounded-md">
+  <div class="bg-hero lg:min-h:500px order-1 py-6 mx-auto">
     <h1 class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight">
       Watermatex 2023
     </h1>
@@ -43,28 +27,54 @@ const sponsors = [
       </div-->
     </p>
     <div class="mt-6 flex flex-col sm:flex-row gap-3">
-      <Link href="/register/fees" rel="noopener">Registrations are now open!</Link>
+      <Link class="no-wrap" href="/register/fees" rel="noopener">Register</Link>
       <Link
+        class="no-wrap"
         size="lg"
         style="outline"
         rel="noopener"
         href="/info/visas"
         target="_blank">Get your visa</Link
       >
-      <Link
-        size="lg"
-        style="outline"
-        rel="noopener"
-        href="/news"
-        target="_blank">Announcements</Link
+      <Link class="no-wrap" href="preliminary-program.pdf"
+        >Download the program</Link
       >
     </div>
-    <div class="mt-3 flex flex-col sm:flex-row gap-3">
-      <Link
-        href="preliminary-program.pdf"
-        >Download the preliminary program</Link
-      >
+    <div class="mt-3 flex flex-col sm:flex-row gap-3"></div>
+  </div>
+  <div
+    class="ticker-box my-6 order-2 mx-auto rounded drop-shadow-md border-slate-800 border-3 bg-gray-100 bg-opacity-60">
+    <div class="relative">
+      <NewsTicker />
     </div>
   </div>
-  <Logos header="" logos={sponsors} />
+  <!-- <Logos header="" logos={sponsors} /> -->
 </main>
+<style>
+  .main {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.75),
+        rgba(255, 255, 255, 0.2)
+      ),
+      linear-gradient(
+        to left,
+        rgba(255, 255, 255, 0.75),
+        rgba(255, 255, 255, 0.2)
+      ),
+      url("/qc-hero2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; /* Cover the entire width and height of the div */
+    background-position: center; /* Center the image */
+  }
+  .bg-hero {
+    padding: 2rem; /* Add some padding around your content for spacing */
+  }
+  .ticker-box {
+    margin: 2rem;
+    padding: 0.3rem;
+  }
+  .no-wrap {
+    white-space: nowrap;
+  }
+</style>

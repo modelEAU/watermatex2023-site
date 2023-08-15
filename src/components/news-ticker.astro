@@ -1,0 +1,51 @@
+---
+import { getFormattedDate } from "@utils/all";
+
+// Use Astro.glob() to fetch all posts, and then sort them by date.
+const posts = (await Astro.glob("../pages/blog/*.{md,mdx}")).sort(
+  (a, b) =>
+    new Date(b.frontmatter.publishDate).valueOf() -
+    new Date(a.frontmatter.publishDate).valueOf()
+);
+---
+
+<main class="">
+  <ul class="grid gap-2 max-w-lg">
+    {
+      posts.map((post) => (
+        <li>
+          <a href={post.url} class="flex hover:bg-gray-200 hover:bg-opacity-30">
+            <div>
+              <span class="text-blue-400 uppercase tracking-wider text-sm font-medium">
+                {post.frontmatter.category}
+              </span>
+              <h2 class="text-lg font-semibold leading-snug tracking-tight mt-1 ">
+                {post.frontmatter.title}
+              </h2>
+              <time
+                class="text-gray-400 text-base"
+                datetime={post.frontmatter.publishDate}>
+                {getFormattedDate(post.frontmatter.publishDate)}
+              </time>
+            </div>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</main>
+<style>
+  li img {
+    max-width: 50px; /* Sets the maximum width */
+    width: 100%; /* Ensures the image scales responsively up to the max-width */
+    margin-right: 1rem;
+    border-radius: 5px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    max-height: 500px; /* Adjust this value to your desired height */
+    overflow-y: auto; /* Makes it scrollable */
+  }
+</style>
