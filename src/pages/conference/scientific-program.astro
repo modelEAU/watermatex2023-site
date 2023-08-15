@@ -1,7 +1,40 @@
 ---
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
+import Link from "@components/ui/link.astro";
 import Layout from "@layouts/Layout.astro";
+
+import bruceBeck from "@assets/people/bruce-beck.jpeg";
+import elmiraHassanzadeh from "@assets/people/elmira-hassanzadeh.jpeg";
+import peterBach from "@assets/people/peter-bach.png";
+import { Image } from "@astrojs/image/components";
+
+let bruce = {
+  src: bruceBeck,
+  alt: "Bruce Beck",
+  name: "Bruce Beck",
+  width: 250,
+  height: 250,
+  date: "Bla bla bla",
+};
+
+let elmira = {
+  src: elmiraHassanzadeh,
+  alt: "Elmira Hassanzadeh",
+  name: "Elmira Hassanzadeh",
+  width: 250,
+  height: 250,
+  date: "Bla bla bla",
+};
+
+let peter = {
+  src: peterBach,
+  alt: "Peter Marcus Bach",
+  name: "Peter Marcus Bach",
+  width: 250,
+  height: 250,
+  date: "Bla bla bla",
+};
 ---
 
 <Layout title="Scientific Program">
@@ -11,7 +44,21 @@ import Layout from "@layouts/Layout.astro";
       <Fragment slot="desc">Time to put our thinking caps on</Fragment>
     </Sectionhead>
 
-    <div class="mt-16 md:mt-5 mx-12 md:mx-36 py-8">
+    <div
+      class="sticky top-0 z-10 mt-16 md:mt-5 mx-12 md:mx-36 py-8 flex justify-center">
+      <Link
+        class="text-lg mt-4 text-slate-600 py-2 mx-auto"
+        rel="noopener"
+        href="/preliminary-program.pdf">
+        Download the preliminary conference program.
+      </Link>
+    </div>
+
+    <div class="mt-8 md:mt-5 mx-12 md:mx-36 py-8">
+      <h2
+        class="text-2xl lg:text-3xl font-bold lg:tracking-tight text-left mt-6 py-2">
+        The program
+      </h2>
       <p class="text-lg mt-4 text-slate-600 py-2">
         The conference program will consist of 3 parallel sessions and
         interactive keynote sessions (2 experts, 2 visions). Posters will get
@@ -22,36 +69,85 @@ import Layout from "@layouts/Layout.astro";
         class="text-2xl lg:text-3xl font-bold lg:tracking-tight text-left mt-6 py-2">
         Keynotes
       </h2>
-      <p class="text-lg mt-4 text-slate-600 py-2">
-        The opening keynote will be delivered by Mr. Bruce Beck. Bruce was a
-        visionary leader and the driving force behind the establishment of the
-        IWA MIA Specialist Group on Modelling and Integrated Assessment back in
-        the 80s. Serving as chairman well into the 2000s, Bruce's unwavering
-        passion and expertise have nurtured the group into one of the largest
-        and most influential Specialist Groups within the IWA, covering all
-        water systems.
-      </p>
-      <p class="text-lg mt-4 text-slate-600 py-2">
-        Elmira Hassanzadeh, Associate Professor at Polytechnique Montréal will
-        be discussing the paramount importance of "Community Engagement for
-        Water Management Under Uncertainty." Elmira's research delves into
-        integrated modelling of water resource systems, understanding system
-        behaviour under changing conditions, and developing decision support
-        tools based on stakeholders' perspectives for effective water
-        management.
-      </p>
-      <p class="text-lg mt-4 text-slate-600 py-2">
-        Peter Marcus Bach is a Senior Research Scientist at the Eastern
-        Switzerland University of Applied Sciences (OST). He brings a fresh
-        perspective on "Modelling "Palettes" - A New Dawn of Integrated
-        Assessment to Support Water Management's Role Towards Climate-Adaptive
-        Cities." Peter's expertise lies in integrated modelling and blue-green
-        infrastructures, and his research focuses on developing quantitative
-        approaches to aid urban planning and adaptation to climate change. He is
-        particularly passionate about promoting urban nature-based solutions to
-        tackle environmental challenges.
-      </p>
-      <p class="text-lg mt-4 text-slate-600 py-2">
+      <div class="presenter grid grid-cols-3 gap-4 place-items-left mt-4 py-2">
+        <div
+          class="order-1 justify-self-start grid grid-auto-rows-min-content align-middle">
+          <Image
+            class="rounded order-1 py-2 justify-self-left my-auto"
+            src={bruce.src}
+            alt={bruce.name}
+            width={bruce.width}
+            height={bruce.height}
+          />
+
+          <div class="order-2 justify-center">
+            Presentation date: <br />
+            September 24 2023 @ 17:30
+          </div>
+        </div>
+        <p class="text-lg text-slate-600 order-2 col-span-2 my-auto">
+          The opening keynote will be delivered by Mr. Bruce Beck. Bruce was a
+          visionary leader and the driving force behind the establishment of the
+          IWA MIA Specialist Group on Modelling and Integrated Assessment back
+          in the 80s. Serving as chairman well into the 2000s, Bruce's
+          unwavering passion and expertise have nurtured the group into one of
+          the largest and most influential Specialist Groups within the IWA,
+          covering all water systems.
+        </p>
+      </div>
+      <div class="presenter grid grid-cols-3 gap-4 place-items-left mt-4 py-2">
+        <div
+          class="order-2 justify-self-end grid grid-auto-rows-min-content align-middle">
+          <Image
+            class="rounded order-1 py-2 my-auto"
+            src={elmira.src}
+            alt={elmira.name}
+            width={elmira.width}
+            height={elmira.height}
+          />
+          <div class="order-2 justify-center">
+            Presentation date: <br />
+            September 25 2023 @ 8:30
+          </div>
+        </div>
+        <p class="text-lg text-slate-600 col-span-2 order-1 my-auto">
+          Elmira Hassanzadeh, Associate Professor at Polytechnique Montréal will
+          be discussing the paramount importance of "Community Engagement for
+          Water Management Under Uncertainty." Elmira's research delves into
+          integrated modelling of water resource systems, understanding system
+          behaviour under changing conditions, and developing decision support
+          tools based on stakeholders' perspectives for effective water
+          management.
+        </p>
+      </div>
+      <div class="presenter grid grid-cols-3 gap-4 place-items-left mt-4 py-2">
+        <div
+          class="order-2 justify-self-start grid grid-auto-rows-min-content align-middle">
+          <Image
+            class="rounded justify-self-start order-1 py-2 my-auto"
+            src={peter.src}
+            alt={peter.name}
+            width={peter.width}
+            height={peter.height}
+          />
+          <div class="order-2 justify-center">
+            Presentation date: <br />September 25 2023 @ 8:30
+          </div>
+        </div>
+        <p class="text-lg text-slate-600 order-2 col-span-2 my-auto">
+          Peter Marcus Bach is a Senior Research Scientist at the Eastern
+          Switzerland University of Applied Sciences (OST). He brings a fresh
+          perspective on "Modelling "Palettes" - A New Dawn of Integrated
+          Assessment to Support Water Management's Role Towards Climate-Adaptive
+          Cities." Peter's expertise lies in integrated modelling and blue-green
+          infrastructures, and his research focuses on developing quantitative
+          approaches to aid urban planning and adaptation to climate change. He
+          is particularly passionate about promoting urban nature-based
+          solutions to tackle environmental challenges.
+        </p>
+      </div>
+
+      <p class="text-lg mt-4 text-slate-600 py-2 justify-end">
         The closing keynote speaker will be announced later this summer - stay
         tuned!
       </p>
@@ -69,12 +165,15 @@ import Layout from "@layouts/Layout.astro";
         organized and attended by YWPs (Young Water Professionals).
       </p>
       <p class="text-lg mt-4 text-slate-600 py-2">
-        <a class="underline text-blue-500" href="/preliminary-program.pdf"
-          >Click here to download the preliminary conference program.</a
-        >
-        and stay tuned for the official scientific program and schedule later this
+        Stay tuned for the official scientific program and schedule later this
         summer.
       </p>
     </div>
   </Container>
+
+  <style>
+    .sticky {
+      background-color: white;
+    }
+  </style>
 </Layout>

@@ -7,6 +7,9 @@ module.exports = {
       fontFamily: {
         sans: ["Inter", ...defaultTheme.fontFamily.sans],
       },
+      backgroundColor: {
+        'transparent': 'transparent'
+      }
     },
   },
   plugins: [require("@tailwindcss/typography")],

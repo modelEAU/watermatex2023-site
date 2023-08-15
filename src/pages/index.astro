@@ -16,16 +16,13 @@ import uGhent from "../assets/logo-ugent_en.png";
 import ulaval from "../assets/logo-ulaval.png";
 import dynamita from "../assets/sponsors/Dynamita.png";
 
-const sponsors = [
+const utilities = [
   {
     name: "dynamita",
     src: dynamita,
     width: 351,
     height: 84,
   },
-];
-
-const utilities = [
   {
     name: "Clean Water Services",
     src: cws,
@@ -162,15 +159,17 @@ const supportingPartners = [
     <div class="max-w-6xl mx-auto justify-center">
       <div
         class="grid sm:grid-cols-1 md:grid-cols-1 mt-8 gap-16 justify-center">
-        <Logos header="Thank you to our sponsors," logos={sponsors} />
-        <Logos header="supporting utilities," logos={utilities} />
+        <Logos
+          header="Thank you to our sponsors and supporting utilities"
+          logos={utilities}
+        />
         <!--Logos header="Supporting utilities" logos={utilities} /-->
       </div>
     </div>
     <div class="mx-12 md:mx-36 justify-center">
       <div
         class="grid sm:grid-cols-1 md:grid-cols-1 mt-8 gap-16 justify-center">
-        <Logos header="and partners" logos={supportingPartners} />
+        <Logos header="and to our partners" logos={supportingPartners} />
       </div>
     </div>
   </Container>
