@@ -8,11 +8,49 @@ import Layout from "@layouts/Layout.astro";
 <Layout title="Venue">
   <Container>
     <Sectionhead>
-        <Fragment slot="title">Templates</Fragment>
-        <Fragment slot="desc">Everything you need to submit your work to Watermatex.</Fragment>
-      </Sectionhead>
+      <Fragment slot="title">Templates</Fragment>
+      <Fragment slot="desc">
+        Everything you need to submit your work to Watermatex.
+      </Fragment>
+    </Sectionhead>
   </Container>
-  <Container>
-    <DocsLinks></DocsLinks>
-  </Container>
+  <div class="mt-4 md:mt-5 mx-12 md:mx-36 py-8">
+    <h2
+      class="text-2xl lg:text-3xl font-bold lg:tracking-tight text-left mt-6 py-2">
+      Guidelines
+    </h2>
+    <p class="text-lg mt-4 text-slate-600 py-2">
+      All oral, poster and workshop presenters should send in a revised version
+      of their paper abstract, following the template.
+    </p>
+
+    <p class="text-lg mt-4 text-slate-600 py-2">
+      The revised abstract should be no longer than 4 pages (2 pages for text
+      and 2 pages for figures + tables). In order to have uniform conference
+      proceedings, all abstracts not complying with the template will be
+      returned to the authors for correction.
+    </p>
+
+    <p class="text-lg mt-4 text-slate-600 py-2">
+      Note that no copyright transfer is required for your abstract and that you
+      are therefore entitled to submit your paper to a journal of your liking.
+      We are in the process of creating a special issue to which you will be
+      invited to submit your Watermatex2023 contribution after the conference.
+    </p>
+
+    <p class="text-lg mt-4 text-slate-600 py-2">
+      Please send your revised abstract to <a
+        class="underline text-blue-500"
+        href="mailto:info@watermatex2023.org">info@watermatex2023.org</a
+      > before August 15th, 2023.
+    </p>
+  </div>
+  <div class="mt-4 md:mt-5 mx-12 md:mx-36 py-8">
+    <h2
+      class="text-2xl lg:text-3xl font-bold lg:tracking-tight text-left mt-6 py-2">
+      Templates
+    </h2>
+
+    <DocsLinks />
+  </div>
 </Layout>
