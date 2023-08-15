@@ -1,19 +1,11 @@
 ---
 import Link from "@components/ui/link.astro";
-import dynamita from "../assets/sponsors/Dynamita.png";
-import NewsTicker from "./news-ticker.astro";
 
-const sponsors = [
-  {
-    name: "dynamita",
-    src: dynamita,
-    width: 351,
-    height: 84,
-  },
-];
+import NewsTicker from "./news-ticker.astro";
 ---
 
-<main class="main grid lg:grid-cols-2 place-items-center mt-8 mb-8 rounded-md">
+<main
+  class="main grid lg:grid-cols-2 place-items-center mt-8 mb-8 rounded-md max-w-5xl mx-auto">
   <div class="bg-hero lg:min-h:500px order-1 py-6 mx-auto">
     <h1 class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight">
       Watermatex 2023
@@ -34,11 +26,12 @@ const sponsors = [
         style="outline"
         rel="noopener"
         href="/info/visas"
-        target="_blank">Get your visa</Link
-      >
-      <Link class="no-wrap" href="preliminary-program.pdf"
-        >Download the program</Link
-      >
+        target="_blank">
+        Get your visa
+      </Link>
+      <Link class="no-wrap" href="preliminary-program.pdf">
+        Download the program
+      </Link>
     </div>
     <div class="mt-3 flex flex-col sm:flex-row gap-3"></div>
   </div>

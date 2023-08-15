@@ -1,20 +1,29 @@
 ---
 import Container from "@components/container.astro";
-import Callout from "@components/callout.astro";
 import Cta from "@components/cta.astro";
 import Hero from "@components/hero.astro";
 import Logos from "@components/logos.astro";
 import ThemesText from "@components/themes-text.astro";
 import Layout from "@layouts/Layout.astro";
-import cEau from "../assets/logo-c-eau.png";
-import iwa from "../assets/logo-iwa2.png";
-import uGhent from "../assets/logo-ugent_en.png";
-import ulaval from "../assets/logo-ulaval.png";
 import vcsDen from "../assets/logo-VCS.png";
+import cEau from "../assets/logo-c-eau.png";
 import cws from "../assets/logo-cws.png";
 import dcWater from "../assets/logo-dcwater.png";
 import dommel from "../assets/logo-de-dommel2.png";
 import hrsd from "../assets/logo-hrsd.png";
+import iwa from "../assets/logo-iwa2.png";
+import uGhent from "../assets/logo-ugent_en.png";
+import ulaval from "../assets/logo-ulaval.png";
+import dynamita from "../assets/sponsors/Dynamita.png";
+
+const sponsors = [
+  {
+    name: "dynamita",
+    src: dynamita,
+    width: 351,
+    height: 84,
+  },
+];
 
 const utilities = [
   {
@@ -83,11 +92,78 @@ const supportingPartners = [
 <Layout title="Watermatex 2023">
   <Container>
     <Hero />
-    <!--Features/-->
+  </Container>
+  <Container>
+    <div class="max-w-5xl mt-24 md:mt-12 mx-auto p-6 bg-red-100 rounded-3xl">
+      <button
+        class="collapsible-title text-3xl lg:text-4xl font-semibold lg:tracking-tight"
+        >NOTICE: Important travel information</button
+      >
+      <div class="collapsible-content py-8">
+        <p class="text-lg mt-4 text-slate-600 py-2">
+          It is now possible for participants from one of the <a
+            class="underline text-blue-500"
+            href="https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/entry-requirements-country.html"
+            >visa required countries</a
+          > to ask the organizing committee for an invitation letter. This letter
+          should facilitate the processing of your visa application. <strong
+            >If you plan at all to attend, please apply for your visa now since
+            processing times can be long!</strong
+          >
+        </p>
+        <p class="text-lg mt-4 text-slate-600 py-2">
+          To request a letter, please reach out to <a
+            class="underline text-blue-500"
+            href="mailto:registration@watermatex2023.org"
+            >registration@watermatex2023.org</a
+          > with the following information:
+        </p>
+        <div class="px-6">
+          <ul class="list-disc">
+            <li>Full legal name</li>
+            <li>Date of birth</li>
+            <li>Affiliation</li>
+            <li>Home address</li>
+            <li>Home phone number</li>
+            <li>Business phone number</li>
+          </ul>
+        </div>
+        <p class="text-lg mt-4 text-slate-600 py-2">
+          To ensure the swift processing of your application, <strong>
+            please reach out again to <a
+              class="underline text-blue-500"
+              href="mailto:registration@watermatex2023.org"
+              >registration@watermatex2023.org</a
+            > as soon as your visa application has been submitted</strong
+          > and provide the following information:
+        </p>
+        <div class="px-6">
+          <ul class="list-disc">
+            <li>Full legal name</li>
+            <li>Visa application number</li>
+            <li>Passport country of issuance</li>
+          </ul>
+        </div>
+
+        <p class="text-lg mt-4 text-slate-600 py-2">
+          <strong>Thank you for your collaboration!</strong> For more information,
+          see our <a class="underline text-blue-500" href="/info/visas.html"
+            >"Obtaining a visa"</a
+          > page and the following <a
+            class="underline text-blue-500"
+            href="/info-letter.pdf">
+            information letter from Immigration, Refugees and Citizenship Canada</a
+          >
+        </p>
+      </div>
+    </div>
+  </Container>
+  <Container>
     <div class="mx-12 md:mx-36 justify-center">
       <div
         class="grid sm:grid-cols-1 md:grid-cols-1 mt-8 gap-16 justify-center">
-        <Logos header="Thank you to our supporting utilities" logos={utilities} />
+        <Logos header="Thank you to our sponsors," logos={sponsors} />
+        <Logos header="supporting utilities," logos={utilities} />
         <!--Logos header="Supporting utilities" logos={utilities} /-->
       </div>
     </div>
@@ -97,49 +173,32 @@ const supportingPartners = [
         <Logos header="and partners" logos={supportingPartners} />
       </div>
     </div>
-    <Container>
-      <div class="max-w-5xl mt-24 md:mt-12 mx-auto p-6 bg-red-100 rounded-3xl">
-        <h2 class="text-3xl lg:text-4xl font-semibold lg:tracking-tight">NOTICE: Important travel information</h2>
-        <div class="py-8">
-          <p class="text-lg mt-4 text-slate-600 py-2">
-            It is now possible for participants from one of the <a class="underline text-blue-500" href="https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/entry-requirements-country.html">visa required countries</a> to ask the organizing committee for an invitation letter. This letter should facilitate the processing of your visa application. <strong>If you plan at all to attend, please apply for your visa now since processing times can be long!</strong>
-          </p>
-          <p class="text-lg mt-4 text-slate-600 py-2">
-            To request a letter, please reach out to <a class="underline text-blue-500" href="mailto:registration@watermatex2023.org">registration@watermatex2023.org</a> with the following information:
-          </p>
-          <div class="px-6">
-            <ul class="list-disc">
-              <li>Full legal name</li>
-              <li>Date of birth</li>
-              <li>Affiliation</li>
-              <li>Home address</li>
-              <li>Home phone number</li>
-              <li>Business phone number</li>
-            </ul>
-          </div>
-          <p class="text-lg mt-4 text-slate-600 py-2">
-            To ensure the swift processing of your application, <strong> please reach out again to <a class="underline text-blue-500" href="mailto:registration@watermatex2023.org">registration@watermatex2023.org</a> as soon as your visa application has been submitted</strong> and provide the following information:
-          </p>
-          <div class="px-6">
-            <ul class="list-disc">
-              <li>Full legal name</li>
-              <li>Visa application number</li>
-              <li>Passport country of issuance</li>
-            </ul>
-          </div>
-          
-          <p class="text-lg mt-4 text-slate-600 py-2">
-            <strong>Thank you for your collaboration!</strong> For more information, see our <a class="underline text-blue-500" href="/info/visas.html">"Obtaining a visa"</a> page and the following <a class="underline text-blue-500" href="/info-letter.pdf"> information letter from Immigration, Refugees and Citizenship Canada</a>
-          </p>
-        </div>
-      </div>
-      </Container>
-    <!--Logos header="Supporting utilities" logos={sponsors}/-->
-    <!--<Logos header="Gold sponsors" logos={sponsors}/>
-      <Logos header="Silver sponsors" logos={sponsors}/>
-      <Logos header="Bronze sponsors" logos={sponsors}/-->
-    <ThemesText showTitle={true} />
-    <Logos header="Organized by" logos={affiliates} />
-    <Cta />
   </Container>
+  <ThemesText showTitle={true} />
+  <Logos header="Organized by" logos={affiliates} />
 </Layout>
+
+<script>
+  document
+    .querySelector(".collapsible-title")
+    .addEventListener("click", function () {
+      const content = document.querySelector(".collapsible-content");
+      if (content.style.display === "none" || content.style.display === "") {
+        content.style.display = "block";
+      } else {
+        content.style.display = "none";
+      }
+    });
+</script>
+
+<style>
+  .collapsible-content {
+    display: none;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+
+  .collapsible-title {
+    cursor: pointer;
+  }
+</style>
