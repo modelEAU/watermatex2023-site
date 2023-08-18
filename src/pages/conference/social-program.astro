@@ -7,6 +7,7 @@ import dinnerPath from "/public/data/social-program/dinner.jpg";
 import drinksPath from "/public/data/social-program/drinks.jpg"; 
 import museumPath from "/public/data/social-program/MNBAQ.jpg"; 
 import postersPath from "/public/data/social-program/posterSession.jpg"; 
+import "styles/generalStyle.css";
 
 // Photo by <a href="https://unsplash.com/@antenna?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Antenna</a> on <a href="https://unsplash.com/photos/ZDN-G1xBWHY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 // Photo by <a href="https://unsplash.com/@filmmakerandrea6?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Andrea Joshua Sibabalo Qoqonga</a> on <a href="https://unsplash.com/photos/dxyyr_UzH6Q?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
@@ -54,15 +55,14 @@ const posters = {
         </Fragment>
       </Sectionhead>
 
-    <Container>
+    <div class="mt-8 md:mt-5 mx-12 md:mx-36 py-8">
       <p class="text-lg mt-4 text-slate-600 py-6">
         We firmly believe that the connections you make and the memories you create during the 
         social events will add an extra layer of fulfilment to your conference experience. 
         Don't miss out on this chance to bond with like-minded individuals and create lasting 
         connections. Take a look at what we have in store for you:
       </p>
-    </Container>
-    <Container>
+      
       <hr class="featurette-divider">
 
       <div class="grid lg:grid-cols-2 items-center">
@@ -147,6 +147,6 @@ const posters = {
       <p class= "text-2xl lg:text-3xl font-bold lg:tracking-tight text-left mt-6 py-4">
         We look forward to welcoming you to our conference and sharing these incredible social moments together!
       </p>
-    </Container>
+    </div>
   </Container>
 </Layout>
