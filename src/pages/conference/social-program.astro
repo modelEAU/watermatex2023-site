@@ -7,7 +7,6 @@ import dinnerPath from "/public/data/social-program/dinner.jpg";
 import drinksPath from "/public/data/social-program/drinks.jpg"; 
 import museumPath from "/public/data/social-program/MNBAQ.jpg"; 
 import postersPath from "/public/data/social-program/posterSession.jpg"; 
-import Link from "@components/ui/link.astro";
 
 // Photo by <a href="https://unsplash.com/@antenna?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Antenna</a> on <a href="https://unsplash.com/photos/ZDN-G1xBWHY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 // Photo by <a href="https://unsplash.com/@filmmakerandrea6?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Andrea Joshua Sibabalo Qoqonga</a> on <a href="https://unsplash.com/photos/dxyyr_UzH6Q?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
@@ -75,7 +74,11 @@ const posters = {
             This event is designed to provide the perfect platform for networking, making new 
             connections, and reuniting with old friends. Relax and enjoy delightful refreshments 
             as you gear up for an incredible conference journey. On top of this, The key one of our esteemed keynote speakers, 
-            <Link href="../blog/6-bruce.md" size="md" > Mr. Bruce Beck </Link> will deliver a speech
+            <a class="underline text-blue-500"
+              href="../blog/6-bruce.md">
+              Mr. Bruce Beck
+            </a>
+            will deliver a speech
              that will leave you inspired and ready for action</p>
         </div>
         <div class="w-screen max-w-xl flex items-center pl-8">
