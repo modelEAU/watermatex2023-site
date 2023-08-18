@@ -5,6 +5,9 @@ import Layout from "@layouts/Layout.astro";
 import { Image } from "@astrojs/image/components";
 import dinnerPath from "/public/data/social-program/dinner.jpg"; 
 import drinksPath from "/public/data/social-program/drinks.jpg"; 
+import museumPath from "/public/data/social-program/MNBAQ.jpg"; 
+import postersPath from "/public/data/social-program/posterSession.jpg"; 
+import Link from "@components/ui/link.astro";
 
 // Photo by <a href="https://unsplash.com/@antenna?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Antenna</a> on <a href="https://unsplash.com/photos/ZDN-G1xBWHY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 // Photo by <a href="https://unsplash.com/@filmmakerandrea6?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Andrea Joshua Sibabalo Qoqonga</a> on <a href="https://unsplash.com/photos/dxyyr_UzH6Q?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
@@ -13,7 +16,7 @@ const pathSocialQuebec = "/info/SocialActivities"
 
 const dinner = {
   src: dinnerPath,
-  alt: "dinner",
+  alt: "Dinner",
   width: "633",
   height: "480",
   format: "jpg",
@@ -21,12 +24,27 @@ const dinner = {
 
 const drinks = {
   src: drinksPath,
-  alt: "coctail",
+  alt: "Coctail",
   width: "527",
   height: "351",
   format: "jpg",
 };
 
+const museum = {
+  src: museumPath,
+  alt: "MNBAQ",
+  width: "662",
+  height: "357",
+  format: "jpg",
+};
+
+const posters = {
+  src: postersPath,
+  alt: "Poster Session",
+  width: "600",
+  height: "397",
+  format: "jpg",
+};
 ---
 
 <Layout title="Social Program">
@@ -51,14 +69,17 @@ const drinks = {
       <div class="grid lg:grid-cols-2 items-center">
         <div class="">
           <h2 class="text-2xl lg:text-3xl font-bold lg:tracking-tight text-left mt-6 py-2">Welcome Reception.</h2>
-          <p class="lead">Sunday 24 September - Evening</p>
-          <p class="py-4">Let's kickstart the conference with a warm and welcoming reception. 
+          <p class="lead">Sunday 24 September - From 5 to 9 pm</p>
+          <p class="py-4">Let's kickstart the conference with a warm and welcoming reception at the Musée national 
+            des beaux-arts du québec. 
             This event is designed to provide the perfect platform for networking, making new 
             connections, and reuniting with old friends. Relax and enjoy delightful refreshments 
-            as you gear up for an incredible conference journey.</p>
+            as you gear up for an incredible conference journey. On top of this, The key one of our esteemed keynote speakers, 
+            <Link href="../blog/6-bruce.md" size="md" > Mr. Bruce Beck </Link> will deliver a speech
+             that will leave you inspired and ready for action</p>
         </div>
         <div class="w-screen max-w-xl flex items-center pl-8">
-          <Image {...drinks}  />
+          <Image {...museum}  />
         </div>
       </div>
 
@@ -66,8 +87,23 @@ const drinks = {
 
       <div class="grid lg:grid-cols-2 items-center">
         <div class="w-screen max-w-xl flex items-center pl-8">
-          <Image {...dinner}  />
+          <Image {...drinks}  />
         </div>
+        <div class="">
+          <h2 class="text-2xl lg:text-3xl font-bold lg:tracking-tight text-left mt-6 py-2">Poster cocktail.</h2>
+          <p class="lead">Monday 25 September - Evening</p>
+          <p class="py-4">
+            To ensure that our excellent scientific poster submissions receive the attention they deserve,
+       this dedicated poster session will stimulate networking and discussion around the 
+       poster topics. Engage with diverse poster presentations while enjoying cocktails, fostering connections, 
+       and igniting innovative discussions. Cheers to an evening of discovery and networking!
+          </p>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="grid lg:grid-cols-2 items-center">
         <div class="">
           <h2 class="text-2xl lg:text-3xl font-bold lg:tracking-tight text-left mt-6 py-2">Conference Dinner.</h2>
           <p class="lead">Tuesday 26 September - Evening</p>
@@ -75,6 +111,26 @@ const drinks = {
             Save the date for our conference dinner. It promises to be an enchanting affair filled with 
             delectable cuisine, captivating entertainment, and an ambiance that encourages camaraderie and 
             collaboration. Stay tuned for more details in the upcoming weeks - you won't want to miss this!
+          </p>
+        </div>
+        <div class="w-screen max-w-xl flex items-center pl-8">
+          <Image {...dinner}  />
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="grid lg:grid-cols-2 items-center">
+        <div class="w-screen max-w-xl flex items-center pl-8">
+          <Image {...posters}  />
+        </div>
+        <div class="">
+          <h2 class="text-2xl lg:text-3xl font-bold lg:tracking-tight text-left mt-6 py-2">Breakfast poster session.</h2>
+          <p class="lead">Wednesday 27 September - Morning</p>
+          <p class="py-4">
+            Start your Wednesday with inspiration! Join this poster session exploring captivating poster presentations. 
+            Fuel your mind and connect with fellow attendees over insightful discussions.
+             Get ready for a day of enriching experiences!
           </p>
         </div>
       </div>
