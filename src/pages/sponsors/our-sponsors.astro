@@ -5,20 +5,38 @@ import Layout from "@layouts/Layout.astro";
 import { Image } from "@astrojs/image/components";
 
 import dynamita from "/src/assets/sponsors/Dynamita.png";
+import QuebecCity from "/src/assets/sponsors/QuebecCite.png";
 
 ---
 
-<Layout title="Visas">
+<Layout title="Sponsors">
   <Container>
     <Sectionhead>
         <Fragment slot="title">Our sponsors</Fragment>
         <Fragment slot="desc"></Fragment>
       </Sectionhead>
-      <div class="mx-auto max-w-4xl mt-12">
+  
+  <div class="z-10 mt-16 md:mt-5 mx-12 md:mx-36 py-8">
+
+    <div class="justify-center">
+
+      <div class="flex justify-center">
         <Image
-          src={dynamita}
-          alt="dynamita"
+        src={QuebecCity}
+        alt="Québec Cité"
         />
       </div>
+     
+    </div>
+    <div class="justify-center">
+
+      <div class="flex justify-center">
+        <Image
+        src={dynamita}
+        alt="dynamita"/>
+      </div>
+      
+    </div>
+  </div>
   </Container>
 </Layout>
