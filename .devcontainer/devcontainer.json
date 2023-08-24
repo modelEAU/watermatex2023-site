@@ -8,7 +8,8 @@
 			"extensions": [
 				"astro-build.astro-vscode",
 				"adrianwilczynski.alpine-js-intellisense",
-				"bradlc.vscode-tailwindcss"
+				"bradlc.vscode-tailwindcss",
+				"GitHub.vscode-pull-request-github"
 			]
 		}
 	}
