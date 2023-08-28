@@ -1,6 +1,5 @@
 ---
 import { Tick } from "@components/ui/icons";
-import Link from "@components/ui/link.astro";
 
 const { plan } = Astro.props;
 const labels = new Map();
@@ -14,9 +13,10 @@ labels.set("accompanier", "Accompanying Person");
   <div
     class="flex flex-col w-full order-first lg:order-none border-2 border-[#D8DEE9] border-opacity-50 py-5 px-6 rounded-md">
     <div class="text-center">
-      <h4 class="text-lg font-medium text-gray-400">{plan.name}</h4>
-      <p
-        class="mt-3 text-4xl font-bold text-black md:text-4xl">
+      <h4 class="text-lg font-medium text-gray-400">
+        {plan.name.includes("Early") ? <s>{plan.name}</s> : <>{plan.name}<>}
+      </h4>
+      <p class="mt-3 text-4xl font-bold text-black md:text-4xl">
         {
           Object.entries(plan.price).map((item) => (
             <li class="flex items-start gap-3 text-gray-800 text-left">
@@ -44,5 +44,6 @@ labels.set("accompanier", "Accompanying Person");
           </li>
         ))
       }
+    </ul>
   </div>
 </div>
