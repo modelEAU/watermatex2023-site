@@ -23,12 +23,18 @@ const utilities = [
     src: QuebecCity,
     width: 170,
     height: 256,
-  },  
+  },
   {
     name: "dynamita",
     src: dynamita,
     width: 351,
     height: 84,
+  },
+  {
+    name: "c-eau",
+    src: cEau,
+    width: 308,
+    height: 55,
   },
   {
     name: "Clean Water Services",
@@ -83,14 +89,7 @@ const affiliates = [
   },
 ];
 
-const supportingPartners = [
-  {
-    name: "c-eau",
-    src: cEau,
-    width: 308,
-    height: 55,
-  },
-];
+const supportingPartners = [];
 ---
 
 <Layout title="Watermatex 2023">
@@ -173,12 +172,12 @@ const supportingPartners = [
         <!--Logos header="Supporting utilities" logos={utilities} /-->
       </div>
     </div>
-    <div class="mx-12 md:mx-36 justify-center">
+    <!-- <div class="mx-12 md:mx-36 justify-center">
       <div
         class="grid sm:grid-cols-1 md:grid-cols-1 mt-8 gap-16 justify-center">
         <Logos header="and to our partners" logos={supportingPartners} />
       </div>
-    </div>
+    </div> -->
   </Container>
   <ThemesText showTitle={true} />
   <Logos header="Organized by" logos={affiliates} />

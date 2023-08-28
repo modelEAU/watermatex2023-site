@@ -21,9 +21,6 @@ const sponsors = [
     width: 351,
     height: 84,
   },
-];
-
-const partners = [
   {
     name: "c-eau",
     src: cEau,
@@ -31,20 +28,19 @@ const partners = [
     height: 55,
   },
 ];
+
+const partners = [];
 ---
 
 <Layout title="Sponsors">
   <Sectionhead>
-    <Fragment slot="title">Sponsors and supporting partners</Fragment>
+    <Fragment slot="title">Sponsors</Fragment>
     <Fragment slot="desc">
       Thank you for making this Watermatex possible through your generous
       support.
     </Fragment>
   </Sectionhead>
   <Container class="mt-12">
-    <Logos header="Our Sponsors" logos={sponsors} />
-  </Container>
-  <Container class="mt-12 text-4xl">
-    <Logos header="Our supporting partners" logos={partners} />
+    <Logos header="" logos={sponsors} />
   </Container>
 </Layout>
