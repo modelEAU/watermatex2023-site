@@ -1,42 +1,50 @@
 ---
 import Container from "@components/container.astro";
-import Sectionhead from "@components/sectionhead.astro";
+import Logos from "@components/logos.astro";
 import Layout from "@layouts/Layout.astro";
-import { Image } from "@astrojs/image/components";
 
+import Sectionhead from "@components/sectionhead.astro";
+import cEau from "/src/assets/logo-c-eau.png";
 import dynamita from "/src/assets/sponsors/Dynamita.png";
 import QuebecCity from "/src/assets/sponsors/QuebecCite.png";
 
+const sponsors = [
+  {
+    name: "Québec Cité",
+    src: QuebecCity,
+    width: 170,
+    height: 256,
+  },
+  {
+    name: "dynamita",
+    src: dynamita,
+    width: 351,
+    height: 84,
+  },
+];
+
+const partners = [
+  {
+    name: "c-eau",
+    src: cEau,
+    width: 308,
+    height: 55,
+  },
+];
 ---
 
 <Layout title="Sponsors">
-  <Container>
-    <Sectionhead>
-        <Fragment slot="title">Our sponsors</Fragment>
-        <Fragment slot="desc"></Fragment>
-      </Sectionhead>
-  
-  <div class="z-10 mt-16 md:mt-5 mx-12 md:mx-36 py-8">
-
-    <div class="justify-center">
-
-      <div class="flex justify-center">
-        <Image
-        src={QuebecCity}
-        alt="Québec Cité"
-        />
-      </div>
-     
-    </div>
-    <div class="justify-center">
-
-      <div class="flex justify-center">
-        <Image
-        src={dynamita}
-        alt="dynamita"/>
-      </div>
-      
-    </div>
-  </div>
+  <Sectionhead>
+    <Fragment slot="title">Sponsors and supporting partners</Fragment>
+    <Fragment slot="desc">
+      Thank you for making this Watermatex possible through your generous
+      support.
+    </Fragment>
+  </Sectionhead>
+  <Container class="mt-12">
+    <Logos header="Our Sponsors" logos={sponsors} />
+  </Container>
+  <Container class="mt-12 text-4xl">
+    <Logos header="Our supporting partners" logos={partners} />
   </Container>
 </Layout>
