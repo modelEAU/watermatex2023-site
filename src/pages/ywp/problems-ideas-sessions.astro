@@ -1,0 +1,57 @@
+---
+import { Image } from "@astrojs/image/components";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import Layout from "@layouts/Layout.astro";
+import imageCube from "assets/ywp/cube.png";
+
+const imCube = {
+  src: imageCube,
+  alt: "cube",
+  width: "500",
+  height: "500",
+  format: "png",
+};
+---
+
+<Layout title="YWP-Problem-ideas-session">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">“Problems, Ideas and Challenges” Session</Fragment>
+      <Fragment slot="desc"></Fragment>
+    </Sectionhead>
+    <div class="mx-12 md:mx-36 py-8">
+      <p class="text-lg mt-4 text-slate-600 py-2">
+        This session, organized by the YWP steering committee, aims to provide a unique platform 
+        for discussing <strong>research problems, unsolved challenges</strong> and/or <strong>intriguing ideas </strong>
+        within the Watermatex community. Moreover, it's designed to ignite cross-fertilization among different 
+        domains and expertise, inject new energy into projects that might feel a bit stagnant, and 
+        facilitate the invaluable sharing of lessons learned.
+      </p>
+      <p class="text-lg mt-4 text-slate-600 py-2">
+        It is scheduled for <strong>Tuesday, September 26th, at 15:30-16:30 </strong>
+        and involves enlightening round table discussions where participants 
+        can dive into engaging conversations. Selected speakers will present their 
+        topics in a plenary pitch, setting the stage for insightful discussions. Following these pitches, 
+        participants can freely choose the discussion they're most passionate about and join the conversation.
+      </p>
+      <p class="text-lg mt-4 text-slate-600 py-2">
+        If you're enthusiastic about sharing your expertise and insights, we encourage you 
+        to send a concise description of your <strong>problem, idea or challenge</strong> to: 
+        <a
+          class="underline text-blue-500"
+          href="info@watermatex2023.org"
+          target="_blank">info@watermatex2023.org </a>
+        by September 10th. The title should be "Problems and ideas - Surname_Name" and the 
+        description shouldn't exceed 400 words. The selected topics will be announced on September 18th.
+      </p>
+
+      <div class="w-screen max-w-xl flex items-center pl-8">
+        <Image
+            {...imCube}
+          />
+      </div>
+
+    </div>
+  </Container>
+</Layout>
