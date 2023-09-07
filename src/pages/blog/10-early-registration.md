@@ -2,7 +2,7 @@
 title: "Early registration is ending"
 excerpt: ""
 publishDate: "2023-08-10T11:39:36.050Z"
-image: ""
+image: "/blog/early-bird.jpeg"
 category: "Announcement"
 author: "Mostafa Khalil"
 layout: "@layouts/BlogLayout.astro"

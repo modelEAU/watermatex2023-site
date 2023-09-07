@@ -1,8 +1,8 @@
 ---
-title: "Introducing the "Problems and Ideas" Session"
+title: "Introducing the YWP Problems and Ideas Session"
 excerpt: ""
-publishDate: "2023-08-24T11:39:36.050Z"
-image: ""
+publishDate: "2023-09-07T11:39:36.050Z"
+image: "/blog/ideas.jpeg"
 category: "Announcement"
 author: "Mostafa Khalil"
 layout: "@layouts/BlogLayout.astro"

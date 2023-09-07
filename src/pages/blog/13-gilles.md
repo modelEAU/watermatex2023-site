@@ -1,7 +1,7 @@
 ---
 title: "⭐️ 📢 Keynote Alert!"
 excerpt: ""
-publishDate: "2023-09-06T11:39:36.050Z"
+publishDate: "2023-09-07T11:40:36.050Z"
 image: "/blog/gilles.jpeg"
 category: "Announcement"
 author: "Mostafa Khalil"
