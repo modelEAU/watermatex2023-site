@@ -26,4 +26,4 @@ He has received honorary doctorates from several prestigious institutions and is
 Don't miss Dr. [Gilles Patry](https://www.linkedin.com/in/gilles-patry-71223119/)'s captivating keynote at Watermatex 2023!
 
 
-[Gilles Keynote](/blog/gilles.jpeg)
+![Gilles Keynote](/blog/gilles.jpeg)
