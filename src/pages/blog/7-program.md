@@ -21,4 +21,4 @@ Here's how Bruce announces his keynote address, entitled: CLIMATE CHANGE DRIVES 
 
 Stay tuned as we unveil the full Watermatex 2023 program, featuring a lineup of exceptional speakers, cutting-edge research, and innovative solutions for the water industry.💧🌍
 
-[Click here to download the preliminary program](/preliminary-program.pdf)
+[Click here to download the preliminary program](/preliminary_program.pdf)
