@@ -12,8 +12,8 @@ import MuseeQuebec from "assets/venue/musee3.jpg";
 const map = {
   src: mapPath,
   alt: "Map of airports with direct connections to Québec City (YQB)",
-  width: "1000",
-  height: "900",
+  width: "600",
+  height: "540",
   format: "png",
   loading: "lazy",
 };
@@ -30,33 +30,13 @@ const map = {
     <div class="mx-12 md:mx-36 py-8">
       <h2
         class="text-2xl lg:text-3xl font-bold lg:tracking-tight text-left mt-6">
-        Getting to Quebec City
-      </h2>
-      <p class="text-lg mt-4 text-slate-600 py-2">
-        The airport <a
-          class="underline text-blue-500"
-          target="_blank"
-          href="https://www.aeroportdequebec.com/en">
-          Jean-Lesage International Airport (YQB)
-        </a> is the airport of Québec City and the closest airport to the conference
-        venue. Multiple flights arrive at Quebec International Airport (YQB) daily.
-        You will be able to book a connection from Montreal, Toronto, Chicago, New
-        York (Newark and JFK) or Philadelphia.
-      </p>
-      <div
-        class="w-screen max-w-xl flex items-center pt-16 pb-8 z-0 mx-auto justify-center"
-        style="grid-template-columns: 1fr 1fr;">
-        <Image {...map} />
-        <Map />
-      </div>
-      <h2
-        class="text-2xl lg:text-3xl font-bold lg:tracking-tight text-left mt-6">
         Main Venue
       </h2>
       <p class="text-lg mt-4 text-slate-600 py-2">
-        The conference venue is located approximately 10km (20 min by car) East
-        of the airport, on the Université Laval campus. Bus route 76 connects
-        the airport to Sainte-Foy, the neighborhood of the venue, in less than
+        The conference will be held at Pavillon Alphonse-Desjardins (2325, rue de l'Université, 
+        Local 2447 Université Laval, Québec (Québec)  G1V 0A6. The conference venue is located 
+        approximately 10km (20 min by car) East of the airport, on the Université Laval campus. 
+        Bus route 76 connects the airport to Sainte-Foy, the neighborhood of the venue, in less than
         30 minutes. From there, express bus routes 800 and 801 can take you to
         the city center. Taxis and Uber are also available from the airport -
         their stands are clearly indicated upon arrival. Further information is
@@ -68,6 +48,9 @@ const map = {
           >here.
         </a>
       </p>
+      <div class="justify-center w-screen mx-auto max-w-xl flex items-center pl-8 mt-4">
+        <Map />
+      </div>
       <div class="justify-center">
         <SliderPhotos photos={photoMaps} />
       </div>
@@ -94,6 +77,24 @@ const map = {
           src={`https://www.google.com/maps/embed/v1/place?key=${process.env["GOOGLE_MAPS_API_KEY"]}&q=Musée+national+des+beaux-arts+du+Québec`}
           allowfullscreen>
         </iframe>
+      </div>
+      <h2
+        class="text-2xl lg:text-3xl font-bold lg:tracking-tight text-left mt-6">
+        Getting to Quebec City
+      </h2>
+      <p class="text-lg mt-4 text-slate-600 py-2">
+        The airport <a
+          class="underline text-blue-500"
+          target="_blank"
+          href="https://www.aeroportdequebec.com/en">
+          Jean-Lesage International Airport (YQB)
+        </a> is the airport of Québec City and the closest airport to the conference
+        venue. Multiple flights arrive at Quebec International Airport (YQB) daily.
+        You will be able to book a connection from Montreal, Toronto, Chicago, New
+        York (Newark and JFK) or Philadelphia.
+      </p>
+      <div class="justify-center w-screen mx-auto max-w-xl flex items-center pl-8 mt-4">
+        <Image {...map} />
       </div>
     </div>
   </Container>
