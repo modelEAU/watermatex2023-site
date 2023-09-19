@@ -30,29 +30,20 @@ const map = {
     <div class="mx-12 md:mx-36 py-8">
       <h2
         class="text-2xl lg:text-3xl font-bold lg:tracking-tight text-left mt-6">
-        Getting to Quebec City
+        Main Venue
       </h2>
-      <p class="text-lg mt-4 text-slate-600 py-2">
-        The airport <a
-          class="underline text-blue-500"
-          target="_blank"
-          href="https://www.aeroportdequebec.com/en">
-          Jean-Lesage International Airport (YQB)
-        </a> is the airport of Québec City and the closest airport to the conference
-        venue. Multiple flights arrive at Quebec International Airport (YQB) daily.
-        You will be able to book a connection from Montreal, Toronto, Chicago, New
-        York (Newark and JFK) or Philadelphia.
-      </p>
       <div
         class="w-screen max-w-xl flex items-center pt-16 pb-8 z-0 mx-auto justify-center"
         style="grid-template-columns: 1fr 1fr;">
-        <Image {...map} />
+        <p class="text-lg mt-4 text-slate-600 py-2">
+        The conference will be held at Pavillon Alphonse-Desjardins (2325, rue de l'Université, 
+        Local 2447 Université Laval, Québec (Québec)  G1V 0A6.
+        </p>
         <Map />
       </div>
-      <h2
-        class="text-2xl lg:text-3xl font-bold lg:tracking-tight text-left mt-6">
-        Main Venue
-      </h2>
+      <div class="justify-center">
+        <SliderPhotos photos={photoMaps} />
+      </div>
       <p class="text-lg mt-4 text-slate-600 py-2">
         The conference venue is located approximately 10km (20 min by car) East
         of the airport, on the Université Laval campus. Bus route 76 connects
@@ -68,9 +59,7 @@ const map = {
           >here.
         </a>
       </p>
-      <div class="justify-center">
-        <SliderPhotos photos={photoMaps} />
-      </div>
+      <Image {...map} />
       <h2
         class="text-2xl lg:text-3xl font-bold lg:tracking-tight text-left mt-6">
         Welcome reception 
@@ -95,6 +84,21 @@ const map = {
           allowfullscreen>
         </iframe>
       </div>
+      <h2
+        class="text-2xl lg:text-3xl font-bold lg:tracking-tight text-left mt-6">
+        Getting to Quebec City
+      </h2>
+      <p class="text-lg mt-4 text-slate-600 py-2">
+        The airport <a
+          class="underline text-blue-500"
+          target="_blank"
+          href="https://www.aeroportdequebec.com/en">
+          Jean-Lesage International Airport (YQB)
+        </a> is the airport of Québec City and the closest airport to the conference
+        venue. Multiple flights arrive at Quebec International Airport (YQB) daily.
+        You will be able to book a connection from Montreal, Toronto, Chicago, New
+        York (Newark and JFK) or Philadelphia.
+      </p>
     </div>
   </Container>
 </Layout>
