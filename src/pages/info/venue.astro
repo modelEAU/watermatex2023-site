@@ -32,8 +32,10 @@ const map = {
         class="text-2xl lg:text-3xl font-bold lg:tracking-tight text-left mt-6">
         Main Venue
       </h2>
-      <div class="grid grid-cols-3 gap-4 place-items-left mt-4 py-2">
-        <p class="text-lg text-slate-600 col-span-2 order-1 my-auto">
+      <div
+        class="w-screen max-w-xl flex items-center pt-16 pb-8 z-0 mx-auto justify-center"
+        style="grid-template-columns: 1fr 1fr;">
+        <p class="text-lg text-slate-600">
         The conference will be held at Pavillon Alphonse-Desjardins (2325, rue de l'Université, 
         Local 2447 Université Laval, Québec (Québec)  G1V 0A6. The conference venue is located 
         approximately 10km (20 min by car) East of the airport, on the Université Laval campus. 
@@ -49,10 +51,7 @@ const map = {
           >here.
         </a>
         </p>
-        <div
-          class="order-2 justify-self-end grid grid-auto-rows-min-content align-middle">
         <Map />
-        </div>
       </div>
       <div class="justify-center">
         <SliderPhotos photos={photoMaps} />
