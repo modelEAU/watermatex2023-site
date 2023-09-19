@@ -12,8 +12,8 @@ import MuseeQuebec from "assets/venue/musee3.jpg";
 const map = {
   src: mapPath,
   alt: "Map of airports with direct connections to Québec City (YQB)",
-  width: "1000",
-  height: "900",
+  width: "600",
+  height: "540",
   format: "png",
   loading: "lazy",
 };
@@ -37,17 +37,9 @@ const map = {
         style="grid-template-columns: 1fr 1fr;">
         <p class="text-lg mt-4 text-slate-600 py-2">
         The conference will be held at Pavillon Alphonse-Desjardins (2325, rue de l'Université, 
-        Local 2447 Université Laval, Québec (Québec)  G1V 0A6.
-        </p>
-        <Map />
-      </div>
-      <div class="justify-center">
-        <SliderPhotos photos={photoMaps} />
-      </div>
-      <p class="text-lg mt-4 text-slate-600 py-2">
-        The conference venue is located approximately 10km (20 min by car) East
-        of the airport, on the Université Laval campus. Bus route 76 connects
-        the airport to Sainte-Foy, the neighborhood of the venue, in less than
+        Local 2447 Université Laval, Québec (Québec)  G1V 0A6. The conference venue is located 
+        approximately 10km (20 min by car) East of the airport, on the Université Laval campus. 
+        Bus route 76 connects the airport to Sainte-Foy, the neighborhood of the venue, in less than
         30 minutes. From there, express bus routes 800 and 801 can take you to
         the city center. Taxis and Uber are also available from the airport -
         their stands are clearly indicated upon arrival. Further information is
@@ -58,7 +50,12 @@ const map = {
           href="https://www.aeroportdequebec.com/en/airport-access/taxis-and-limousine"
           >here.
         </a>
-      </p>
+        </p>
+        <Map />
+      </div>
+      <div class="justify-center">
+        <SliderPhotos photos={photoMaps} />
+      </div>
       <h2
         class="text-2xl lg:text-3xl font-bold lg:tracking-tight text-left mt-6">
         Welcome reception 
