@@ -1,7 +1,6 @@
 ---
-import Link from "@components/ui/link.astro";
-
 import NewsTicker from "./news-ticker.astro";
+import Link from "./ui/link.astro";
 ---
 
 <main
@@ -20,21 +19,21 @@ import NewsTicker from "./news-ticker.astro";
     </p>
     <div class="mt-6 flex flex-col sm:flex-row gap-3">
       <!--Link class="no-wrap" href="/register/fees" rel="noopener">Register</Link-->
-      <Link class="no-wrap" href="/program.pdf">Download the program</Link>
-      <a
-        style="background:#2dacee;color:#ffffff;padding:10px;border-radius:5px;font-size:16px;text-decoration:none"
-        href="https://whova.com/portal/inper16_202309/?source=btn_link"
-        target="_blank"
-        rel="noreferrer"
-        data-reactroot="">Get the app!</a
-      >
-      <a
-        style="background:#2dacee;color:#ffffff;padding:10px;border-radius:5px;font-size:16px;text-decoration:none"
+      <!--Link class="no-wrap" href="/program.pdf">Download the program</Link-->
+      <Link
+        class="no-wrap"
         href="https://whova.com/embedded/event/6UQh89uB%402Zzlw9sS3B5YXHR03xMxSe3Jc-ssawUo-g%3D/?utc_source=ems"
         target="_blank"
-        rel="noreferrer"
-        data-reactroot="">See the agenda</a
-      >
+        data-reactroot="">
+        See the detailed program
+      </Link>
+      <Link
+        class="bg-sky-500 no-wrap"
+        href="https://whova.com/portal/inper16_202309/?source=btn_link"
+        target="_blank"
+        rel="noreferrer">
+        Get the conference app
+      </Link>
     </div>
     <div class="mt-3 flex flex-col sm:flex-row gap-3"></div>
   </div>

@@ -1,19 +1,18 @@
 ---
+import { Image } from "@astrojs/image/components";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
 import Link from "@components/ui/link.astro";
 import Layout from "@layouts/Layout.astro";
-import { Image } from "@astrojs/image/components";
 
+import KateNewhart from "@assets/people/Kate-Newhart2.png";
+import brankoKerkez from "@assets/people/branko-kerkez.jpeg";
 import bruceBeck from "@assets/people/bruce-beck.jpeg";
 import elmiraHassanzadeh from "@assets/people/elmira-hassanzadeh.jpeg";
+import gillesPatry from "@assets/people/gilles-patry.png";
+import jipingJiang from "@assets/people/jiping-jiang.jpg";
 import peterBach from "@assets/people/peter-bach.png";
-import brankoKerkez from "@assets/people/branko-kerkez.jpeg"
-import jipingJiang from "@assets/people/jiping-jiang.jpg"
-import simonDuchi from "@assets/people/simon-duchi.png"
-import gillesPatry from "@assets/people/gilles-patry.png"
-import KateNewhart from "@assets/people/Kate-Newhart2.png"
-
+import simonDuchi from "@assets/people/simon-duchi.png";
 
 let bruce = {
   src: bruceBeck,
@@ -47,7 +46,7 @@ let gilles = {
   alt: "Gilles Patry",
   name: "Gilles Patry",
   width: 250,
-  height: 250
+  height: 250,
 };
 
 let simon = {
@@ -81,7 +80,6 @@ let branko = {
   width: 250,
   height: 250,
 };
-
 ---
 
 <Layout title="Scientific Program">
@@ -94,10 +92,11 @@ let branko = {
     <div
       class="sticky top-0 z-10 mt-16 md:mt-5 mx-12 md:mx-36 py-8 flex justify-center">
       <Link
-        class="text-lg mt-4 text-slate-600 py-2 mx-auto"
-        rel="noopener"
-        href="/program.pdf">
-        Download the conference program.
+        class="no-wrap bg-sky-500"
+        href="https://whova.com/embedded/event/6UQh89uB%402Zzlw9sS3B5YXHR03xMxSe3Jc-ssawUo-g%3D/?utc_source=ems"
+        target="_blank"
+        data-reactroot="">
+        See the detailed program
       </Link>
     </div>
 
@@ -209,14 +208,14 @@ let branko = {
           </div>
         </div>
         <p class="text-lg text-slate-600 col-span-2 order-1 my-auto">
-          Dr. Gilles Patry, a pioneering figure in environmental modeling and 
-          co-founder of Hydromantis Environmental Software Solutions, 
-          Inc., has a distinguished career spanning academia, leadership roles, 
-          and numerous accolades, including honorary doctorates and prestigious 
-          fellowships. At the conference's closing session, he will present a 
-          keynote on the evolution of AI-based control systems for wastewater 
-          treatment plants, tracing back to 1987 and highlighting key components, 
-          challenges, and visionary contributors.
+          Dr. Gilles Patry, a pioneering figure in environmental modeling and
+          co-founder of Hydromantis Environmental Software Solutions, Inc., has
+          a distinguished career spanning academia, leadership roles, and
+          numerous accolades, including honorary doctorates and prestigious
+          fellowships. At the conference's closing session, he will present a
+          keynote on the evolution of AI-based control systems for wastewater
+          treatment plants, tracing back to 1987 and highlighting key
+          components, challenges, and visionary contributors.
         </p>
       </div>
       <h2
@@ -235,11 +234,11 @@ let branko = {
           />
         </div>
         <p class="text-lg text-slate-600 order-2 col-span-2 my-auto">
-          Simon Duchi obtained his MSc in environmental engineering at Ghent 
-          University (Belgium). After starting his career at Antea Group as 
-          sewer modelling engineer, he was the first team member joining the 
-          AM-Team adventure. Simon helped designing and optimising numerous 
-          full-scale plants using CFD modelling in combination with kinetic 
+          Simon Duchi obtained his MSc in environmental engineering at Ghent
+          University (Belgium). After starting his career at Antea Group as
+          sewer modelling engineer, he was the first team member joining the
+          AM-Team adventure. Simon helped designing and optimising numerous
+          full-scale plants using CFD modelling in combination with kinetic
           modelling. He also leads several key projects as a project manager.
         </p>
       </div>
@@ -255,21 +254,22 @@ let branko = {
           />
         </div>
         <p class="text-lg text-slate-600 order-1 col-span-2 my-auto">
-          Branko is an Associate Professor of Civil and Environmental Engineering
-           at the University of Michigan, Ann Arbor, and the director of the Digital 
-           Water Lab at U-M. His group is working to enable “self-driving” water 
-           systems, which autonomously adapt themselves to changing conditions 
-           using real-time data and controls. He is the founder of Open-Storm.org, 
-           an open-source group dedicated to freely sharing hardware, software, and 
-           case studies on smart water systems. He is a recipient of the US National 
-           Science Foundation’s CAREER award and was recognized by US National Academy 
-           of Engineering as a Gilbreth Lecturer.
+          Branko is an Associate Professor of Civil and Environmental
+          Engineering at the University of Michigan, Ann Arbor, and the director
+          of the Digital Water Lab at U-M. His group is working to enable
+          “self-driving” water systems, which autonomously adapt themselves to
+          changing conditions using real-time data and controls. He is the
+          founder of Open-Storm.org, an open-source group dedicated to freely
+          sharing hardware, software, and case studies on smart water systems.
+          He is a recipient of the US National Science Foundation’s CAREER award
+          and was recognized by US National Academy of Engineering as a Gilbreth
+          Lecturer.
         </p>
       </div>
       <div class="presenter grid grid-cols-3 gap-4 place-items-left mt-4 py-2">
         <div
           class="order-2 justify-self-start grid grid-auto-rows-min-content align-middle">
-        <Image
+          <Image
             class="rounded order-1 py-2 justify-self-left my-auto"
             src={jiang.src}
             alt={jiang.name}
@@ -278,17 +278,21 @@ let branko = {
           />
         </div>
         <p class="text-lg text-slate-600 order-2 col-span-2 my-auto">
-          Jiping Jiang, PhD, Associate Research Professor, Deputy director of Shenzhen 
-          Municipal Engineering Lab of Environmental IoT Technologies, Southern University 
-          of Science and Technology, China. His is also a Senior Water Supply and Drainage Engineer.
-          His research interests mainly focus on Hydroinformatics and Environmental Informatics, 
-          severing for smart management, control and governance on water quality related issues. 
-          He has published 70 journal papers like WR, WRR, ACS ES&T Water, EM&S, J Hydrol. and host 
-          30 research and engineering projects, localized in 7 provinces in China. He also severs 
-          as the board member of Application Management Committee of Shenzhen Municipal Government, 
-          the committee member of iEMSs, OMF and the editor of Water Sci Technol, China Environ Sci, etc. 
-          He won the Gold Medal of “Water Star Award” for new scientists and engineers by YWP-China and 
-          the First Prize of environmental protection science and technology award of Guangdong province, China.
+          Jiping Jiang, PhD, Associate Research Professor, Deputy director of
+          Shenzhen Municipal Engineering Lab of Environmental IoT Technologies,
+          Southern University of Science and Technology, China. His is also a
+          Senior Water Supply and Drainage Engineer. His research interests
+          mainly focus on Hydroinformatics and Environmental Informatics,
+          severing for smart management, control and governance on water quality
+          related issues. He has published 70 journal papers like WR, WRR, ACS
+          ES&T Water, EM&S, J Hydrol. and host 30 research and engineering
+          projects, localized in 7 provinces in China. He also severs as the
+          board member of Application Management Committee of Shenzhen Municipal
+          Government, the committee member of iEMSs, OMF and the editor of Water
+          Sci Technol, China Environ Sci, etc. He won the Gold Medal of “Water
+          Star Award” for new scientists and engineers by YWP-China and the
+          First Prize of environmental protection science and technology award
+          of Guangdong province, China.
         </p>
       </div>
       <div class="presenter grid grid-cols-3 gap-4 place-items-left mt-4 py-2">
@@ -303,17 +307,27 @@ let branko = {
           />
         </div>
         <p class="text-lg text-slate-600 order-1 col-span-2 my-auto">
-          Dr. Kate Newhart is an Assistant Professor of Environmental Engineering 
-          with a specialization in data-driven monitoring and control for the water 
-          sector. Dr. Newhart holds a PhD in Civil and Environmental Engineering from 
-          the Colorado School of Mines and previously worked at Metro Water Recovery, 
-          the largest wastewater utility in the Rocky Mountains, as an engineer in their 
-          Technology and Innovation Division, where she led data handling and data-driven 
-          modeling efforts. Dr. Newhart’s current work includes soft-sensor development for 
-          disinfection, resource recovery, and DBP mitigation in collaboration with utilities 
-          and universities across North America.
+          Dr. Kate Newhart is an Assistant Professor of Environmental
+          Engineering with a specialization in data-driven monitoring and
+          control for the water sector. Dr. Newhart holds a PhD in Civil and
+          Environmental Engineering from the Colorado School of Mines and
+          previously worked at Metro Water Recovery, the largest wastewater
+          utility in the Rocky Mountains, as an engineer in their Technology and
+          Innovation Division, where she led data handling and data-driven
+          modeling efforts. Dr. Newhart’s current work includes soft-sensor
+          development for disinfection, resource recovery, and DBP mitigation in
+          collaboration with utilities and universities across North America.
         </p>
       </div>
+    </div>
+    <div
+      class="sticky top-0 z-10 mt-16 md:mt-5 mx-12 md:mx-36 py-8 flex justify-center">
+      <Link
+        class="text-lg mt-4 text-slate-600 py-2 mx-auto"
+        rel="noopener"
+        href="/program.pdf">
+        Download the PDF program.
+      </Link>
     </div>
   </Container>
 
